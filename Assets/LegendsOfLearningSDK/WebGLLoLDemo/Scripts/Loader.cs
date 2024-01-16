@@ -7,7 +7,7 @@ using SimpleJSON;
 using System.IO;
 
 
-namespace TUSOM.Alpha.Phases.Games
+namespace Digi.Waves.Alpha.Phases.Games
 {
     public class Loader : MonoBehaviour
     {

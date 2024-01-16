@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace TUSOM.Alpha.Phases.Games
+namespace Digi.Waves.Alpha.Phases.Games
 {
     // this script controls the robot player on the navmesh
     public class RobotController : MonoBehaviour
