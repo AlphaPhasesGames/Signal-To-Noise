@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Signal To Noise/Final Scenes/LoaderScene.unity
+    path: Assets/Signal To Noise/Scenes/LoaderScene.unity
     guid: 181dca2591f0d3a4caad633a24231e4f
   - enabled: 1
-    path: Assets/Signal To Noise/Final Scenes/Stage1Bridge.unity
+    path: Assets/Signal To Noise/Scenes/Stage1Bridge.unity
     guid: 33c665e4e352bab4aaa30ac6aad7f82b
   - enabled: 1
-    path: Assets/Signal To Noise/Final Scenes/CrewQuaters.unity
+    path: Assets/Signal To Noise/Scenes/CrewQuaters.unity
     guid: bed6899ba5e02b14b89e9f28b3d86c3d
   m_configObjects: {}

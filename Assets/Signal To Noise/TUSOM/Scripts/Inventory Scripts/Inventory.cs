@@ -7,11 +7,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 { 
     public class Inventory : MonoBehaviour
     {
-
-      
+            
         public GameObject invUIPanal; // declare gameobject for UI inventory panal
-
-        
+        public EmployeeBadgeInvProperties badgeProp;
         public Button closeInv;
         public Button openInv;
 
@@ -24,6 +22,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool stopRepeat3;
         public bool stopRepeat4;
 
+
+        public Button employeeBadge;
+      //  public Button keyboardItem;
 
         public bool stopRepeat5;
         public bool stopRepeat6;
@@ -41,13 +42,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         void Update()
         {
 
-            //  if (Input.GetKeyDown(KeyCode.I))  // UI button to open the inventory
-            //    {
-            //       OpenInventory(); // execute open inventory function
-            ///}
-            if (!stopRepeat) // if stopRepeat bool is fasle, execute code
+           
+            if (isInvOpen) // if stopRepeat bool is fasle, execute code
             {
-                if (isInvOpen) // if inventory is open
+                if (!stopRepeat) // if inventory is open
                 {               
                     invUIPanal.gameObject.SetActive(true); // enable the INV UI
                     Debug.Log("Inv Consta Loading");
@@ -65,11 +63,11 @@ namespace Digi.Waves.Alpha.Phases.Games
               
             }
 
-          // if(Input.GetKeyDown(KeyCode.Escape) || (Input.GetMouseButtonDown(1)))
-         //   {
-            //    eScopeProp.DeselecttEScopeItem();
-            //    gasProp.DeselectGasItem();
-          //  }
+           if(Input.GetKeyDown(KeyCode.Escape) || (Input.GetMouseButtonDown(1)))
+          {
+
+               badgeProp.DeSelectGoldItem();
+          }
         }
 
 

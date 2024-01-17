@@ -29,6 +29,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool docking_bay_4_started_already;
         public bool abour_ship_5_started_already;
 
+        public bool employee_badge_collected;
+        public bool keyboad_collected;
+
         public bool lobby_reminder_1;
         public bool lobby_reminder_2;
 
@@ -74,6 +77,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool commsRoom3StartedAkready;
             public bool dockingBay4StartedAlready;
             public bool aboardTheShip5StartedAlready;
+
+            public bool employeeBadgeCollected;
+            public bool keyboadCollected;
 
             public int taskNumber;
             public int taskNumberSolid1;
@@ -210,7 +216,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                   //  taskNumber = tusomSaveData.task_number;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
-
+                    employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
                 }             
               
                 }
@@ -299,7 +305,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (currentStage == 1)
                 {
-             
+                employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
                 }
 
                 if (currentStage == 2)
@@ -395,7 +401,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             Save();
         }
    
-      
+        public void SaveBadgeCollected()
+        {
+            digiWavesSaveData.employee_badge_collected = true;
+            Save();
+        }
 
         #endregion
     }
