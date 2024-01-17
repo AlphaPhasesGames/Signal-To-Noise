@@ -10,7 +10,6 @@ namespace Digi.Waves.Alpha.Phases.Games
     {
         [Header("Controller Scripts")]
         private CharacterController charControl;
-
         [SerializeField]
         private float moveSpeed;
         private float inputX;

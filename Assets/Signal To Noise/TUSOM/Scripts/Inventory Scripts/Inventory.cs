@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TUSOM.Alpha.Phases.Games
-{
+namespace Digi.Waves.Alpha.Phases.Games
+{ 
     public class Inventory : MonoBehaviour
     {
 
@@ -41,15 +41,14 @@ namespace TUSOM.Alpha.Phases.Games
         void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.I))  // UI button to open the inventory
+            //  if (Input.GetKeyDown(KeyCode.I))  // UI button to open the inventory
+            //    {
+            //       OpenInventory(); // execute open inventory function
+            ///}
+            if (!stopRepeat) // if stopRepeat bool is fasle, execute code
             {
-                OpenInventory(); // execute open inventory function
-            }
-
-            if (isInvOpen) // if inventory is open
-            {
-                if (!stopRepeat) // if stopRepeat bool is fasle, execute code
-                {
+                if (isInvOpen) // if inventory is open
+                {               
                     invUIPanal.gameObject.SetActive(true); // enable the INV UI
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
@@ -66,11 +65,11 @@ namespace TUSOM.Alpha.Phases.Games
               
             }
 
-           if(Input.GetKeyDown(KeyCode.Escape) || (Input.GetMouseButtonDown(1)))
-            {
+          // if(Input.GetKeyDown(KeyCode.Escape) || (Input.GetMouseButtonDown(1)))
+         //   {
             //    eScopeProp.DeselecttEScopeItem();
             //    gasProp.DeselectGasItem();
-            }
+          //  }
         }
 
 

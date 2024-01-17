@@ -21,8 +21,6 @@ namespace Digi.Waves.Alpha.Phases.Games
         //  public bool has_player_visited_apple_stand;
 
         [Header("InventoryItems")]
-
-       
         public bool lobby_item_1_keycard_collected;
 
         public bool bridge_1_started_already;
@@ -99,7 +97,7 @@ namespace Digi.Waves.Alpha.Phases.Games
           //  public bool playerAppleTree;
 
             public int currentStage;
-            public GameObject robotPlayer;
+         //   public GameObject robotPlayer;
             public bool runMainOnce;
 
             public bool loadInvItemsOnce;
@@ -125,7 +123,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 Application.runInBackground = false; // dont let the game run in the background
                 DontDestroyOnLoad(this.gameObject);
-              
+               
             //    currentStage = 1;
             }
 
@@ -133,9 +131,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 newGameButton.onClick.AddListener(RemoveMainMenuUINewGame); // new game button after pressing, hides the button - see script at the bottom of the script
                 continueButton.onClick.AddListener(RemoveMainMenuUIContinue); ; // continune saved game button after pressing, hides the button - see script at the bottom of the script
-
+                robCont = FindObjectOfType<RobotController>();
 #if UNITY_EDITOR
-                ILOLSDK sdk = new LoLSDK.MockWebGL();
+            ILOLSDK sdk = new LoLSDK.MockWebGL();
 #elif UNITY_WEBGL
 	    ILOLSDK sdk = new LoLSDK.WebGL();
 #endif
@@ -213,36 +211,15 @@ namespace Digi.Waves.Alpha.Phases.Games
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
 
-                }
+                }             
               
-                if (lobbyItem1KeyCardCollected)
-                {
-                 //   inv.keyButton.gameObject.SetActive(true);
-                }
-              
-
-                // robotPlayer.transform.position = tusomSaveData.robot_location_save;
-                //  robotPlayer.transform.rotation = tusomSaveData.robot_rotaion;
-                Debug.Log("Player on shore on load");
                 }
            
                 if (digiWavesSaveData.current_stage == 2)
                 {
-                   SceneManager.LoadScene("S1Solid");
-                if (!loadInvItemsOnce)
-                {
-
-                    
-                    //taskNumberSolid1 = tusomSaveData.task_number_solid_1;
-                   
-                   // currentStage = tusomSaveData.current_stage;
-                    loadInvItemsOnce = true;
-                    Debug.Log("Stage 1 update runs - load save data from save");
-
-                }
-         
-             
-                Debug.Log("Loaded Stage 1 Save");
+                   SceneManager.LoadScene("CrewQuaters"); 
+                   Debug.Log("Stage 1 update runs - load save data from save");
+                                   
                 }
 
 
@@ -306,8 +283,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 //cargoSaveData.current_stage = 1;
                 currentStage = 1;
-                robCont .enabled = true;
-                
+                robCont.enabled = true;
+                SaveStage();
                 // peopleCam.enabled = true;
             //     fadeBlack.SetBool("fadeBlack",true);
             //     logoImage.SetActive(false);
@@ -327,7 +304,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                 if (currentStage == 2)
                 {
-              
+                SceneManager.LoadScene("CrewQuaters");
+                Debug.Log("Loaded Stage 2");
                 }
 
                 if (currentStage == 3)
@@ -417,6 +395,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             Save();
         }
    
+      
 
         #endregion
     }
