@@ -107,7 +107,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool runMainOnce;
 
             public bool loadInvItemsOnce;
-
+            public GameObject logo;
             [SerializeField] Button continueButton, newGameButton; // declare two buttons for the start new game and continue game options
             public TextMeshProUGUI newGameText; // TMP for the new game button
             public TextMeshProUGUI continueText; // TMP for the continue game button
@@ -290,6 +290,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 //cargoSaveData.current_stage = 1;
                 currentStage = 1;
                 robCont.enabled = true;
+                logo.gameObject.SetActive(false);
                 SaveStage();
                 // peopleCam.enabled = true;
             //     fadeBlack.SetBool("fadeBlack",true);
