@@ -265,6 +265,8 @@ GameObject:
   - component: {fileID: 54274806}
   - component: {fileID: 54274808}
   - component: {fileID: 54274807}
+  - component: {fileID: 54274810}
+  - component: {fileID: 54274809}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -329,6 +331,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54274805}
   m_CullTransparentMesh: 1
+--- !u!114 &54274809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54274805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a596f7229b3b34c98345f0d5f83a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logoToDisable: {fileID: 54274805}
+  textMan: {fileID: 1984380649}
+--- !u!95 &54274810
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54274805}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc4ec8447b7f0c64e841623e7d27a827, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &94101801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
@@ -1662,6 +1699,7 @@ MonoBehaviour:
     crew_quaters_3_started_already: 0
     docking_bay_4_started_already: 0
     abour_ship_5_started_already: 0
+    stage_1_started_already: 0
     employee_badge_collected: 0
     keyboad_collected: 0
     lobby_reminder_1: 0
@@ -1693,6 +1731,7 @@ MonoBehaviour:
   commsRoom3StartedAkready: 0
   dockingBay4StartedAlready: 0
   aboardTheShip5StartedAlready: 0
+  stage1Started: 0
   employeeBadgeCollected: 0
   keyboadCollected: 0
   taskNumber: 0
@@ -1720,6 +1759,7 @@ MonoBehaviour:
   newGameButton: {fileID: 3280873519921674030}
   newGameText: {fileID: 442876712837758072}
   continueText: {fileID: 3079924647504726398}
+  logoAnim: {fileID: 54274810}
   _langCode: en
 --- !u!4 &326647773
 Transform:
@@ -3857,6 +3897,7 @@ GameObject:
   - component: {fileID: 1984380645}
   - component: {fileID: 1984380644}
   - component: {fileID: 1984380648}
+  - component: {fileID: 1984380649}
   m_Layer: 0
   m_Name: NonMovingScripts
   m_TagString: Untagged
@@ -3955,6 +3996,42 @@ MonoBehaviour:
   checkBool1: 0
   checkBool2: 0
   badgeHeld: 0
+--- !u!114 &1984380649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984380643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be07f440f7404a4eb7647a50f087d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopTaskRepeating: 0
+  parentTextPanalObject: {fileID: 3674327027395797412}
+  introText1: {fileID: 6218471156124461678}
+  introText2: {fileID: 614997977737098197}
+  introText3: {fileID: 6803531936995319732}
+  introText4: {fileID: 4154754693079224551}
+  introText5: {fileID: 5148420335059751851}
+  textBeenRead: 0
+  progressTextIsShowing: 0
+  hasTextplayerOnce: 0
+  gameComplete: 0
+  textSection1Read: 0
+  textSection2Read: 0
+  textSection3Read: 0
+  textSection4Read: 0
+  textSection5Read: 0
+  ttsIntro1: {fileID: 4655410225137449496}
+  ttsIntro2: {fileID: 7016664553167062658}
+  ttsIntro3: {fileID: 8846577092344072798}
+  ttsIntro4: {fileID: 5279033623400057345}
+  ttsIntro5: {fileID: 4132929379211182205}
+  progressText: {fileID: 432685823962953188}
+  progressTextBack: {fileID: 5292014275656523324}
+  currentStageOfText: 0
 --- !u!4 &2000181533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190384165951000, guid: 5e4bdc96038d5424fbd9029b5ecaea9f, type: 3}
@@ -4421,8 +4498,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: With your help, we'll be looking at states of matter and how they change
-    depending on temperature and pressure! test
+  m_text: Here we analyze, decrypt, and respond to digital and analog signals, received
+    from throughout the galaxy. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4449,13 +4526,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4485,7 +4562,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -40.2417, y: 0, z: -392.80832, w: 0}
+  m_margin: {x: -56.30806, y: -39.18113, z: -385.37302, w: -29.70417}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5116,8 +5193,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8737,8 +8814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now let's get started. You can move around by pressing where you want to
-    go with the mouse or touchpad.
+  m_text: Your job is to decode the signals and reply where you can. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8765,13 +8841,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8801,7 +8877,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.180153, y: 0, z: -372.20398, w: 0}
+  m_margin: {x: -54.498352, y: -35.507454, z: -387.10855, w: -35.894203}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9370,7 +9446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: 0}
+  m_AnchoredPosition: {x: -124, y: -4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6290121755291488883
@@ -9393,9 +9469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome robot 2001. Today is your first day on the job! test
-
-'
+  m_text: Greetings robot 486. Welcome to Communication Space Station 80. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9422,13 +9496,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -9458,7 +9532,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -41.791126, z: -258.62912, w: -22.24591}
+  m_margin: {x: -116.1181, y: -41.791126, z: -329.24387, w: -22.24591}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9500,7 +9574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.00006, y: 0}
+  m_AnchoredPosition: {x: -17, y: 5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6350225345361646237
@@ -9703,8 +9777,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well done. Before we go further It's important for you to know there are
-    4 states of matter. test
+  m_text: You can walk over there with WASD or the arrow keys. If you want to interact
+    with the world, you can use the mouse or touchpad. Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9731,13 +9805,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -9767,7 +9841,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -17.996315, y: 0, z: -299.18338, w: 0}
+  m_margin: {x: -185.07549, y: 0, z: -196.20697, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10411,7 +10485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 465, y: 30}
+  m_AnchoredPosition: {x: 351, y: 30}
   m_SizeDelta: {x: 38.9593, y: 39.054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7802190528892240704
@@ -10618,7 +10692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e9f325524f48654daed69a8d6fc1e2e, type: 3}
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10654,16 +10728,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248341169003261784}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2163409, y: 1.2163409, z: 1.2163409}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2052587658552787438}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -385, y: -3}
+  m_AnchoredPosition: {x: -384.99997, y: -3.0000312}
   m_SizeDelta: {x: 67.3862, y: 75.1869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8027442847492049224
@@ -10998,8 +11072,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try walking to the table in front of you! You can also use the arrows keys
-    or WASD to move around
+  m_text: Looks like work has already started. There is a message waiting on the
+    ship's console. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11026,13 +11100,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -11088,7 +11162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e9f325524f48654daed69a8d6fc1e2e, type: 3}
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11278,16 +11352,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026760976225078407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2163409, y: 1.2163409, z: 1.2163409}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2052587658552787438}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: -3}
+  m_AnchoredPosition: {x: 394, y: -3.0000312}
   m_SizeDelta: {x: 67.3862, y: 75.1869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8624134167545924471

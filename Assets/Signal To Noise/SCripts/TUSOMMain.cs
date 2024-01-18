@@ -29,6 +29,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool docking_bay_4_started_already;
         public bool abour_ship_5_started_already;
 
+        public bool stage_1_started_already;
+
         public bool employee_badge_collected;
         public bool keyboad_collected;
 
@@ -78,6 +80,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool dockingBay4StartedAlready;
             public bool aboardTheShip5StartedAlready;
 
+            public bool stage1Started;
+ 
             public bool employeeBadgeCollected;
             public bool keyboadCollected;
 
@@ -111,7 +115,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             [SerializeField] Button continueButton, newGameButton; // declare two buttons for the start new game and continue game options
             public TextMeshProUGUI newGameText; // TMP for the new game button
             public TextMeshProUGUI continueText; // TMP for the continue game button
-         //   public GameObject logoImage;
+        public Animator logoAnim;
+        //   public GameObject logoImage;
          //   public GameObject blackFade;
           //  public Animator fadeBlack;
         #endregion
@@ -129,7 +134,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 Application.runInBackground = false; // dont let the game run in the background
                 DontDestroyOnLoad(this.gameObject);
-               
+                stage1Started = true;
             //    currentStage = 1;
             }
 
@@ -217,6 +222,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
                     employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
+                    stage1Started = digiWavesSaveData.stage_1_started_already;
                 }             
               
                 }
@@ -290,10 +296,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                 //cargoSaveData.current_stage = 1;
                 currentStage = 1;
                 robCont.enabled = true;
-                logo.gameObject.SetActive(false);
+               // logo.gameObject.SetActive(false);
                 SaveStage();
                 // peopleCam.enabled = true;
-            //     fadeBlack.SetBool("fadeBlack",true);
+                 logoAnim.SetBool("logoFade",true);
             //     logoImage.SetActive(false);
 
             }
@@ -301,8 +307,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
             robCont.enabled = true;
             currentStage = digiWavesSaveData.current_stage;
-          //   logoImage.SetActive(false);
-           //  blackFade.gameObject.SetActive(false);
+            logo.gameObject.SetActive(false);
+            //   logoImage.SetActive(false);
+            //  blackFade.gameObject.SetActive(false);
 
             if (currentStage == 1)
                 {
@@ -405,6 +412,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SaveBadgeCollected()
         {
             digiWavesSaveData.employee_badge_collected = true;
+            Save();
+        }
+
+        public void SaveStage1Started()
+        {
+            digiWavesSaveData.stage_1_started_already = stage1Started;
             Save();
         }
 
