@@ -21,7 +21,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         //  public bool has_player_visited_apple_stand;
 
         [Header("InventoryItems")]
-        public bool lobby_item_1_keycard_collected;
+       // public bool lobby_item_1_keycard_collected;
+       // public bool lobby_item_1_keycar_collected;
 
         public bool bridge_1_started_already;
         public bool comms_room_2_started_already;
@@ -72,7 +73,6 @@ namespace Digi.Waves.Alpha.Phases.Games
                                                // //public Inventory inv;
         public RobotController robCont;
         [Header("InventoryItems")]
-            public bool lobbyItem1KeyCardCollected;
 
             public bool bridge1StartedAlready;
             public bool crewQuarters2StartedAlready;
@@ -222,6 +222,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
                     employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
+                    keyboadCollected = digiWavesSaveData.keyboad_collected;
                     stage1Started = digiWavesSaveData.stage_1_started_already;
                 }             
               
@@ -314,7 +315,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             if (currentStage == 1)
                 {
                 employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
-                }
+                keyboadCollected = digiWavesSaveData.keyboad_collected;
+            }
 
                 if (currentStage == 2)
                 {
@@ -412,6 +414,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SaveBadgeCollected()
         {
             digiWavesSaveData.employee_badge_collected = true;
+            Save();
+        }
+
+        public void SaveKeyBCollected()
+        {
+            digiWavesSaveData.keyboad_collected = true;
             Save();
         }
 

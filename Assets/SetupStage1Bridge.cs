@@ -9,8 +9,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public GameObject employeeBadge;
         public Button employeeBadgeButton;
+
+        public GameObject digiKeyboard;
+        public Button keyBoardButton;
+
         public TUSOMMain digiWaveMain;
         public bool runOnce;
+        public bool runTwice;
         // Start is called before the first frame update
         void Start()
         {
@@ -29,8 +34,20 @@ namespace Digi.Waves.Alpha.Phases.Games
                     Debug.Log("Loaded badge gone");
                     runOnce = true;
                 }
+
+               
+              
             }
-           
+            if (!runTwice)
+            {
+                if (digiWaveMain.keyboadCollected)
+                {
+                    digiKeyboard.gameObject.SetActive(false);
+                    keyBoardButton.gameObject.SetActive(true);
+                    Debug.Log("Loaded keyboard gone");
+                    runTwice = true;
+                }
+            }
         }
     }
 }

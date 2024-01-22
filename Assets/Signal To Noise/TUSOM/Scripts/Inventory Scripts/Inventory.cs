@@ -10,6 +10,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             
         public GameObject invUIPanal; // declare gameobject for UI inventory panal
         public EmployeeBadgeInvProperties badgeProp;
+        public DigiKeyBaordInvProperties keyBProp;
         public Button closeInv;
         public Button openInv;
 
@@ -24,7 +25,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
 
         public Button employeeBadge;
-      //  public Button keyboardItem;
+        public Button keyboardItem;
 
         public bool stopRepeat5;
         public bool stopRepeat6;
@@ -67,6 +68,7 @@ namespace Digi.Waves.Alpha.Phases.Games
           {
 
                badgeProp.DeSelectGoldItem();
+                keyBProp.DeSelectKeyBItem();
           }
         }
 
