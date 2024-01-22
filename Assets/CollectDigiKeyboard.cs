@@ -9,6 +9,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CollectDigiKeyboard : MonoBehaviour
     {
         public Inventory invScript;
+        public Stage1BridgeTextMan textMan;
         public GameObject keyBItem;
         TUSOMMain tusomMain;
         public RobotController robCont;
@@ -16,10 +17,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         private void Awake()
         {
             tusomMain = FindObjectOfType<TUSOMMain>();
-            if (tusomMain.keyboadCollected)
-            {
-                keyBItem.gameObject.SetActive(false);
-            }
+          
         }
 
         public void OnMouseDown()
@@ -29,7 +27,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             tusomMain.SaveKeyBCollected();
             keyBItem.gameObject.SetActive(false);
             Debug.Log("This clicked");
-            //textMan.currentStageOfText = 4;
+            textMan.currentStageOfText = 17;
         }
     }
 }

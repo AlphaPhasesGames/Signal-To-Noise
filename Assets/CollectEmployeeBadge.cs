@@ -17,10 +17,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         private void Awake()
         {
             tusomMain = FindObjectOfType<TUSOMMain>();
-            if (tusomMain.employeeBadgeCollected)
-            {
-                badgeItem.SetActive(false);
-            }
+        
         }
 
         public void OnMouseDown()
