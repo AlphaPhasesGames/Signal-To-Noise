@@ -23,7 +23,7 @@
       "stage1IntroText14": 90,
       "stage1IntroText15": 140,
       "stage1IntroText16": 70,
-      "stage1IntroText17": 70,
+      "stage1IntroText17": 120,
       "stage1IntroText18": 60,
       "stage1IntroText19": 60,
       "stage1IntroText20": 60,
@@ -39,6 +39,8 @@
       "stage1IntroText30": 100,
       "stage1IntroText31": 60,
       "stage1IntroText32": 50,
+      "stage1IncorrectSpeakerItem": 90,
+      "stage1IncorrectClockItem": 100,
       "autoSave": 40
     }
   },
@@ -65,7 +67,7 @@
     "stage1IntroText14": "Also, can you find a piece of digital technology that will allow us to type a reply?",
     "stage1IntroText15": "Can you find both of these items now? To pick up an item, simply click it with the left mouse button on the touchpad or mouse.",
     "stage1IntroText16": "Excellent this keyboard is digital and just what we need.",
-    "stage1IntroText17": "No, this is an analog device, we need a digital one. Try again.",
+    "stage1IntroText17": "No, this old TV is an analog device, we need a digital device that will allow to type a reply. Try again.",
     "stage1IntroText18": "There is nothing in this locker. Try another!",
     "stage1IntroText19": "Excellent you have found an employee badge.",
     "stage1IntroText20": "Now we have both items, let's use them on the console.",
@@ -81,7 +83,9 @@
     "stage1IntroText30": "Somewhere around the bridge is an analog clock. Can you find it please and get the time?",
     "stage1IntroText31": "This is a clock but it's digital. Try again!",
     "stage1IntroText32": "Excellent this wall mounted clock is an analog device. And it’s time for our break! Let's head to the door and explore the crew quarters.",
-    "autoSave": "Autosaving..."
+     "stage1IncorrectSpeakerItem": "This clock is digital but it won’t help us reply to the message on the console. Try again!",
+     "stage1IncorrectClockItem": "These are analog speakers and won’t help us reply to the message. Try again!",    
+     "autoSave": "Autosaving..."
   },
   "es": {
     "newGame": "New Game",
@@ -106,7 +110,7 @@
     "stage1IntroText14": "Also, can you find a piece of digital technology that will allow us to type a reply?",
     "stage1IntroText15": "Can you find both of these items now? To pick up an item, simply click it with the left mouse button on the touchpad or mouse.",
     "stage1IntroText16": "Excellent this keyboard is digital and just what we need.",
-    "stage1IntroText17": "No, this is an analog device, we need a digital one. Try again.",
+    "stage1IntroText17": "No, this old TV is an analog device, we need a digital device that will allow to type a reply. Try again.",
     "stage1IntroText18": "There is nothing in this locker. Try another!",
     "stage1IntroText19": "Excellent you have found an employee badge.",
     "stage1IntroText20": "Now we have both items, let's use them on the console.",
