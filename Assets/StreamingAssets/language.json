@@ -3,6 +3,9 @@
     "maxChars": {
       "newGame": 20,
       "continue": 20,
+      "inventoryTitle": 20,
+      "inventoryKeycard": 20,
+      "inventoryKeyboard": 20,
       "digitalLabel": 20,
       "analogLabel": 20,
       "responsesText": 20,
@@ -47,6 +50,9 @@
   "en": {
     "newGame": "New Game",
     "continue": "Continue",
+    "inventoryTitle": "Inventory",
+    "inventoryKeycard": "Employee Badge",
+    "inventoryKeyboard": "PC Keyboard",
     "digitalLabel": "Digital Signal",
     "analogLabel": "Analog Signal",
     "responsesText": "Possible responses",      
@@ -83,13 +89,16 @@
     "stage1IntroText30": "Somewhere around the bridge is an analog clock. Can you find it please and get the time?",
     "stage1IntroText31": "This is a clock but it's digital. Try again!",
     "stage1IntroText32": "Excellent this wall mounted clock is an analog device. And it’s time for our break! Let's head to the door and explore the crew quarters.",
-     "stage1IncorrectSpeakerItem": "This clock is digital but it won’t help us reply to the message on the console. Try again!",
-     "stage1IncorrectClockItem": "These are analog speakers and won’t help us reply to the message. Try again!",    
+    "stage1IncorrectSpeakerItem": "This clock is digital but it won’t help us reply to the message on the console. Try again!",
+    "stage1IncorrectClockItem": "These are analog speakers and won’t help us reply to the message. Try again!",    
      "autoSave": "Autosaving..."
   },
   "es": {
     "newGame": "New Game",
     "continue": "Continue",
+    "inventoryTitle": "Inventory",
+    "inventoryKeycard": "Employee Badge",
+    "inventoryKeyboard": "PC Keyboard",
     "digitalLabel": "Digital Signal",
     "analogLabel": "Analog Signal",
     "responsesText": "Possible responses",      
@@ -126,6 +135,8 @@
     "stage1IntroText30": "Somewhere around the bridge is an analog clock. Can you find it please and get the time?",
     "stage1IntroText31": "This is a clock but it's digital. Try again!",
     "stage1IntroText32": "Excellent this wall mounted clock is an analog device. And it’s time for our break! Let's head to the door and explore the crew quarters.",
+    "stage1IncorrectSpeakerItem": "This clock is digital but it won’t help us reply to the message on the console. Try again!",
+    "stage1IncorrectClockItem": "These are analog speakers and won’t help us reply to the message. Try again!",
     "autoSave": "Autosaving..."
   },
   "zh": {

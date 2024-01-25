@@ -8,7 +8,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
         public class CollectEmployeeBadge : MonoBehaviour
         {
-
+          public Stage1BridgeTextMan textMan;
           public Inventory invScript;
           public GameObject badgeItem;
           TUSOMMain tusomMain;
@@ -27,7 +27,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             tusomMain.SaveBadgeCollected();
             badgeItem.gameObject.SetActive(false);
             Debug.Log("This clicked");
-            //textMan.currentStageOfText = 4;
+            textMan.currentStageOfText = 21;
         }
     }
 }
