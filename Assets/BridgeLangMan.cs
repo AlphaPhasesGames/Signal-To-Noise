@@ -37,6 +37,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI bridgeText18;
         public TextMeshProUGUI bridgeText19;
         public TextMeshProUGUI bridgeText20;
+        public TextMeshProUGUI bridgeText21;
+        public TextMeshProUGUI bridgeText22;
+        public TextMeshProUGUI bridgeText23;
 
 
         private void Awake()
@@ -70,6 +73,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeText18.text = defs["stage1IntroText18"];
             bridgeText19.text = defs["stage1IntroText19"];
             bridgeText20.text = defs["stage1IntroText20"];
+            bridgeText21.text = defs["stage1IntroText21"];
+            bridgeText22.text = defs["stage1IntroText22"];
+            bridgeText23.text = defs["stage1IntroText23"];
         }
 
     }

@@ -7,7 +7,6 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class SetupStage1Bridge : MonoBehaviour
     {
         public Stage1BridgeTextMan textMan;
-
         public GameObject employeeBadge;
         public Button employeeBadgeButton;
 
@@ -22,6 +21,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool collectedKeyB;
         public bool collectedBadge;
 
+        public bool pickedUpKeyB;
+        public bool pickedUpBadge;
 
         // Update is called once per frame
         void Update()
@@ -32,6 +33,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     employeeBadge.gameObject.SetActive(false);
                     employeeBadgeButton.gameObject.SetActive(true);
+                    pickedUpKeyB = true;
                     Debug.Log("Loaded badge gone");
                     runOnce = true;
                 }
@@ -45,6 +47,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     digiKeyboard.gameObject.SetActive(false);
                     keyBoardButton.gameObject.SetActive(true);
+                    pickedUpBadge = true;
                     Debug.Log("Loaded keyboard gone");
                     runTwice = true;
                 }
@@ -52,7 +55,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (!runThrice)
             {
-                if (collectedKeyB && collectedBadge)
+                if (pickedUpKeyB && pickedUpBadge)
                 {
                     StartCoroutine(ShowText());
                     runThrice = true;

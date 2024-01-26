@@ -29,7 +29,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             badgeItem.gameObject.SetActive(false);
             Debug.Log("This clicked");
             textMan.currentStageOfText = 22;
-            setup.collectedBadge = true;
+            setup.pickedUpBadge = true;
         }
     }
 }

@@ -37,7 +37,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText19NoBadge;
         public GameObject introText20FoundBadge;
         public GameObject introText21CollectedBothItems;
-
+        public GameObject introText22;
+        public GameObject introText23;
+        public GameObject introText24;
 
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -67,7 +69,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection19ReadNoBadge;
         public bool textSection20ReadFoundBadge;
         public bool textSection21ReadCollectedBothItems;
-
+        public bool textSection22Read;
+        public bool textSection23Read;
+        public bool textSection24Read;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
@@ -93,6 +97,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro19NoBadge;
         public Button ttsIntro20FoundBadge;
         public Button ttsIntro21CollectedBothItems;
+        public Button ttsIntro22;
+        public Button ttsIntro23;
+        public Button ttsIntro24;
 
         public Button progressText;
         public Button progressTextBack;
@@ -128,7 +135,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro18IncorrectDigiItem.onClick.AddListener(IntroTTSSpeak18);
             ttsIntro18IncorrectDigiItem2.onClick.AddListener(IntroTTSSpeak19);
             ttsIntro18IncorrectDigiItem3.onClick.AddListener(IntroTTSSpeak20);
-
+            ttsIntro22.onClick.AddListener(IntroTTSSpeak24);
+            ttsIntro23.onClick.AddListener(IntroTTSSpeak25);
+            ttsIntro24.onClick.AddListener(IntroTTSSpeak25);
             if (!digiWaves.stage1Started)
             {
                 currentStageOfText = 1;
@@ -778,13 +787,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection20ReadFoundBadge = true;
-                    Debug.Log("Is stage1IntroText18  running");
+                    Debug.Log("Is stage1IntroText19  running");
                 }
             }
 
             if (!textSection21ReadCollectedBothItems)
             {
-                if (currentStageOfText == 25)
+                if (currentStageOfText == 23)
                 {
                     parentTextPanalObject.gameObject.SetActive(true);
                     if (!textBeenRead)
@@ -797,10 +806,100 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText21CollectedBothItems.SetActive(true);
                     ttsIntro21CollectedBothItems.gameObject.SetActive(true);
 
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    //StartCoroutine(MoveCorrectGuessOnD2());
+                    textSection21ReadCollectedBothItems = true;
+                    Debug.Log("Is stage1IntroText20  running");
+                }
+            }
+
+            if (!textSection22Read)
+            {
+                if (currentStageOfText == 24)
+                {
+                    progressTextBack.gameObject.SetActive(true);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1IntroText21");
+
+
+                    introText21CollectedBothItems.SetActive(false);
+                    ttsIntro21CollectedBothItems.gameObject.SetActive(false);
+
+                    introText22.SetActive(true);
+                    ttsIntro22.gameObject.SetActive(true);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    // StartCoroutine(MoveCorrectGuessOnD2());
+                    textSection22Read = true;
+                    Debug.Log("Is stage1IntroText21  running");
+                }
+            }
+
+            if (!textSection23Read)
+            {
+                if (currentStageOfText == 25)
+                {
+                  
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1IntroText22");
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(true);
+                    ttsIntro23.gameObject.SetActive(true);
 
                     StartCoroutine(MoveCorrectGuessOnD2());
-                    textSection21ReadCollectedBothItems = true;
-                    Debug.Log("Is stage1IntroText18  running");
+                    textSection23Read = true;
+                    Debug.Log("Is stage1IntroText22  running");
+                }
+            }
+
+            if (!textSection24Read)
+            {
+                if (currentStageOfText == 26)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1IntroText23");
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
+
+
+                    introText24.SetActive(true);
+                    ttsIntro24.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    textSection24Read = true;
+                    Debug.Log("Is stage1IntroText23  running");
                 }
             }
 
@@ -883,6 +982,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText21CollectedBothItems.SetActive(false);
                     ttsIntro21CollectedBothItems.gameObject.SetActive(false);
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
+
+                    introText24.SetActive(false);
+                    ttsIntro24.gameObject.SetActive(false);
 
                     ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
@@ -1080,6 +1188,24 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void IntroTTSSpeak23()
         {
             LOLSDK.Instance.SpeakText("stage1IntroText20");
+            Debug.Log("introText 18 Button is pressed");
+        }
+
+        public void IntroTTSSpeak24()
+        {
+            LOLSDK.Instance.SpeakText("stage1IntroText21");
+            Debug.Log("introText 18 Button is pressed");
+        }
+
+        public void IntroTTSSpeak25()
+        {
+            LOLSDK.Instance.SpeakText("stage1IntroText22");
+            Debug.Log("introText 18 Button is pressed");
+        }
+
+        public void IntroTTSSpeak26()
+        {
+            LOLSDK.Instance.SpeakText("stage1IntroText23");
             Debug.Log("introText 18 Button is pressed");
         }
 

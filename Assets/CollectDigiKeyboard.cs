@@ -29,7 +29,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             keyBItem.gameObject.SetActive(false);
             Debug.Log("This clicked");
             textMan.currentStageOfText = 17;
-            setup.collectedKeyB = true;
+            setup.pickedUpKeyB = true;
         }
     }
 }
