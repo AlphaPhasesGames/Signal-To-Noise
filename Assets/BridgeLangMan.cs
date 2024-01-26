@@ -57,7 +57,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeText8.text = defs["stage1IntroText8"];
             bridgeText9.text = defs["stage1IntroText9"];
             bridgeText10.text = defs["stage1IntroText10"];
-            bridgeText10.text = defs["stage1IntroText10a"];
+            bridgeText10a.text = defs["stage1IntroText10a"];
             bridgeText11.text = defs["stage1IntroText11"];
             bridgeText12.text = defs["stage1IntroText12"];
             bridgeText13.text = defs["stage1IntroText13"];

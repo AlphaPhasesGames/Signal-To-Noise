@@ -6,6 +6,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class SetupStage1Bridge : MonoBehaviour
     {
+        public Stage1BridgeTextMan textMan;
 
         public GameObject employeeBadge;
         public Button employeeBadgeButton;
@@ -16,11 +17,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TUSOMMain digiWaveMain;
         public bool runOnce;
         public bool runTwice;
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
+        public bool runThrice;
+
+        public bool collectedKeyB;
+        public bool collectedBadge;
+
 
         // Update is called once per frame
         void Update()
@@ -48,6 +49,25 @@ namespace Digi.Waves.Alpha.Phases.Games
                     runTwice = true;
                 }
             }
+
+            if (!runThrice)
+            {
+                if (collectedKeyB && collectedBadge)
+                {
+                    StartCoroutine(ShowText());
+                    runThrice = true;
+                }
+            }
+          
+        }
+
+
+
+        public IEnumerator ShowText()
+        {
+            yield return new WaitForSeconds(6f);
+           textMan.currentStageOfText = 23;
+
         }
     }
 }

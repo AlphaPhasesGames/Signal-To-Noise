@@ -7714,6 +7714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c920c2f264fb747a46dc766c619c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380649}
   employeeBadge: {fileID: 4230346524670822022}
   employeeBadgeButton: {fileID: 5250048585328545736}
   digiKeyboard: {fileID: 7155032579948378906}
@@ -7721,6 +7722,9 @@ MonoBehaviour:
   digiWaveMain: {fileID: 326647772}
   runOnce: 0
   runTwice: 0
+  runThrice: 0
+  collectedKeyB: 0
+  collectedBadge: 0
 --- !u!114 &1984380648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15070,7 +15074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c6a5a0038bea44fa8b57c7b474712c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 0}
+  setup: {fileID: 1984380647}
+  textMan: {fileID: 1984380649}
   invScript: {fileID: 1984380645}
   badgeItem: {fileID: 4230346524670822022}
   robCont: {fileID: 521271704}
@@ -15358,6 +15363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77afe48245df0004596bea49c96c0021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setup: {fileID: 1984380647}
   invScript: {fileID: 1984380645}
   textMan: {fileID: 1984380649}
   keyBItem: {fileID: 7155032579948378906}

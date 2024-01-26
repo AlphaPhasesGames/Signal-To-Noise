@@ -762,7 +762,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (!textSection20ReadFoundBadge)
             {
-                if (currentStageOfText == 23)
+                if (currentStageOfText == 22)
                 {
                     parentTextPanalObject.gameObject.SetActive(true);
                     if (!textBeenRead)

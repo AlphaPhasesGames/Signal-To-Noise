@@ -7,9 +7,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class ExamineConsoleBridge : MonoBehaviour
     {
-
+        public SetupStage1Bridge setup;
         public Stage1BridgeTextMan textMan;
-       
+        public Inventory invScript;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -18,6 +18,16 @@ namespace Digi.Waves.Alpha.Phases.Games
                 textMan.currentStageOfText = 6;
                 Debug.Log("Opened New Test");
             }
+        }
+
+        public void OnMouseDown()
+        {
+            if(setup.collectedKeyB && setup.collectedBadge)
+            {
+                Debug.Log("This clicked");
+                textMan.currentStageOfText = 23;
+            }
+
         }
     }
 }
