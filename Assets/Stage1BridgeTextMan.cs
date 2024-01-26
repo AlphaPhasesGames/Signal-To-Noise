@@ -11,6 +11,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         TUSOMMain digiWaves;
         RobotController ronCont;
 
+        public GameObject consoleScreen;
+
         public bool stopTaskRepeating;
 
         public GameObject parentTextPanalObject;
@@ -72,6 +74,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection22Read;
         public bool textSection23Read;
         public bool textSection24Read;
+
+        public bool consoleImageRead;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
@@ -893,12 +897,45 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText23.SetActive(false);
                     ttsIntro23.gameObject.SetActive(false);
 
-
                     introText24.SetActive(true);
                     ttsIntro24.gameObject.SetActive(true);
 
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    //  StartCoroutine(MoveCorrectGuessOnD2());
                     textSection24Read = true;
+                    Debug.Log("Is stage1IntroText23  running");
+                }
+            }
+
+            if (!consoleImageRead)
+            {
+                if (currentStageOfText == 27)
+                {
+                    //parentTextPanalObject.gameObject.SetActive(true);
+                    //progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    // LOLSDK.Instance.SpeakText("stage1IntroText23");
+                    introText24.SetActive(false);
+                    ttsIntro24.gameObject.SetActive(false);
+                    // introText22.SetActive(false);
+                    // ttsIntro22.gameObject.SetActive(false);
+                    consoleScreen.gameObject.SetActive(true);
+                    //  introText23.SetActive(false);
+                    //   ttsIntro23.gameObject.SetActive(false);
+
+
+                    //    introText24.SetActive(true);
+                    //   ttsIntro24.gameObject.SetActive(true);
+
+                    // StartCoroutine(MoveCorrectGuessOnD2());
+                    consoleImageRead = true;
                     Debug.Log("Is stage1IntroText23  running");
                 }
             }
