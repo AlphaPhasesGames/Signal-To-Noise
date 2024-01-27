@@ -15,6 +15,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stopTaskRepeating;
 
+        public Button messageButton;
+
         public GameObject parentTextPanalObject;
         public GameObject introText1;
         public GameObject introText2;
@@ -42,6 +44,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText22;
         public GameObject introText23;
         public GameObject introText24;
+        public GameObject introText25;
 
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -74,6 +77,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection22Read;
         public bool textSection23Read;
         public bool textSection24Read;
+        public bool textSection25Read;
 
         public bool consoleImageRead;
 
@@ -104,6 +108,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro22;
         public Button ttsIntro23;
         public Button ttsIntro24;
+        public Button ttsIntro25;
 
         public Button progressText;
         public Button progressTextBack;
@@ -924,6 +929,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     // LOLSDK.Instance.SpeakText("stage1IntroText23");
                     introText24.SetActive(false);
                     ttsIntro24.gameObject.SetActive(false);
+
+                    introText25.SetActive(true);
+                    ttsIntro25.gameObject.SetActive(true);
+
+                    messageButton.gameObject.SetActive(true);
                     // introText22.SetActive(false);
                     // ttsIntro22.gameObject.SetActive(false);
                     consoleScreen.gameObject.SetActive(true);
@@ -1028,6 +1038,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText24.SetActive(false);
                     ttsIntro24.gameObject.SetActive(false);
+
+                    introText25.SetActive(false);
+                    ttsIntro25.gameObject.SetActive(false);
 
                     ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
