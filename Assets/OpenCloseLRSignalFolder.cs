@@ -6,15 +6,16 @@ using TMPro;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
-    public class OpenCloseMessageBridge : MonoBehaviour
+    public class OpenCloseLRSignalFolder : MonoBehaviour
     {
-        public Stage1BridgeTextMan textMan;
+      
         public Button openMessage;
         public Button closeMessage;
         public bool folderOpen;
         public bool stopRepeat;
         public bool stopRepeat2;
         public GameObject consoleWindow;
+        public GameObject prevConsoleWindow;
 
         private void Awake()
         {
@@ -59,8 +60,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             folderOpen = !folderOpen; // if inventory is closed, open. If open, then close it
             stopRepeat = false; // Set stopRepeat bool to false
             stopRepeat2 = false; // set stoprepeat bool to true
-            openMessage.gameObject.SetActive(false);
-            textMan.currentStageOfText = 28;
+           // openMessage.gameObject.SetActive(false);
+            consoleWindow.gameObject.SetActive(true);
+            prevConsoleWindow.gameObject.SetActive(false);
+            Debug.Log("This folder should open");
         }
     }
 }
