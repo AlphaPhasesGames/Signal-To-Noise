@@ -11,15 +11,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider locker3Box;
         // Start is called before the first frame update
 
-
-        private void OnTriggerEnter(Collider other)
+        private void OnMouseDown()
         {
-            if (other.CompareTag("Player"))
-            {
-                locker3.SetBool("L3", true);
-                locker3Box.enabled = false;
-                textMan.currentStageOfText = 21;
-            }
+            locker3.SetBool("L3", true);
+            locker3Box.enabled = false;
+            textMan.currentStageOfText = 21;
         }
+       
     }
 }

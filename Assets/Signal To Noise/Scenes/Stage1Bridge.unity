@@ -1106,7 +1106,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.013187673, y: 0.020472212, z: 0.03082087}
   m_Center: {x: -0.0026102227, y: -0.0000646687, z: 0.0044240924}
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214366736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 163c817b87765354fb6491308fa4dedc, type: 3}
   m_Name: 
@@ -2113,7 +2113,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 24.175638, y: 18.896393, z: 33.79541}
   m_Center: {x: 0.8130293, y: 2.3099532, z: -1.7657089}
@@ -2126,7 +2126,7 @@ Transform:
   m_GameObject: {fileID: 214366736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4882, y: 0.12086, z: -0.79924}
+  m_LocalPosition: {x: -9.67, y: 0.12086, z: 20.59}
   m_LocalScale: {x: 0.17893635, y: 0.55806, z: 0.15638514}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4520,7 +4520,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.08246184, y: 0.09925487, z: 0.58425826}
   m_Center: {x: 0.028073024, y: 0.010798704, z: -0.033237483}
@@ -6449,7 +6449,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.029518103, y: 0.020057546, z: 0.020057552}
   m_Center: {x: 0.0047302735, y: -2.8194613e-10, z: -1.2069834e-10}
@@ -9357,7 +9357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aabc7ff56fe34a4085ca016276897d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.31
+      value: 8.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aabc7ff56fe34a4085ca016276897d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10141,7 +10141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aabc7ff56fe34a4085ca016276897d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.03
+      value: 29.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aabc7ff56fe34a4085ca016276897d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11901,7 +11901,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 2.423085, z: 2.555973}
   m_Center: {x: -3.573578e-10, y: 0.7115421, z: 0.11023887}
@@ -15040,6 +15040,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consoleScreen: {fileID: 1707764833}
   stopTaskRepeating: 0
+  tvBox: {fileID: 576328910}
+  clockBox: {fileID: 9065971947474273737}
+  speakersBox: {fileID: 327390284}
+  keyboardBox: {fileID: 8742536982692629907}
+  analogClockBox: {fileID: 1535305283}
   messageButton: {fileID: 926504005}
   parentTextPanalObject: {fileID: 3674327027395797412}
   introText1: {fileID: 6218471156124461678}
@@ -22694,7 +22699,7 @@ Transform:
   m_GameObject: {fileID: 4230346524670822022}
   serializedVersion: 2
   m_LocalRotation: {x: -0.038048, y: 0.7060824, z: 0.7060824, w: 0.038048}
-  m_LocalPosition: {x: -14.55, y: 3.78, z: -0.94}
+  m_LocalPosition: {x: -15.19, y: 3.78, z: -7.42}
   m_LocalScale: {x: 25.358387, y: 37.244, z: 3.6493635}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22985,7 +22990,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.03346073, z: 0.15}
   m_Center: {x: 0.0011878865, y: 0.00352264, z: 0.0044820253}
@@ -23197,7 +23202,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.51972175, y: 0.2697902, z: 1.1118143}
   m_Center: {x: -0.06585135, y: 0.007092274, z: 0.13794926}

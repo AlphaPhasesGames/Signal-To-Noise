@@ -15,6 +15,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stopTaskRepeating;
 
+        public BoxCollider tvBox;
+        public BoxCollider clockBox;
+        public BoxCollider speakersBox;
+        public BoxCollider keyboardBox;
+
+        public BoxCollider analogClockBox;
+
         public Button messageButton;
 
         public GameObject parentTextPanalObject;
@@ -317,7 +324,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText4.SetActive(false);
                     ttsIntro4.gameObject.SetActive(false);
-
+                    ronCont.enabled = true;
                     introText5.SetActive(true);
                     ttsIntro5.gameObject.SetActive(true);
                     digiWaves.stage1Started = true;
@@ -650,7 +657,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText16.SetActive(true);
                     ttsIntro16.gameObject.SetActive(true);
-
+                    tvBox.enabled = true;
+                    keyboardBox.enabled = true;
+                    speakersBox.enabled = true;
+                    clockBox.enabled = true;
                     //  introText16.SetActive(false);
                     //  ttsIntro16.gameObject.SetActive(false);
 
@@ -1079,7 +1089,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText29");
                     consoleScreen.gameObject.SetActive(false);
-
+                    analogClockBox.enabled = true;
                     introText26b.SetActive(false);
                     ttsIntro26b.gameObject.SetActive(false);
 

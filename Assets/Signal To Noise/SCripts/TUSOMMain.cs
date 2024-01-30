@@ -296,7 +296,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 //cargoSaveData.current_stage = 1;
                 currentStage = 1;
-                robCont.enabled = true;
+               // robCont.enabled = true;
                // logo.gameObject.SetActive(false);
                 SaveStage();
                 // peopleCam.enabled = true;

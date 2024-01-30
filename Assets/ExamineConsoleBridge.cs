@@ -13,6 +13,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Stage1BridgeTextMan textMan;
         public Inventory invScript;
 
+
+
+
         public GameObject keyB;
         public GameObject badge;
 
