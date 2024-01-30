@@ -12,7 +12,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public DigiKeyBaordInvProperties keyBProp;
         public Stage1BridgeTextMan textMan;
         public Inventory invScript;
-
+        public bool playerCollectedItems;
 
 
 
@@ -23,11 +23,16 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool badgePlaced;
         private void OnTriggerEnter(Collider other)
         {
+           
             if (other.CompareTag("Player"))
             {
-                textMan.currentStageOfText = 6;
-                Debug.Log("Opened New Test");
+                if (!playerCollectedItems)
+                {
+                    textMan.currentStageOfText = 6;
+                    Debug.Log("Opened New Test");
+                }
             }
+            
         }
 
        
@@ -40,6 +45,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 keyB.gameObject.SetActive(true);
                 keyBPlaced = false;
                 setup.collectedKeyB = true;
+                keyBProp.DeSelectKeyBItem();
+                keyBProp.keyBButton.gameObject.SetActive(false);
                 
             }
 
@@ -48,6 +55,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 badge.gameObject.SetActive(true);
                 badgePlaced = false;
                 setup.collectedBadge = true;
+                badgeProp.DeSelectGoldItem();
+                badgeProp.badgeButton.gameObject.SetActive(false);
             }
 
             if (setup.collectedKeyB && setup.collectedBadge)

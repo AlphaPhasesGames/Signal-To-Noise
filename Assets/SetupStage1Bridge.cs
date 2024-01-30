@@ -9,7 +9,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Stage1BridgeTextMan textMan;
         public GameObject employeeBadge;
         public Button employeeBadgeButton;
-
+        public ExamineConsoleBridge consoleBridge;
+     
         public GameObject digiKeyboard;
         public Button keyBoardButton;
 
@@ -68,6 +69,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator ShowText()
         {
+            consoleBridge.playerCollectedItems = true;
             yield return new WaitForSeconds(6f);
            textMan.currentStageOfText = 23;
 

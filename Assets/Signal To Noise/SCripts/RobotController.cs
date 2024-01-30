@@ -16,7 +16,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         private float inputZ;
         private Vector3 v_movement;
         private Vector3 v_velocity;
-
+        public LayerMask ignoreMe;
         public Camera mainCam; // declare camera to store our camera from the inspector
         public Ray cameraRay; // public ray to detect when the player is over ground/brick etc
         RaycastHit cameraRayHit; // raycasthit to detect when the ray has hit something
@@ -43,7 +43,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         Ray position = mainCam.ScreenPointToRay(Input.mousePosition); // new RAY decalred as position and is set to the mouse position called once per frame
                         RaycastHit hitInfo; // get a raycast variable to detect what we hit
 
-                        if (Physics.Raycast(position, out hitInfo, 100f)) // if the raycast from position hits in distance of 100f
+                        if (Physics.Raycast(position, out hitInfo, 100f, ~ignoreMe)) // if the raycast from position hits in distance of 100f
                         {
                             Debug.Log("We Hit: " + hitInfo.collider); // log the position it hits
                         }
