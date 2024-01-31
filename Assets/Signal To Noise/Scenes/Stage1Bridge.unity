@@ -1133,6 +1133,7 @@ MonoBehaviour:
   textMan: {fileID: 1984380649}
   invScript: {fileID: 1984380645}
   playerCollectedItems: 0
+  digiwaveMain: {fileID: 326647772}
   keyB: {fileID: 846033840}
   badge: {fileID: 143641750}
   keyBPlaced: 0
@@ -15004,6 +15005,7 @@ GameObject:
   - component: {fileID: 1984380652}
   - component: {fileID: 1984380653}
   - component: {fileID: 1984380654}
+  - component: {fileID: 1984380655}
   m_Layer: 0
   m_Name: NonMovingScripts
   m_TagString: Untagged
@@ -15283,6 +15285,10 @@ MonoBehaviour:
   bridgeText27: {fileID: 1173959439}
   bridgeTextClockRight28: {fileID: 645912530}
   bridgeTextClockWrong29: {fileID: 1638728809}
+  task1: {fileID: 6995120937136294724}
+  task2: {fileID: 8636252220795010278}
+  task3: {fileID: 3483174520632074103}
+  task4: {fileID: 5783384721920020162}
 --- !u!114 &1984380651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15360,6 +15366,35 @@ MonoBehaviour:
   reply1: {fileID: 306914122}
   reply2: {fileID: 358619926}
   reply3: {fileID: 599816982}
+--- !u!114 &1984380655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984380643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c4207c4a42188419c0464ca2920025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task1: {fileID: 6995120937136294724}
+  task2: {fileID: 8636252220795010278}
+  task3: {fileID: 3483174520632074103}
+  task4: {fileID: 5783384721920020162}
+  taskPanal: {fileID: 1054676096323762151}
+  badgeProp: {fileID: 1984380648}
+  keyBProp: {fileID: 1984380651}
+  loadTaskOnce: 0
+  miniBool1: 0
+  miniBool2: 0
+  miniBool3: 0
+  miniBool4: 0
+  tvItem: {fileID: 576328910}
+  speakersItem: {fileID: 327390284}
+  keyboardItem: {fileID: 8742536982692629907}
+  clockItem: {fileID: 9065971947474273737}
+  anaClockItem: {fileID: 1535305283}
 --- !u!4 &2000181533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190384165951000, guid: 5e4bdc96038d5424fbd9029b5ecaea9f, type: 3}
@@ -15515,7 +15550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.933216
+      value: 27.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19106,7 +19141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the escope on the gold
+  m_text: Use both collected items on the bridge console. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20646,7 +20681,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the keycard on the door
+  m_text: Locate an analog clock somewhere around the bridge.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21692,7 +21727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Approach The Table
+  m_text: Examine the bridge computer console. Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22970,7 +23005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Collect the items
+  m_text: Find the employee badge and a digital device to reply with. test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

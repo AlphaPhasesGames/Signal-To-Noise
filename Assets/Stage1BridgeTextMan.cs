@@ -329,6 +329,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro5.gameObject.SetActive(true);
                     digiWaves.stage1Started = true;
                     digiWaves.SaveStage1Started();
+                    digiWaves.taskNumber = 1;
+                    digiWaves.TaskNumberSaver();
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection5Read = true;
                     Debug.Log("Is currentStageOfText 5 running");
@@ -1098,6 +1100,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText28.SetActive(false);
                     ttsIntro28.gameObject.SetActive(false);
+
+                    digiWaves.taskNumber = 4;
+                    digiWaves.TaskNumberSaver();
 
                     if (!progressTextIsShowing)
                     { // 3 second delay

@@ -50,6 +50,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI bridgeTextClockRight28;
         public TextMeshProUGUI bridgeTextClockWrong29;
 
+        public TextMeshProUGUI task1;
+        public TextMeshProUGUI task2;
+        public TextMeshProUGUI task3;
+        public TextMeshProUGUI task4;
+
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -93,6 +98,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeText27.text = defs["stage1IntroText30"];
             bridgeTextClockRight28.text = defs["stage1IntroText32"];
             bridgeTextClockWrong29.text = defs["stage1IntroText31"];
+
+            task1.text = defs["stage1Task1"];
+            task2.text = defs["stage1Task2"];
+            task3.text = defs["stage1Task3"];
+            task4.text = defs["stage1Task4"];
         }
 
     }

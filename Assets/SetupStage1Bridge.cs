@@ -56,10 +56,16 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (!runThrice)
             {
-                if (pickedUpKeyB && pickedUpBadge)
-                {
-                    StartCoroutine(ShowText());
-                    runThrice = true;
+               
+                    if (pickedUpKeyB && pickedUpBadge)
+                    {
+                    if (!digiWaveMain.itemsCollected)
+                    {
+                        StartCoroutine(ShowText());
+
+                        runThrice = true;
+                    }
+                   
                 }
             }
           
@@ -69,9 +75,19 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator ShowText()
         {
+           
+            digiWaveMain.taskNumber = 3;
+            digiWaveMain.TaskNumberSaver();
             consoleBridge.playerCollectedItems = true;
-            yield return new WaitForSeconds(6f);
-           textMan.currentStageOfText = 23;
+            if (!digiWaveMain.itemsCollected)
+            {
+                digiWaveMain.itemsCollected = true;
+                digiWaveMain.ItemsCollectedStage1();
+                yield return new WaitForSeconds(6f);
+                textMan.currentStageOfText = 23;
+            }
+
+         
 
         }
     }

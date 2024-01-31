@@ -29,7 +29,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         void Start()
         {
-            moveSpeed = 5f;          
+            moveSpeed = 15f;          
         }
 
         // Update is called once per frame

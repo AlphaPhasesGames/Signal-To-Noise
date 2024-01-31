@@ -34,6 +34,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool employee_badge_collected;
         public bool keyboad_collected;
+        public bool items_collected;
 
         public bool lobby_reminder_1;
         public bool lobby_reminder_2;
@@ -81,7 +82,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool aboardTheShip5StartedAlready;
 
             public bool stage1Started;
- 
+            public bool itemsCollected;
             public bool employeeBadgeCollected;
             public bool keyboadCollected;
 
@@ -218,12 +219,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                  
                    // currentStage = tusomSaveData.current_stage;
-                  //  taskNumber = tusomSaveData.task_number;
+                    taskNumber = digiWavesSaveData.task_number;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
                     employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
                     keyboadCollected = digiWavesSaveData.keyboad_collected;
                     stage1Started = digiWavesSaveData.stage_1_started_already;
+                    itemsCollected = digiWavesSaveData.items_collected;
                 }             
               
                 }
@@ -316,6 +318,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                 employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
                 keyboadCollected = digiWavesSaveData.keyboad_collected;
+                taskNumber = digiWavesSaveData.task_number;
+                itemsCollected = digiWavesSaveData.items_collected;
             }
 
                 if (currentStage == 2)
@@ -426,6 +430,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SaveStage1Started()
         {
             digiWavesSaveData.stage_1_started_already = stage1Started;
+
+            Save();
+        }
+
+        public void ItemsCollectedStage1()
+        {
+            digiWavesSaveData.items_collected = itemsCollected;
             Save();
         }
 

@@ -13,7 +13,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Stage1BridgeTextMan textMan;
         public Inventory invScript;
         public bool playerCollectedItems;
-
+        public TUSOMMain digiwaveMain;
 
 
         public GameObject keyB;
@@ -29,6 +29,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!playerCollectedItems)
                 {
                     textMan.currentStageOfText = 6;
+                    digiwaveMain.taskNumber = 2;
+                    digiwaveMain.TaskNumberSaver();
                     Debug.Log("Opened New Test");
                 }
             }
