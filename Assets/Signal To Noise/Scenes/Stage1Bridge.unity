@@ -15640,6 +15640,9 @@ MonoBehaviour:
   task2: {fileID: 8636252220795010278}
   task3: {fileID: 3483174520632074103}
   task4: {fileID: 5783384721920020162}
+  reminder1: {fileID: 2062183336}
+  reminder2: {fileID: 797195267}
+  reminder3: {fileID: 102497359}
 --- !u!114 &1984380651
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -55,6 +55,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task3;
         public TextMeshProUGUI task4;
 
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
+        public TextMeshProUGUI reminder3;
+
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -103,6 +107,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             task2.text = defs["stage1Task2"];
             task3.text = defs["stage1Task3"];
             task4.text = defs["stage1Task4"];
+
+            reminder1.text = defs["stage1Reminder1"];
+            reminder2.text = defs["stage1Reminder2"];
+            reminder3.text = defs["stage1Reminder3"];
         }
 
     }
