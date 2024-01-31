@@ -10,7 +10,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     {
         TUSOMMain digiWaves;
         RobotController ronCont;
-
+        public ExitStage1 exitScript;
         public GameObject consoleScreen;
 
         public bool stopTaskRepeating;
@@ -1180,7 +1180,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText30.SetActive(true);
                     ttsIntro30.gameObject.SetActive(true);
-
+                    exitScript.enabled = true;
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection30Read = true;
                     Debug.Log("Is stage1IntroText25b  running");

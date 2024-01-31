@@ -13,6 +13,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task2;
         public TextMeshProUGUI task3;
         public TextMeshProUGUI task4;
+
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
+        public TextMeshProUGUI reminder3;
         public GameObject taskPanal;
         TUSOMMain tusomMain;
         public EmployeeBadgeInvProperties badgeProp;
@@ -67,6 +71,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     clockItem.enabled = true;
                     keyboardItem.enabled = true;
                     speakersItem.enabled = true;
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
                     miniBool2 = true;
                     Debug.Log("Task 2 fired once");
                 }
@@ -83,6 +89,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(true);
                     task4.gameObject.SetActive(false);
                     miniBool3 = true;
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
+                    reminder3.gameObject.SetActive(true);
                     Debug.Log("Task fired once");
                 }
 
@@ -101,7 +110,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     anaClockItem.enabled = true;
                     keyBProp.keyBButton.gameObject.SetActive(false);
                     badgeProp.badgeButton.gameObject.SetActive(false);
-
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
+                    reminder3.gameObject.SetActive(true);
                     miniBool4 = true;
                     Debug.Log("Task fired once");
                 }
