@@ -15742,6 +15742,7 @@ MonoBehaviour:
   taskPanal: {fileID: 1054676096323762151}
   badgeProp: {fileID: 1984380648}
   keyBProp: {fileID: 1984380651}
+  consoleCol: {fileID: 94101810}
   loadTaskOnce: 0
   miniBool1: 0
   miniBool2: 0

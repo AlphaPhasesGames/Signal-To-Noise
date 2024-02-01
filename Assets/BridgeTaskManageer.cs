@@ -22,6 +22,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public EmployeeBadgeInvProperties badgeProp;
         public DigiKeyBaordInvProperties keyBProp;
 
+        public BoxCollider consoleCol;
+
         public bool loadTaskOnce;
 
         public bool miniBool1;
@@ -110,6 +112,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     anaClockItem.enabled = true;
                     keyBProp.keyBButton.gameObject.SetActive(false);
                     badgeProp.badgeButton.gameObject.SetActive(false);
+                    consoleCol.enabled = false;
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
