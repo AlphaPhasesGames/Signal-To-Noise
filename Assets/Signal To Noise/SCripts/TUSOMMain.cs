@@ -25,12 +25,13 @@ namespace Digi.Waves.Alpha.Phases.Games
        // public bool lobby_item_1_keycar_collected;
 
         public bool bridge_1_started_already;
-        public bool comms_room_2_started_already;
-        public bool crew_quaters_3_started_already;
+        public bool crew_quaters_2_started_already;
+        public bool comms_room_3_started_already;
         public bool docking_bay_4_started_already;
         public bool abour_ship_5_started_already;
 
         public bool stage_1_started_already;
+        public bool stage_2_started_already;
 
         public bool employee_badge_collected;
         public bool keyboad_collected;
@@ -232,8 +233,9 @@ namespace Digi.Waves.Alpha.Phases.Games
            
                 if (digiWavesSaveData.current_stage == 2)
                 {
-                   SceneManager.LoadScene("CrewQuaters"); 
-                   Debug.Log("Stage 1 update runs - load save data from save");
+                  SceneManager.LoadScene("CrewQuaters");
+                crewQuarters2StartedAlready = digiWavesSaveData.stage_2_started_already;   
+                Debug.Log("Stage 1 update runs - load save data from save");
                                    
                 }
 
@@ -325,6 +327,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (currentStage == 2)
                 {
                 SceneManager.LoadScene("CrewQuaters");
+                crewQuarters2StartedAlready = digiWavesSaveData.stage_2_started_already;
                 Debug.Log("Loaded Stage 2");
                 }
 
