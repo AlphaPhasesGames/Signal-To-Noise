@@ -2031,6 +2031,10 @@ PrefabInstance:
       value: It's so dark in here, how will we find the devices that Robot 80 left
         us? Test
       objectReference: {fileID: 0}
+    - target: {fileID: 588078527020485672, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Excellent a digital smartphone. Test
+      objectReference: {fileID: 0}
     - target: {fileID: 797093547895444600, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_text
       value: Excellent. This light switch is digital. How strange, the light didn't
@@ -3892,6 +3896,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1944036642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2186443191314093361, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 730353706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1944036643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2682775737746597645, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 730353706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944036644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 588078527020485672, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 730353706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944036643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984380643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3952,6 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopTaskRepeating: 0
+  smartPhone: {fileID: 6058258796580740095}
   roomLight: {fileID: 628534795}
   spotLight: {fileID: 603550343}
   parentTextPanalObject: {fileID: 730353715}
@@ -3962,6 +3994,7 @@ MonoBehaviour:
   introText5: {fileID: 455439466}
   introText6: {fileID: 455439465}
   introText7: {fileID: 455439464}
+  introText8: {fileID: 1944036643}
   textBeenRead: 0
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
@@ -3973,6 +4006,7 @@ MonoBehaviour:
   textSection5Read: 0
   textSection6Read: 0
   textSection7Read: 0
+  textSection8Read: 0
   consoleImageRead: 0
   ttsIntro1: {fileID: 730353711}
   ttsIntro2: {fileID: 730353710}
@@ -3981,6 +4015,7 @@ MonoBehaviour:
   ttsIntro5: {fileID: 455439463}
   ttsIntro6: {fileID: 455439462}
   ttsIntro7: {fileID: 455439461}
+  ttsIntro8: {fileID: 1944036642}
   progressText: {fileID: 730353708}
   progressTextBack: {fileID: 730353707}
   currentStageOfText: 0
@@ -4003,6 +4038,7 @@ MonoBehaviour:
   crewQuartersText5: {fileID: 1267280514}
   crewQuartersText6: {fileID: 1267280513}
   crewQuartersText7: {fileID: 1267280512}
+  crewQuartersText8: {fileID: 1944036644}
 --- !u!4 &2000181533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190384165951000, guid: 5e4bdc96038d5424fbd9029b5ecaea9f, type: 3}
@@ -4628,6 +4664,8 @@ GameObject:
   - component: {fileID: 5721099075120253786}
   - component: {fileID: 6261212406940796825}
   - component: {fileID: 8072738782309416788}
+  - component: {fileID: 8072738782309416790}
+  - component: {fileID: 8072738782309416789}
   m_Layer: 0
   m_Name: Cube.006
   m_TagString: Untagged
@@ -4813,6 +4851,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8072738782309416789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058258796580740095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a50c915328610040ab12d7954b32508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380648}
+--- !u!65 &8072738782309416790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058258796580740095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.013667731, y: 0.019999998, z: 0.02}
+  m_Center: {x: -0.00087508396, y: 0.000000014901161, z: -0.000000007450581}
 --- !u!1 &8089916190994054203
 GameObject:
   m_ObjectHideFlags: 0
