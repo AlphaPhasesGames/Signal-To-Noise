@@ -16,6 +16,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool stopTaskRepeating;
 
           public GameObject smartPhone;
+        public GameObject smartTablet;
+        public GameObject smartWatch;
+
         //   public BoxCollider clockBox;
         //   public BoxCollider speakersBox;
         //    public BoxCollider keyboardBox;
@@ -35,10 +38,10 @@ namespace Digi.Waves.Alpha.Phases.Games
        public GameObject introText7;
         
       public GameObject introText8;
-        /* public GameObject introText9;
+        public GameObject introText9;
          public GameObject introText10;
-         public GameObject introText11;
-         public GameObject introText12;
+        /* public GameObject introText11;
+          public GameObject introText12;
          public GameObject introText13WatchMessage1;
          public GameObject introText14WatchMessage2;
          public GameObject introText15;
@@ -61,9 +64,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection6Read;
         public bool textSection7Read;
         public bool textSection8Read;
-        /* public bool textSection9Read;
+        public bool textSection9Read;
          public bool textSection10Read;
-         public bool textSection11Read;
+        /*  public bool textSection11Read;
          public bool textSection12Read;
          public bool textSection13ReadWatchMessage1;
          public bool textSection14ReadWatchMessage2;
@@ -85,9 +88,9 @@ namespace Digi.Waves.Alpha.Phases.Games
        public Button ttsIntro6;
        public Button ttsIntro7;
         public Button ttsIntro8;
-        /* public Button ttsIntro9;
+         public Button ttsIntro9;
          public Button ttsIntro10;
-         public Button ttsIntro11;
+        /* public Button ttsIntro11;
          public Button ttsIntro12;
          public Button ttsIntro13WatchMessage1;
          public Button ttsIntro14WatchMessage2;
@@ -120,6 +123,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro6.onClick.AddListener(IntroTTSSpeak6);
             ttsIntro7.onClick.AddListener(IntroTTSSpeak7);
             ttsIntro8.onClick.AddListener(IntroTTSSpeak8);
+            ttsIntro9.onClick.AddListener(IntroTTSSpeak9);
+            ttsIntro10.onClick.AddListener(IntroTTSSpeak10);
 
             if (!digiWaves.crewQuarters2StartedAlready)
             {
@@ -363,7 +368,53 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!textSection9Read)
+            {
+                if (currentStageOfText == 9)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
 
+                    smartTablet.gameObject.SetActive(false);
+                    introText9.SetActive(true);
+                    ttsIntro9.gameObject.SetActive(true);
+
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection9Read = true;
+                }
+            }
+
+            if (!textSection10Read)
+            {
+                if (currentStageOfText == 10)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+
+                    smartWatch.gameObject.SetActive(false);
+                    introText10.SetActive(true);
+                    ttsIntro10.gameObject.SetActive(true);
+
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection10Read = true;
+                }
+            }
             if (currentStageOfText == 50)
             {
 
@@ -394,7 +445,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText8.SetActive(false);
                     ttsIntro8.gameObject.SetActive(false);
-                    /*
+                   
                  //   StartCoroutine(MoveCorrectGuessOn2());
                  introText8.SetActive(false);
                  ttsIntro8.gameObject.SetActive(false);
@@ -404,7 +455,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                  introText10.SetActive(false);
                  ttsIntro10.gameObject.SetActive(false);
-
+ /*
                  introText11.SetActive(false);
                  ttsIntro11.gameObject.SetActive(false);
 
@@ -563,6 +614,17 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             LOLSDK.Instance.SpeakText("stage2IntroText8");
             Debug.Log("stage2IntroText8 Button is pressed");
+        }
+
+        public void IntroTTSSpeak9()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText9");
+            Debug.Log("stage2IntroText9 Button is pressed");
+        }
+        public void IntroTTSSpeak10()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText10");
+            Debug.Log("stage2IntroText10 Button is pressed");
         }
         public void CorrectGuess()
         {
