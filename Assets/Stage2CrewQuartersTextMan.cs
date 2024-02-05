@@ -15,11 +15,12 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stopTaskRepeating;
 
-     //   public BoxCollider tvBox;
-     //   public BoxCollider clockBox;
-     //   public BoxCollider speakersBox;
-    //    public BoxCollider keyboardBox;
-
+        //   public BoxCollider tvBox;
+        //   public BoxCollider clockBox;
+        //   public BoxCollider speakersBox;
+        //    public BoxCollider keyboardBox;
+        public Light roomLight;
+        public Light spotLight;
      //   public BoxCollider analogClockBox;
 
     //    public Button messageButton;
@@ -28,24 +29,25 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText1;
         public GameObject introText2;
         public GameObject introText3;
-       /* public GameObject introText4;
-        public GameObject introText5;
-        public GameObject introText6;
-        public GameObject introText7;
-        public GameObject introText8;
-        public GameObject introText9;
-        public GameObject introText10;
-        public GameObject introText11;
-        public GameObject introText12;
-        public GameObject introText13WatchMessage1;
-        public GameObject introText14WatchMessage2;
-        public GameObject introText15;
-        public GameObject introText16;
-        public GameObject introText17;
-        public GameObject introText18;
-        public GameObject introText19DoorCorrect;
-        public GameObject introText20DoorIncorrect;
-       */
+       public GameObject introText4;
+       public GameObject introText5;
+       public GameObject introText6;
+       public GameObject introText7;
+        /*
+      public GameObject introText8;
+      public GameObject introText9;
+      public GameObject introText10;
+      public GameObject introText11;
+      public GameObject introText12;
+      public GameObject introText13WatchMessage1;
+      public GameObject introText14WatchMessage2;
+      public GameObject introText15;
+      public GameObject introText16;
+      public GameObject introText17;
+      public GameObject introText18;
+      public GameObject introText19DoorCorrect;
+      public GameObject introText20DoorIncorrect;
+     */
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -54,48 +56,48 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection1Read;
         public bool textSection2Read;
         public bool textSection3Read;
-        /* public bool textSection4Read;
-         public bool textSection5Read;
-         public bool textSection6Read;
-         public bool textSection7Read;
-         public bool textSection8Read;
-         public bool textSection9Read;
-         public bool textSection10Read;
-         public bool textSection11Read;
-         public bool textSection12Read;
-         public bool textSection13ReadWatchMessage1;
-         public bool textSection14ReadWatchMessage2;
-         public bool textSection15Read;
-         public bool textSection16Read;
-         public bool textSection17Read;
-         public bool textSection18Read;
-         public bool textSection19ReadCorrectDoor;
-         public bool textSection20ReadIncorrectDoor;
-        */
+         public bool textSection4Read;
+        public bool textSection5Read;
+        public bool textSection6Read;
+        public bool textSection7Read;
+        /*public bool textSection8Read;
+        public bool textSection9Read;
+        public bool textSection10Read;
+        public bool textSection11Read;
+        public bool textSection12Read;
+        public bool textSection13ReadWatchMessage1;
+        public bool textSection14ReadWatchMessage2;
+        public bool textSection15Read;
+        public bool textSection16Read;
+        public bool textSection17Read;
+        public bool textSection18Read;
+        public bool textSection19ReadCorrectDoor;
+        public bool textSection20ReadIncorrectDoor;
+       */
 
         public bool consoleImageRead;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
-        /* public Button ttsIntro4;
-       public Button ttsIntro5;
+        public Button ttsIntro4;
+        public Button ttsIntro5;
        public Button ttsIntro6;
        public Button ttsIntro7;
-       public Button ttsIntro8;
-       public Button ttsIntro9;
-       public Button ttsIntro10;
-       public Button ttsIntro11;
-       public Button ttsIntro12;
-       public Button ttsIntro13WatchMessage1;
-       public Button ttsIntro14WatchMessage2;
-       public Button ttsIntro15;
-       public Button ttsIntro16;
-       public Button ttsIntro17;
-       public Button ttsIntro18;
-       public Button ttsIntro19DoorCorrect;
-       public Button ttsIntro20DoorIncorrect;
-       */
+        /*public Button ttsIntro8;
+        public Button ttsIntro9;
+        public Button ttsIntro10;
+        public Button ttsIntro11;
+        public Button ttsIntro12;
+        public Button ttsIntro13WatchMessage1;
+        public Button ttsIntro14WatchMessage2;
+        public Button ttsIntro15;
+        public Button ttsIntro16;
+        public Button ttsIntro17;
+        public Button ttsIntro18;
+        public Button ttsIntro19DoorCorrect;
+        public Button ttsIntro20DoorIncorrect;
+        */
 
         public Button progressText;
         public Button progressTextBack;
@@ -113,6 +115,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro1.onClick.AddListener(IntroTTSSpeak1);
             ttsIntro2.onClick.AddListener(IntroTTSSpeak2);
             ttsIntro3.onClick.AddListener(IntroTTSSpeak3);
+            ttsIntro4.onClick.AddListener(IntroTTSSpeak4);
+            ttsIntro5.onClick.AddListener(IntroTTSSpeak5);
+            ttsIntro6.onClick.AddListener(IntroTTSSpeak6);
+            ttsIntro7.onClick.AddListener(IntroTTSSpeak7);
 
             if (!digiWaves.crewQuarters2StartedAlready)
             {
@@ -203,13 +209,251 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText3.SetActive(true);
                     ttsIntro3.gameObject.SetActive(true);
 
+                    digiWaves.crewQuarters2StartedAlready = true;
+                    digiWaves.SaveStage2Started();
                     StartCoroutine(MoveCorrectGuessOnD2());
-
+           
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection3Read = true;
                 }
             }
-            if (currentStageOfText == 40)
+
+            if (!textSection4Read)
+            {
+                if (currentStageOfText == 4)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+
+
+                    introText4.SetActive(true);
+                    ttsIntro4.gameObject.SetActive(true);
+
+              
+                    StartCoroutine(MoveCorrectGuessOnD2());
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection4Read = true;
+                }
+            }
+
+            if (!textSection5Read)
+            {
+                if (currentStageOfText == 5)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+
+
+                    introText5.SetActive(true);
+                    ttsIntro5.gameObject.SetActive(true);
+
+
+                    introText6.SetActive(false);
+                    ttsIntro6.gameObject.SetActive(false);
+
+                    roomLight.enabled = true;
+                    spotLight.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection5Read = true;
+                }
+            }
+
+            if (!textSection6Read)
+            {
+                if (currentStageOfText == 6)
+                {
+                  
+                    progressTextBack.gameObject.SetActive(true);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+
+
+                    introText5.SetActive(false);
+                    ttsIntro5.gameObject.SetActive(false);
+
+
+                    introText6.SetActive(true);
+                    ttsIntro6.gameObject.SetActive(true);
+
+                    introText7.SetActive(false);
+                    ttsIntro7.gameObject.SetActive(true);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection6Read = true;
+                }
+            }
+
+            if (!textSection7Read)
+            {
+                if (currentStageOfText == 7)
+                {
+            
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+
+                    introText6.SetActive(false);
+                    ttsIntro6.gameObject.SetActive(false);
+
+                    introText7.SetActive(true);
+                    ttsIntro7.gameObject.SetActive(true);
+
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection7Read = true;
+                }
+            }
+
+            if (currentStageOfText == 50)
+            {
+
+                if (!hasTextplayerOnce)
+                {
+
+                    parentTextPanalObject.gameObject.SetActive(false);
+                    introText1.SetActive(false);
+                    ttsIntro1.gameObject.SetActive(false);
+
+                    introText2.SetActive(false);
+                    ttsIntro2.gameObject.SetActive(false);
+                    //   StartCoroutine(MoveCorrectGuessOn2());
+                    introText3.SetActive(false);
+                    ttsIntro3.gameObject.SetActive(false);
+                 
+                    introText4.SetActive(false);
+                    ttsIntro4.gameObject.SetActive(false);
+
+                    introText5.SetActive(false);
+                    ttsIntro5.gameObject.SetActive(false);
+
+                    introText6.SetActive(false);
+                    ttsIntro6.gameObject.SetActive(false);
+
+                    introText7.SetActive(false);
+                    ttsIntro7.gameObject.SetActive(false);
+                    /*
+                 //   StartCoroutine(MoveCorrectGuessOn2());
+                 introText8.SetActive(false);
+                 ttsIntro8.gameObject.SetActive(false);
+
+                 introText9.SetActive(false);
+                 ttsIntro9.gameObject.SetActive(false);
+
+                 introText10.SetActive(false);
+                 ttsIntro10.gameObject.SetActive(false);
+
+                 introText11.SetActive(false);
+                 ttsIntro11.gameObject.SetActive(false);
+
+                 introText12.SetActive(false);
+                 ttsIntro12.gameObject.SetActive(false);
+
+                 introText13.SetActive(false);
+                 ttsIntro13.gameObject.SetActive(false);
+                 //   StartCoroutine(MoveCorrectGuessOn2());
+                 introText14.SetActive(false);
+                 ttsIntro14.gameObject.SetActive(false);
+
+                 introText15.SetActive(false);
+                 ttsIntro15.gameObject.SetActive(false);
+
+                 introText16.SetActive(false);
+                 ttsIntro16.gameObject.SetActive(false);
+
+                 introText17CorrectDigitalItem.SetActive(false);
+                 ttsIntro17CorrectDigiItem.gameObject.SetActive(false);
+
+                 introText18IncorrectDigitalItem.SetActive(false);
+                 ttsIntro18IncorrectDigiItem.gameObject.SetActive(false);
+
+                 introText18IncorrectDigitalItem2.SetActive(false);
+                 ttsIntro18IncorrectDigiItem2.gameObject.SetActive(false);
+
+
+                 introText18IncorrectDigitalItem3.SetActive(false);
+                 ttsIntro18IncorrectDigiItem3.gameObject.SetActive(false);
+
+                 introText19NoBadge.SetActive(false);
+                 ttsIntro19NoBadge.gameObject.SetActive(false);
+
+                 introText20FoundBadge.SetActive(false);
+                 ttsIntro20FoundBadge.gameObject.SetActive(false);
+
+                 introText21CollectedBothItems.SetActive(false);
+                 ttsIntro21CollectedBothItems.gameObject.SetActive(false);
+
+                 introText22.SetActive(false);
+                 ttsIntro22.gameObject.SetActive(false);
+
+                 introText23.SetActive(false);
+                 ttsIntro23.gameObject.SetActive(false);
+
+                 introText24.SetActive(false);
+                 ttsIntro24.gameObject.SetActive(false);
+
+                 introText25.SetActive(false);
+                 ttsIntro25.gameObject.SetActive(false);
+
+                 introText26.SetActive(false);
+                 ttsIntro26.gameObject.SetActive(false);
+
+                 introText26a.SetActive(false);
+                 ttsIntro26a.gameObject.SetActive(false);
+
+                 introText26b.SetActive(false);
+                 ttsIntro26b.gameObject.SetActive(false);
+
+                 introText27.SetActive(false);
+                 ttsIntro27.gameObject.SetActive(false);
+
+
+                 introText28.SetActive(false);
+                 ttsIntro28.gameObject.SetActive(false);
+                 */
+                    ronCont.enabled = true;
+                    Debug.Log("This hidwe text funtion executed once");
+
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    hasTextplayerOnce = true;
+
+                }
+            }
+                if (currentStageOfText == 40)
             {
                 parentTextPanalObject.gameObject.SetActive(false);
                 LOLSDK.Instance.SubmitProgress(0, 48, 100);
@@ -248,19 +492,43 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void IntroTTSSpeak1()
         {
             LOLSDK.Instance.SpeakText("stage2IntroText1");
-            Debug.Log(" introText1 Button is pressed");
+            Debug.Log(" stage2IntroText1 Button is pressed");
         }
 
         public void IntroTTSSpeak2()
         {
             LOLSDK.Instance.SpeakText("stage2IntroText2");
-            Debug.Log("introText2 Button is pressed");
+            Debug.Log("stage2IntroText2 Button is pressed");
         }
 
         public void IntroTTSSpeak3()
         {
             LOLSDK.Instance.SpeakText("stage2IntroText3");
-            Debug.Log("introText3 Button is pressed");
+            Debug.Log("stage2IntroText3 Button is pressed");
+        }
+
+        public void IntroTTSSpeak4()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText4");
+            Debug.Log("stage2IntroText4 Button is pressed");
+        }
+
+        public void IntroTTSSpeak5()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText5");
+            Debug.Log("stage2IntroText4 Button is pressed");
+        }
+
+        public void IntroTTSSpeak6()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText6");
+            Debug.Log("stage2IntroText6 Button is pressed");
+        }
+
+        public void IntroTTSSpeak7()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText7");
+            Debug.Log("stage2IntroText7 Button is pressed");
         }
 
         public void CorrectGuess()

@@ -234,7 +234,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (digiWavesSaveData.current_stage == 2)
                 {
                   SceneManager.LoadScene("CrewQuaters");
-                crewQuarters2StartedAlready = digiWavesSaveData.stage_2_started_already;   
+                crewQuarters2StartedAlready = digiWavesSaveData.crew_quaters_2_started_already;   
                 Debug.Log("Stage 1 update runs - load save data from save");
                                    
                 }
@@ -327,7 +327,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (currentStage == 2)
                 {
                 SceneManager.LoadScene("CrewQuaters");
-                crewQuarters2StartedAlready = digiWavesSaveData.stage_2_started_already;
+                crewQuarters2StartedAlready = digiWavesSaveData.crew_quaters_2_started_already;
                 Debug.Log("Loaded Stage 2");
                 }
 
@@ -433,6 +433,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SaveStage1Started()
         {
             digiWavesSaveData.stage_1_started_already = stage1Started;
+
+            Save();
+        }
+
+        public void SaveStage2Started()
+        {
+            digiWavesSaveData.crew_quaters_2_started_already = crewQuarters2StartedAlready;
 
             Save();
         }
