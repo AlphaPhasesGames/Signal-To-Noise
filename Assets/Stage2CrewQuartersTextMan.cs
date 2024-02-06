@@ -40,17 +40,17 @@ namespace Digi.Waves.Alpha.Phases.Games
       public GameObject introText8;
         public GameObject introText9;
          public GameObject introText10;
-        /* public GameObject introText11;
+        public GameObject introText11;
           public GameObject introText12;
-         public GameObject introText13WatchMessage1;
-         public GameObject introText14WatchMessage2;
-         public GameObject introText15;
-         public GameObject introText16;
-         public GameObject introText17;
-         public GameObject introText18;
-         public GameObject introText19DoorCorrect;
-         public GameObject introText20DoorIncorrect;
-        */
+        /* public GameObject introText13WatchMessage1;
+        public GameObject introText14WatchMessage2;
+        public GameObject introText15;
+        public GameObject introText16;
+        public GameObject introText17;
+        public GameObject introText18;
+        public GameObject introText19DoorCorrect;
+        public GameObject introText20DoorIncorrect;
+       */
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -66,17 +66,17 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection8Read;
         public bool textSection9Read;
          public bool textSection10Read;
-        /*  public bool textSection11Read;
+         public bool textSection11Read;
          public bool textSection12Read;
-         public bool textSection13ReadWatchMessage1;
-         public bool textSection14ReadWatchMessage2;
-         public bool textSection15Read;
-         public bool textSection16Read;
-         public bool textSection17Read;
-         public bool textSection18Read;
-         public bool textSection19ReadCorrectDoor;
-         public bool textSection20ReadIncorrectDoor;
-        */
+        /*public bool textSection13ReadWatchMessage1;
+       public bool textSection14ReadWatchMessage2;
+       public bool textSection15Read;
+       public bool textSection16Read;
+       public bool textSection17Read;
+       public bool textSection18Read;
+       public bool textSection19ReadCorrectDoor;
+       public bool textSection20ReadIncorrectDoor;
+      */
 
         public bool consoleImageRead;
 
@@ -90,17 +90,17 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro8;
          public Button ttsIntro9;
          public Button ttsIntro10;
-        /* public Button ttsIntro11;
+         public Button ttsIntro11;
          public Button ttsIntro12;
-         public Button ttsIntro13WatchMessage1;
-         public Button ttsIntro14WatchMessage2;
-         public Button ttsIntro15;
-         public Button ttsIntro16;
-         public Button ttsIntro17;
-         public Button ttsIntro18;
-         public Button ttsIntro19DoorCorrect;
-         public Button ttsIntro20DoorIncorrect;
-         */
+        /*public Button ttsIntro13WatchMessage1;
+        public Button ttsIntro14WatchMessage2;
+        public Button ttsIntro15;
+        public Button ttsIntro16;
+        public Button ttsIntro17;
+        public Button ttsIntro18;
+        public Button ttsIntro19DoorCorrect;
+        public Button ttsIntro20DoorIncorrect;
+        */
 
         public Button progressText;
         public Button progressTextBack;
@@ -125,6 +125,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro8.onClick.AddListener(IntroTTSSpeak8);
             ttsIntro9.onClick.AddListener(IntroTTSSpeak9);
             ttsIntro10.onClick.AddListener(IntroTTSSpeak10);
+            ttsIntro11.onClick.AddListener(IntroTTSSpeak11);
+            ttsIntro12.onClick.AddListener(IntroTTSSpeak12);
 
             if (!digiWaves.crewQuarters2StartedAlready)
             {
@@ -415,6 +417,69 @@ namespace Digi.Waves.Alpha.Phases.Games
                     textSection10Read = true;
                 }
             }
+
+            if (!textSection11Read)
+            {
+                if (currentStageOfText == 11)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage2IntroText11");
+
+
+                  
+
+                    introText11.SetActive(true);
+                    ttsIntro11.gameObject.SetActive(true);
+
+                    introText12.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection6Read = true;
+                }
+            }
+
+            if (!textSection12Read)
+            {
+                if (currentStageOfText == 12)
+                {
+                    progressTextBack.gameObject.SetActive(true);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage2IntroText12");
+
+                    introText11.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    introText12.SetActive(true);
+                    ttsIntro12.gameObject.SetActive(true);
+
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+
+                    Debug.Log("Is currentStageOfText 3 running");
+                    textSection7Read = true;
+                }
+            }
+
+
+
+
             if (currentStageOfText == 50)
             {
 
@@ -455,13 +520,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                  introText10.SetActive(false);
                  ttsIntro10.gameObject.SetActive(false);
- /*
+
                  introText11.SetActive(false);
                  ttsIntro11.gameObject.SetActive(false);
 
                  introText12.SetActive(false);
                  ttsIntro12.gameObject.SetActive(false);
-
+ /*
                  introText13.SetActive(false);
                  ttsIntro13.gameObject.SetActive(false);
                  //   StartCoroutine(MoveCorrectGuessOn2());
@@ -625,6 +690,17 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             LOLSDK.Instance.SpeakText("stage2IntroText10");
             Debug.Log("stage2IntroText10 Button is pressed");
+        }
+
+        public void IntroTTSSpeak11()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText11");
+            Debug.Log("stage2IntroText11 Button is pressed");
+        }
+        public void IntroTTSSpeak12()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText12");
+            Debug.Log("stage2IntroText12 Button is pressed");
         }
         public void CorrectGuess()
         {

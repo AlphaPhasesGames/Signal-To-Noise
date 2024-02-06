@@ -20,6 +20,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI crewQuartersText8;
         public TextMeshProUGUI crewQuartersText9;
         public TextMeshProUGUI crewQuartersText10;
+        public TextMeshProUGUI crewQuartersText11;
+        public TextMeshProUGUI crewQuartersText12;
 
         private void Awake()
         {
@@ -34,6 +36,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             crewQuartersText8.text = defs["stage2IntroText8"];
             crewQuartersText9.text = defs["stage2IntroText9"];
             crewQuartersText10.text = defs["stage2IntroText10"];
+            crewQuartersText11.text = defs["stage2IntroText11"];
+            crewQuartersText12.text = defs["stage2IntroText12"];
         }
 
         

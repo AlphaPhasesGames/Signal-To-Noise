@@ -1,13 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Digi.Waves.Alpha.Phases.Games
 {
     public class SetupStage2CrewQuarters : MonoBehaviour
     {
-        public TUSOMMain digiMain;
+        TUSOMMain digiMain;
+        public CrewQuartersPhoneObjectIvProperties phoneInv;
+        public CrewQuartersTabletObjectIvProperties tabletInv;
+        public CrewQuartersWatchObjectIvProperties watchInv;
+        public Stage2CrewQuartersTextMan textMan;
+        public GameObject digiPhone;
+        public Button phoneButton;
+        public GameObject digiTablet;
+        public Button tabletButton;
+        public GameObject digiWatch;
+        public Button watchButton;
+        // public Button keyBoardButton;
+        public GameObject digiObjects;
+        public bool runOnce;
+        public bool runTwice;
+        public bool runThrice;
+        public bool runForth;
+        public bool runFifth;
 
+        public bool collectedPhone;
+        public bool collectedTablet;
+        public bool collectedWatch;
+
+        public bool pickedUpKeyB;
+        public bool pickedUpBadge;
         private void Awake()
         {
             
@@ -16,15 +39,90 @@ namespace Digi.Waves.Alpha.Phases.Games
             digiMain.currentStage = 2;
             digiMain.SaveStage();
         }
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
 
         // Update is called once per frame
         void Update()
         {
+            if (!runOnce)
+            {
+                if (digiMain.phoneCollected)
+                {
+                     digiPhone.gameObject.SetActive(false);
+                     watchButton.gameObject.SetActive(true);
+                    //  pickedUpKeyB = true;
+                    Debug.Log("Loaded badge gone");
+                    runOnce = true;
+                }
+
+
+
+            }
+            if (!runTwice)
+            {
+                if (digiMain.tabletCollected)
+                {
+                    digiTablet.gameObject.SetActive(false);
+                    tabletButton.gameObject.SetActive(true);
+                    // pickedUpBadge = true;
+                    Debug.Log("Loaded keyboard gone");
+                    runTwice = true;
+                }
+            }
+
+            if (!runThrice)
+            {
+
+
+                if (digiMain.watchCollected)
+                {
+                    digiWatch.gameObject.SetActive(false);
+                    watchButton.gameObject.SetActive(true);
+                    // pickedUpBadge = true;
+                    Debug.Log("Loaded keyboard gone");
+                    runThrice = true;
+                }
+
+            }
+            if (!runForth)
+            {
+                if (collectedPhone && collectedTablet && collectedWatch)
+                {
+                    if (!digiMain.stage2ItemsCollected)
+                    {
+                        StartCoroutine(ShowText());
+                        runForth = true;
+                    }
+                }
+            }
+
+            if (!runFifth)
+            {
+                if (digiMain.stage2ItemsCollected)
+                {
+                    digiObjects.gameObject.SetActive(false);
+                    runFifth = true;
+                }
+            }
+        }
+
+
+
+        public IEnumerator ShowText()
+        {
+
+           // digiMain.taskNumber = 3;
+           // digiWaveMain.TaskNumberSaver();
+           // consoleBridge.playerCollectedItems = true;
+            if (!digiMain.stage2ItemsCollected)
+            {
+                digiMain.stage2ItemsCollected = true;
+                digiMain.ItemsCollectedStage2();
+                yield return new WaitForSeconds(6f);
+                textMan.currentStageOfText = 11;
+            }
+
+
 
         }
     }
