@@ -151,7 +151,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText1");
+                    LOLSDK.Instance.SpeakText("stage2IntroText1");
                     introText1.SetActive(true);
                     ttsIntro1.gameObject.SetActive(true);
 
@@ -177,7 +177,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
-                    LOLSDK.Instance.SpeakText("stage1IntroText2");
+                    LOLSDK.Instance.SpeakText("stage2IntroText2");
 
                     introText1.SetActive(false);
                     ttsIntro1.gameObject.SetActive(false);
@@ -209,7 +209,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText3");
 
                     introText2.SetActive(false);
                     ttsIntro2.gameObject.SetActive(false);
@@ -237,7 +237,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText4");
 
 
                     introText4.SetActive(true);
@@ -246,7 +246,7 @@ namespace Digi.Waves.Alpha.Phases.Games
               
                     StartCoroutine(MoveCorrectGuessOnD2());
 
-                    Debug.Log("Is currentStageOfText 3 running");
+                    Debug.Log("Is stage2IntroText4 running");
                     textSection4Read = true;
                 }
             }
@@ -262,7 +262,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText5");
 
 
                     introText5.SetActive(true);
@@ -280,7 +280,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressTextIsShowing = true;
                     }
 
-                    Debug.Log("Is currentStageOfText 3 running");
+                    Debug.Log("Is stage2IntroText5 running");
                     textSection5Read = true;
                 }
             }
@@ -296,7 +296,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText6");
 
 
                     introText5.SetActive(false);
@@ -315,7 +315,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressTextIsShowing = true;
                     }
 
-                    Debug.Log("Is currentStageOfText 3 running");
+                    Debug.Log("Is stage2IntroText6 running");
                     textSection6Read = true;
                 }
             }
@@ -330,7 +330,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText7");
 
                     introText6.SetActive(false);
                     ttsIntro6.gameObject.SetActive(false);
@@ -341,7 +341,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     StartCoroutine(MoveCorrectGuessOnD2());
 
-                    Debug.Log("Is currentStageOfText 3 running");
+                    Debug.Log("Is stage2IntroText7 running");
                     textSection7Read = true;
                 }
             }
@@ -356,7 +356,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText8");
 
                     smartPhone.gameObject.SetActive(false);
                     introText8.SetActive(true);
@@ -380,7 +380,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText9");
 
                     smartTablet.gameObject.SetActive(false);
                     introText9.SetActive(true);
@@ -404,7 +404,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage1IntroText3");
+                    LOLSDK.Instance.SpeakText("stage2IntroText10");
 
                     smartWatch.gameObject.SetActive(false);
                     introText10.SetActive(true);
@@ -446,8 +446,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressTextIsShowing = true;
                     }
 
-                    Debug.Log("Is currentStageOfText 3 running");
-                    textSection6Read = true;
+                    Debug.Log("Is stage2IntroText11 running");
+                    textSection11Read = true;
                 }
             }
 
@@ -473,7 +473,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     StartCoroutine(MoveCorrectGuessOnD2());
 
                     Debug.Log("Is currentStageOfText 3 running");
-                    textSection7Read = true;
+                    textSection12Read = true;
                 }
             }
 

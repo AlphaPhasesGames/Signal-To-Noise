@@ -14,22 +14,26 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject keyBItem;
         TUSOMMain tusomMain;
         public RobotController robCont;
-
+        public bool memoryTestBool;
         private void Awake()
         {
-            tusomMain = FindObjectOfType<TUSOMMain>();
-          
+            tusomMain = FindObjectOfType<TUSOMMain>();          
         }
 
         public void OnMouseDown()
         {
-            invScript.isInvOpen = true;
-            invScript.keyboardItem.gameObject.SetActive(true);
-            tusomMain.SaveKeyBCollected();
-            keyBItem.gameObject.SetActive(false);
-            Debug.Log("This clicked");
-            textMan.currentStageOfText = 17;
-            setup.pickedUpKeyB = true;
+            if (!memoryTestBool)
+            {
+                invScript.isInvOpen = true;
+                invScript.keyboardItem.gameObject.SetActive(true);
+                keyBItem.gameObject.SetActive(false);
+                Debug.Log("This clicked");
+                textMan.currentStageOfText = 17;
+                setup.pickedUpKeyB = true;
+                tusomMain.SaveKeyBCollected();
+                memoryTestBool = true;
+            }
+          
         }
     }
 }
