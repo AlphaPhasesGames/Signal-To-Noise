@@ -24,6 +24,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool runThrice;
         public bool runForth;
         public bool runFifth;
+        public bool runSixth;
 
         public bool collectedPhone;
         public bool collectedTablet;
@@ -31,6 +32,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool pickedUpKeyB;
         public bool pickedUpBadge;
+
+        public GameObject mainLight;
+        public GameObject torchLight;
         private void Awake()
         {
             
@@ -104,6 +108,17 @@ namespace Digi.Waves.Alpha.Phases.Games
                     runFifth = true;
                 }
             }
+
+            if (!runSixth)
+            {
+                if (digiMain.stage2LightsOn)
+                {
+                    mainLight.gameObject.SetActive(true);
+                    torchLight.gameObject.SetActive(false);
+                    runSixth = true;
+                }
+            }
+
         }
 
 
