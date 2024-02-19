@@ -7,6 +7,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class OpenCommsRoomCodeFile : MonoBehaviour
     {
+        public Stage2CrewQuartersTextMan textMan;
         public Button openFolder;
         public Button closeFolder;
         public bool folderOpen;
@@ -27,6 +28,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!stopRepeat) // if inventory is open
                 {
                     consoleWindow.gameObject.SetActive(true); // enable the INV UI
+                    textMan.currentStageOfText = 13;
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
                 }

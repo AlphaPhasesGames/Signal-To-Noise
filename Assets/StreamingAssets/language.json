@@ -71,8 +71,8 @@
       "stage2IntroText15": 50,
       "stage2IntroText16": 60,
       "stage2IntroText17": 80,
-      "stage2IntroText18": 70,
-      "stage2IntroText19": 60,
+      "stage2IntroText18": 100,
+      "stage2IntroText19": 100,
       "stage2IntroText20": 110,
 
       "autoSave": 40
@@ -149,9 +149,9 @@
     "stage2IntroText15": "Thanks dude  I'll have a look now!",
     "stage2IntroText16": "Oh great, more security! Thanks for the code.",
     "stage2IntroText17": "Thank you. I hope it's easier to remember than the last one.",
-    "stage2IntroText18": "Let's enter the code and check out the communication deck.",
-    "stage2IntroText19DoorCorrect": "That’s the correct code, the door is unlocked.",
-    "stage2IntroText20": "Oh, that code didn’t work. Let’s check out the smartwatch again and see if we remembered it wrong.",    
+    "stage2IntroText18": "Excellent. Let's enter the code by the exit door and check out the communication deck.",
+    "stage2IntroText19DoorCorrect": "That’s the correct code, the door is unlocked. Lets head to the communications room.",
+    "stage2IntroText20": "Oh, that code didn’t work. Let’s check out the smartwatch again!",    
     "autoSave": "Autosaving..."
   },
   "es": {
@@ -225,9 +225,9 @@
     "stage2IntroText15": "Thanks dude  I'll have a look now!",
     "stage2IntroText16": "Oh great, more security! Thanks for the code.",
     "stage2IntroText17": "Thank you. I hope it's easier to remember than the last one.",
-    "stage2IntroText18": "Let's enter the code and check out the communication deck.",
-    "stage2IntroText19DoorCorrect": "That’s the correct code, the door is unlocked.",
-    "stage2IntroText20": "Oh, that code didn’t work. Let’s check out the smartwatch again and see if we remembered it wrong.", 
+    "stage2IntroText18": "Excellent. Let's enter the code by the exit door and check out the communication deck.",
+    "stage2IntroText19DoorCorrect": "That’s the correct code, the door is unlocked. Lets head to the communications room.",
+    "stage2IntroText20": "Oh, that code didn’t work. Let’s check out the smartwatch again!", 
     "autoSave": "Autosaving..."
   },
   "zh": {

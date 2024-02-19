@@ -12,7 +12,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TMP_InputField doorCode;
         public BoxCollider doorCollider;
         public GameObject doorCodeImage;
-
+        public Stage2CrewQuartersTextMan textMan;
         public bool doorCodeEntered;
 
         public int charLimitl;
@@ -53,6 +53,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     doorCollider.enabled = true;
                     doorCodeImage.gameObject.SetActive(false);
                     doorCodeEntered = true;
+                    textMan.currentStageOfText = 14;
                     Debug.Log("The door code was entered");
                 }
             }
@@ -63,6 +64,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     doorCode.text = "";
                     charLimitl = 0;
+                    textMan.currentStageOfText = 15;
                     Debug.Log("Does this run forever");
                 }
             }

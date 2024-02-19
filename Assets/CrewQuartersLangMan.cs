@@ -24,6 +24,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI crewQuartersText12;
         public TextMeshProUGUI crewQuartersText13WatchMessage1;
         public TextMeshProUGUI crewQuartersText14WatchMessage2;
+        public TextMeshProUGUI crewQuartersText15;
+        public TextMeshProUGUI crewQuartersText16;
+        public TextMeshProUGUI crewQuartersText17;
         public TextMeshProUGUI reply1;
         public TextMeshProUGUI reply2;
         public TextMeshProUGUI reply3;
@@ -47,6 +50,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             reply1.text = defs["stage2IntroText15"];
             reply2.text = defs["stage2IntroText16"];
             reply3.text = defs["stage2IntroText17"];
+            crewQuartersText15.text = defs["stage2IntroText18"];
+            crewQuartersText16.text = defs["stage2IntroText19DoorCorrect"];
+            crewQuartersText17.text = defs["stage2IntroText20"];
         }
 
         

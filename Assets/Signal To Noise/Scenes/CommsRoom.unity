@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0456d81732746840c0c2ca53449e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
+  textMan: {fileID: 0}
   openFolder: {fileID: 322834175}
   closeFolder: {fileID: 1405804667}
   folderOpen: 0
@@ -6704,8 +6704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c9107412cf91242b81fc8c6f5cdfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
-  setup: {fileID: 1984380647}
+  textMan: {fileID: 0}
+  setup: {fileID: 0}
 --- !u!65 &1354755073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9305,15 +9305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984380646}
-  - component: {fileID: 1984380647}
-  - component: {fileID: 1984380648}
-  - component: {fileID: 1984380649}
   - component: {fileID: 1984380650}
-  - component: {fileID: 1984380653}
-  - component: {fileID: 1984380652}
-  - component: {fileID: 1984380651}
-  - component: {fileID: 1984380654}
-  - component: {fileID: 1984380655}
   m_Layer: 0
   m_Name: NonMovingScripts
   m_TagString: Untagged
@@ -9336,146 +9328,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1984380647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11dcfc5c87844c459299b768515dc58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phoneInv: {fileID: 1984380653}
-  tabletInv: {fileID: 1984380652}
-  watchInv: {fileID: 1984380651}
-  textMan: {fileID: 1984380648}
-  digiPhone: {fileID: 6058258796580740095}
-  phoneButton: {fileID: 5417844651283891130}
-  digiTablet: {fileID: 5804834794454358792}
-  tabletButton: {fileID: 1726752038915696470}
-  digiWatch: {fileID: 1354755071}
-  watchButton: {fileID: 558161473}
-  digiObjects: {fileID: 2401940479289918922}
-  runOnce: 0
-  runTwice: 0
-  runThrice: 0
-  runForth: 0
-  runFifth: 0
-  runSixth: 0
-  collectedPhone: 0
-  collectedTablet: 0
-  collectedWatch: 0
-  pickedUpKeyB: 0
-  pickedUpBadge: 0
-  mainLight: {fileID: 628534794}
-  torchLight: {fileID: 603550341}
---- !u!114 &1984380648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269df33dc4125a74782895b5e00a3e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stopTaskRepeating: 0
-  smartPhone: {fileID: 6058258796580740095}
-  smartTablet: {fileID: 5804834794454358792}
-  smartWatch: {fileID: 1354755071}
-  roomLight: {fileID: 628534795}
-  spotLight: {fileID: 603550343}
-  parentTextPanalObject: {fileID: 6970692333635345087}
-  introText1: {fileID: 6529324721874598763}
-  introText2: {fileID: 6660607244446489615}
-  introText3: {fileID: 7753024805333407772}
-  introText4: {fileID: 81024779218546524}
-  introText5: {fileID: 4191897575786511951}
-  introText6: {fileID: 3067654680780631763}
-  introText7: {fileID: 4621614747236152735}
-  introText8: {fileID: 2682775738207467303}
-  introText9: {fileID: 2206719717433641006}
-  introText10: {fileID: 3906630527091665172}
-  introText11: {fileID: 2110013606729327635}
-  introText12: {fileID: 5121023131156110750}
-  introText13: {fileID: 4862829687855725181}
-  introText14: {fileID: 4117243543108548263}
-  introText15: {fileID: 6764417406372911215}
-  textBeenRead: 0
-  progressTextIsShowing: 0
-  hasTextplayerOnce: 0
-  gameComplete: 0
-  textSection1Read: 0
-  textSection2Read: 0
-  textSection3Read: 0
-  textSection4Read: 0
-  textSection5Read: 0
-  textSection6Read: 0
-  textSection7Read: 0
-  textSection8Read: 0
-  textSection9Read: 0
-  textSection10Read: 0
-  textSection11Read: 0
-  textSection12Read: 0
-  textSection13Read: 0
-  textSection14Read: 0
-  textSection15Read: 0
-  consoleImageRead: 0
-  ttsIntro1: {fileID: 9069096799269312469}
-  ttsIntro2: {fileID: 1176876737379115276}
-  ttsIntro3: {fileID: 3908022590691917570}
-  ttsIntro4: {fileID: 9185822199008081630}
-  ttsIntro5: {fileID: 6730516131588186128}
-  ttsIntro6: {fileID: 5703349208315571877}
-  ttsIntro7: {fileID: 8131490491021182232}
-  ttsIntro8: {fileID: 2186443191657514267}
-  ttsIntro9: {fileID: 5922081584647678743}
-  ttsIntro10: {fileID: 3126457218125498662}
-  ttsIntro11: {fileID: 6053238340310174590}
-  ttsIntro12: {fileID: 3623060432667670013}
-  ttsIntro13: {fileID: 8624802587469624837}
-  ttsIntro14: {fileID: 1592651274838499143}
-  ttsIntro15: {fileID: 1178900325778332846}
-  progressText: {fileID: 3068156148260281201}
-  progressTextBack: {fileID: 846865127684490827}
-  currentStageOfText: 0
---- !u!114 &1984380649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d894384a8c8ae54a8cdde054add707a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crewQuartersText1: {fileID: 251415045971087997}
-  crewQuartersText2: {fileID: 2248047210168711141}
-  crewQuartersText3: {fileID: 4085236303847689470}
-  crewQuartersText4: {fileID: 797093548256658514}
-  crewQuartersText5: {fileID: 9219893273734157075}
-  crewQuartersText6: {fileID: 8881621609117165425}
-  crewQuartersText7: {fileID: 8179389415965143019}
-  crewQuartersText8: {fileID: 588078526576401410}
-  crewQuartersText9: {fileID: 8451981988582890567}
-  crewQuartersText10: {fileID: 1396850043014036621}
-  crewQuartersText11: {fileID: 1501355377351051395}
-  crewQuartersText12: {fileID: 4434310648479518215}
-  crewQuartersText13WatchMessage1: {fileID: 5508541506402715561}
-  crewQuartersText14WatchMessage2: {fileID: 149118997}
-  crewQuartersText15: {fileID: 3176105138055147070}
-  crewQuartersText16: {fileID: 7272053247304969881}
-  crewQuartersText17: {fileID: 4795792142975162630}
-  reply1: {fileID: 1126903804936161263}
-  reply2: {fileID: 790614861}
-  reply3: {fileID: 39259505}
 --- !u!114 &1984380650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9485,134 +9337,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984380643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f15e7e5509c3c4cbbf6235ba038d14, type: 3}
+  m_Script: {fileID: 11500000, guid: 36e862050e1d5a845aaabf87471c6831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invUIPanal: {fileID: 5542169034279189338}
-  phoneInv: {fileID: 1984380653}
-  tabletInv: {fileID: 1984380652}
-  watchInv: {fileID: 1984380651}
-  closeInv: {fileID: 3406751860974015672}
-  openInv: {fileID: 8746634364681183428}
-  isInvOpen: 0
-  resetBools: 0
-  stopRepeat: 0
-  stopRepeat2: 0
-  stopRepeat3: 0
-  stopRepeat4: 0
-  stopRepeat5: 0
-  stopRepeat6: 0
-  allItemsCollected: 0
---- !u!114 &1984380651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07a88167138e09d41b2526cc60f1a1fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crewTextMan: {fileID: 1984380654}
-  watchName: {fileID: 859797747}
-  playerPickedUpObject: 0
-  playerHasWatchObject: 0
-  invItemImage: {fileID: 1610049970}
-  watchButton: {fileID: 558161473}
-  checkBool1: 0
-  checkBool2: 0
-  watchHeld: 0
-  watchFace: {fileID: 1029444640344487319}
---- !u!114 &1984380652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e516602b8ff7554ab2aa7f9dab5d9b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabletName: {fileID: 4942614448800788691}
-  playerPickedUpObject: 0
-  playerHasPhoneObject: 0
-  invItemImage: {fileID: 7819911748953829204}
-  tabletButton: {fileID: 1726752038915696470}
-  checkBool1: 0
-  checkBool2: 0
-  tabletHeld: 0
---- !u!114 &1984380653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19dc2e6f0f495ca4a93535f641c069bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phoneName: {fileID: 503550412420172068}
-  playerPickedUpObject: 0
-  playerHasPhoneObject: 0
-  invItemImage: {fileID: 600248175515623740}
-  phoneButton: {fileID: 5417844651283891130}
-  checkBool1: 0
-  checkBool2: 0
-  phoneHeld: 0
---- !u!114 &1984380654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e4bd4d3e411fe24c924d63df5e2287f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentTextPanalObject: {fileID: 8830452451837398434}
-  introText1: {fileID: 5319487225745395713}
-  introText2: {fileID: 149118995}
-  textBeenRead: 0
-  progressTextIsShowing: 0
-  hasTextplayerOnce: 0
-  gameComplete: 0
-  textSection1Read: 0
-  textSection2Read: 0
-  ttsIntro1: {fileID: 7452606672960693001}
-  ttsIntro2: {fileID: 1505195495}
-  progressText: {fileID: 1373506228}
-  progressTextBack: {fileID: 1147850190}
-  currentStageOfText: 0
---- !u!114 &1984380655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16359f0c38257bf429daad05496208e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380654}
-  openMessage: {fileID: 8089480540861590233}
-  closeMessage: {fileID: 343942187}
-  folderOpen: 0
-  stopRepeat: 0
-  reply1: {fileID: 854729424234310837}
-  reply2: {fileID: 362389428}
-  reply3: {fileID: 105969947}
-  watchClose: {fileID: 1029444640344487319}
-  textWindow: {fileID: 8830452451837398434}
+  runOnce: 0
+  runTwice: 0
 --- !u!4 &2000181533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190384165951000, guid: 5e4bdc96038d5424fbd9029b5ecaea9f, type: 3}
@@ -14979,7 +14708,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1708545483}
   - {fileID: 8874284580240067669}
   - {fileID: 9078995095321124449}
   - {fileID: 4849140227079060169}
@@ -14987,6 +14715,7 @@ RectTransform:
   - {fileID: 2866332159592621992}
   - {fileID: 3412271920011430993}
   - {fileID: 9205665494802196187}
+  - {fileID: 1708545483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16124,8 +15853,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Oh, that code didn\u2019t work. Let\u2019s check out the smartwatch again!
-    test"
+  m_text: Can you find both of these items now? To pick up an item, simply click
+    it with the left mouse button on the touchpad or mouse. Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17700,7 +17429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ef4248000dc274fa6b485016d315e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
+  textMan: {fileID: 0}
 --- !u!65 &6001751717788318891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17989,7 +17718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2750e65ff3e28458d2030b6f0c1ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
+  textMan: {fileID: 0}
 --- !u!65 &6224492521205818714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19166,8 +18895,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "That\u2019s the correct code, the door is unlocked. Lets head to the communications
-    room. test"
+  m_text: Also, can you find a piece of digital technology that will allow us to
+    type a reply? Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19907,8 +19636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a50c915328610040ab12d7954b32508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
-  setup: {fileID: 1984380647}
+  textMan: {fileID: 0}
+  setup: {fileID: 0}
 --- !u!65 &8072738782309416790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21143,7 +20872,7 @@ MonoBehaviour:
   doorCode: {fileID: 1662506922}
   doorCollider: {fileID: 389937517}
   doorCodeImage: {fileID: 1708545482}
-  textMan: {fileID: 1984380648}
+  textMan: {fileID: 0}
   doorCodeEntered: 0
   charLimitl: 0
   number1: {fileID: 200267019}
@@ -21454,8 +21183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc03201eefeb909408714fc27bae735d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMan: {fileID: 1984380648}
-  setup: {fileID: 1984380647}
+  textMan: {fileID: 0}
+  setup: {fileID: 0}
 --- !u!65 &9152552057069626232
 BoxCollider:
   m_ObjectHideFlags: 0

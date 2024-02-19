@@ -261,7 +261,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (digiWavesSaveData.current_stage == 3)
             {
-                SceneManager.LoadScene("S1Liquid");
+                SceneManager.LoadScene("CommsRoom");
                 if (!loadInvItemsOnce)
                 {
 

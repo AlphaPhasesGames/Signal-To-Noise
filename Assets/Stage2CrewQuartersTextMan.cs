@@ -32,19 +32,22 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText1;
         public GameObject introText2;
         public GameObject introText3;
-       public GameObject introText4;
-       public GameObject introText5;
-       public GameObject introText6;
-       public GameObject introText7;
+        public GameObject introText4;
+        public GameObject introText5;
+        public GameObject introText6;
+        public GameObject introText7;
         
-      public GameObject introText8;
+        public GameObject introText8;
         public GameObject introText9;
-         public GameObject introText10;
+        public GameObject introText10;
         public GameObject introText11;
-          public GameObject introText12;
+        public GameObject introText12;
+        public GameObject introText13;
+        public GameObject introText14;
+        public GameObject introText15;
         /* public GameObject introText13WatchMessage1;
         public GameObject introText14WatchMessage2;
-        public GameObject introText15;
+      
         public GameObject introText16;
         public GameObject introText17;
         public GameObject introText18;
@@ -68,6 +71,9 @@ namespace Digi.Waves.Alpha.Phases.Games
          public bool textSection10Read;
          public bool textSection11Read;
          public bool textSection12Read;
+        public bool textSection13Read;
+        public bool textSection14Read;
+        public bool textSection15Read;
         /*public bool textSection13ReadWatchMessage1;
        public bool textSection14ReadWatchMessage2;
        public bool textSection15Read;
@@ -91,7 +97,10 @@ namespace Digi.Waves.Alpha.Phases.Games
          public Button ttsIntro9;
          public Button ttsIntro10;
          public Button ttsIntro11;
-         public Button ttsIntro12;
+        public Button ttsIntro12;
+        public Button ttsIntro13;
+        public Button ttsIntro14;
+        public Button ttsIntro15;
         /*public Button ttsIntro13WatchMessage1;
         public Button ttsIntro14WatchMessage2;
         public Button ttsIntro15;
@@ -127,6 +136,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro10.onClick.AddListener(IntroTTSSpeak10);
             ttsIntro11.onClick.AddListener(IntroTTSSpeak11);
             ttsIntro12.onClick.AddListener(IntroTTSSpeak12);
+            ttsIntro13.onClick.AddListener(IntroTTSSpeak13);
+            ttsIntro14.onClick.AddListener(IntroTTSSpeak14);
+            ttsIntro15.onClick.AddListener(IntroTTSSpeak15);
 
             if (!digiWaves.crewQuarters2StartedAlready)
             {
@@ -477,8 +489,80 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!textSection13Read)
+            {
+                if (currentStageOfText == 13)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage2IntroText13");
 
+                    introText12.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
 
+                    introText13.SetActive(true);
+                    ttsIntro13.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    Debug.Log("Is stage2IntroText13 running");
+                    textSection13Read = true;
+                }
+            }
+
+            if (!textSection14Read)
+            {
+                if (currentStageOfText == 14)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage2IntroText19DoorCorrect");
+
+                    introText13.SetActive(false);
+                    ttsIntro13.gameObject.SetActive(false);
+
+                    introText14.SetActive(true);
+                    ttsIntro14.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveFinalTextOn());
+                    Debug.Log("Is stage2IntroText19DoorCorrect running");
+                    textSection14Read = true;
+                }
+            }
+
+            if (!textSection15Read)
+            {
+                if (currentStageOfText == 15)
+                {
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage2IntroText20");
+
+                    introText13.SetActive(false);
+                    ttsIntro13.gameObject.SetActive(false);
+
+                    introText15.SetActive(true);
+                    ttsIntro15.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    Debug.Log("Is stage2IntroText20 running");
+                    textSection15Read = true;
+                }
+            }
 
             if (currentStageOfText == 50)
             {
@@ -526,69 +610,72 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                  introText12.SetActive(false);
                  ttsIntro12.gameObject.SetActive(false);
- /*
+
                  introText13.SetActive(false);
                  ttsIntro13.gameObject.SetActive(false);
-                 //   StartCoroutine(MoveCorrectGuessOn2());
-                 introText14.SetActive(false);
-                 ttsIntro14.gameObject.SetActive(false);
 
-                 introText15.SetActive(false);
-                 ttsIntro15.gameObject.SetActive(false);
+                    introText14.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
 
-                 introText16.SetActive(false);
-                 ttsIntro16.gameObject.SetActive(false);
-
-                 introText17CorrectDigitalItem.SetActive(false);
-                 ttsIntro17CorrectDigiItem.gameObject.SetActive(false);
-
-                 introText18IncorrectDigitalItem.SetActive(false);
-                 ttsIntro18IncorrectDigiItem.gameObject.SetActive(false);
-
-                 introText18IncorrectDigitalItem2.SetActive(false);
-                 ttsIntro18IncorrectDigiItem2.gameObject.SetActive(false);
+                    introText15.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+                    /*
+                //   StartCoroutine(MoveCorrectGuessOn2());
 
 
-                 introText18IncorrectDigitalItem3.SetActive(false);
-                 ttsIntro18IncorrectDigiItem3.gameObject.SetActive(false);
+                introText16.SetActive(false);
+                ttsIntro16.gameObject.SetActive(false);
 
-                 introText19NoBadge.SetActive(false);
-                 ttsIntro19NoBadge.gameObject.SetActive(false);
+                introText17CorrectDigitalItem.SetActive(false);
+                ttsIntro17CorrectDigiItem.gameObject.SetActive(false);
 
-                 introText20FoundBadge.SetActive(false);
-                 ttsIntro20FoundBadge.gameObject.SetActive(false);
+                introText18IncorrectDigitalItem.SetActive(false);
+                ttsIntro18IncorrectDigiItem.gameObject.SetActive(false);
 
-                 introText21CollectedBothItems.SetActive(false);
-                 ttsIntro21CollectedBothItems.gameObject.SetActive(false);
-
-                 introText22.SetActive(false);
-                 ttsIntro22.gameObject.SetActive(false);
-
-                 introText23.SetActive(false);
-                 ttsIntro23.gameObject.SetActive(false);
-
-                 introText24.SetActive(false);
-                 ttsIntro24.gameObject.SetActive(false);
-
-                 introText25.SetActive(false);
-                 ttsIntro25.gameObject.SetActive(false);
-
-                 introText26.SetActive(false);
-                 ttsIntro26.gameObject.SetActive(false);
-
-                 introText26a.SetActive(false);
-                 ttsIntro26a.gameObject.SetActive(false);
-
-                 introText26b.SetActive(false);
-                 ttsIntro26b.gameObject.SetActive(false);
-
-                 introText27.SetActive(false);
-                 ttsIntro27.gameObject.SetActive(false);
+                introText18IncorrectDigitalItem2.SetActive(false);
+                ttsIntro18IncorrectDigiItem2.gameObject.SetActive(false);
 
 
-                 introText28.SetActive(false);
-                 ttsIntro28.gameObject.SetActive(false);
-                 */
+                introText18IncorrectDigitalItem3.SetActive(false);
+                ttsIntro18IncorrectDigiItem3.gameObject.SetActive(false);
+
+                introText19NoBadge.SetActive(false);
+                ttsIntro19NoBadge.gameObject.SetActive(false);
+
+                introText20FoundBadge.SetActive(false);
+                ttsIntro20FoundBadge.gameObject.SetActive(false);
+
+                introText21CollectedBothItems.SetActive(false);
+                ttsIntro21CollectedBothItems.gameObject.SetActive(false);
+
+                introText22.SetActive(false);
+                ttsIntro22.gameObject.SetActive(false);
+
+                introText23.SetActive(false);
+                ttsIntro23.gameObject.SetActive(false);
+
+                introText24.SetActive(false);
+                ttsIntro24.gameObject.SetActive(false);
+
+                introText25.SetActive(false);
+                ttsIntro25.gameObject.SetActive(false);
+
+                introText26.SetActive(false);
+                ttsIntro26.gameObject.SetActive(false);
+
+                introText26a.SetActive(false);
+                ttsIntro26a.gameObject.SetActive(false);
+
+                introText26b.SetActive(false);
+                ttsIntro26b.gameObject.SetActive(false);
+
+                introText27.SetActive(false);
+                ttsIntro27.gameObject.SetActive(false);
+
+
+                introText28.SetActive(false);
+                ttsIntro28.gameObject.SetActive(false);
+                */
                     ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -702,6 +789,23 @@ namespace Digi.Waves.Alpha.Phases.Games
             LOLSDK.Instance.SpeakText("stage2IntroText12");
             Debug.Log("stage2IntroText12 Button is pressed");
         }
+        public void IntroTTSSpeak13()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText18");
+            Debug.Log("stage2IntroText18 Button is pressed");
+        }
+
+        public void IntroTTSSpeak14()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText19DoorCorrect");
+            Debug.Log("stage2IntroText19DoorCorrect Button is pressed");
+        }
+        public void IntroTTSSpeak15()
+        {
+            LOLSDK.Instance.SpeakText("stage2IntroText20");
+            Debug.Log("stage2IntroText20 Button is pressed");
+        }
+
         public void CorrectGuess()
         {
 
@@ -743,8 +847,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator MoveFinalTextOn()
         {
-            yield return new WaitForSeconds(3.5f);
-            currentStageOfText = 40;
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene("CommsRoom");
 
         }
 
