@@ -25,6 +25,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool runForth;
         public bool runFifth;
         public bool runSixth;
+        public bool runSeventh;
+        public bool runEighth;
 
         public bool collectedPhone;
         public bool collectedTablet;
@@ -95,6 +97,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     if (!digiMain.stage2ItemsCollected)
                     {
                         StartCoroutine(ShowText());
+                        digiMain.taskNumberCrewQuarters = 4;
                         runForth = true;
                     }
                 }
@@ -115,7 +118,26 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     mainLight.gameObject.SetActive(true);
                     torchLight.gameObject.SetActive(false);
+                    digiMain.taskNumberCrewQuarters = 3;
                     runSixth = true;
+                }
+            }
+
+            if (!runSeventh)
+            {
+                if (digiMain.stage2ItemsCollected)
+                {
+                    digiMain.taskNumberCrewQuarters = 4;
+                    runSeventh = true;
+                }
+            }
+
+            if (!runEighth)
+            {
+                if (digiMain.stage2CodeFound)
+                {
+                    digiMain.taskNumberCrewQuarters = 6;
+                    runEighth = true;
                 }
             }
 

@@ -44,6 +44,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stage_2_lights_on;
 
+        public bool stage_2_code_found;
+
         public bool lobby_reminder_1;
         public bool lobby_reminder_2;
 
@@ -64,7 +66,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool solid_2_reminder_14;
 
         public int task_number;
-        public int task_number_solid_1;
+        public int task_number_crew_quarter;
         public int task_number_liquid_1;
         public int task_number_gas_1;
         public int task_number_solid_2;
@@ -100,9 +102,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool phoneCollected;
             public bool tabletCollected;
             public bool watchCollected;
+            public bool stage2CodeFound;
 
            public int taskNumber;
-            public int taskNumberSolid1;
+            public int taskNumberCrewQuarters;
             public int taskNumberLiquid1;
             public int taskNumberGas1;
             public int taskNumberSolid2;
@@ -248,12 +251,14 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (digiWavesSaveData.current_stage == 2)
                 {
                   SceneManager.LoadScene("CrewQuaters");
+                taskNumberCrewQuarters = digiWavesSaveData.task_number_crew_quarter;
                 crewQuarters2StartedAlready = digiWavesSaveData.crew_quaters_2_started_already;
                 phoneCollected = digiWavesSaveData.stage_2_phone_collected;
                 tabletCollected = digiWavesSaveData.stage_2_watch_collected;
                 watchCollected = digiWavesSaveData.stage_2_watch_collected;
                 stage2ItemsCollected = digiWavesSaveData.stage_2_items_collected;
                 stage2LightsOn = digiWavesSaveData.stage_2_lights_on;
+                stage2CodeFound = digiWavesSaveData.stage_2_code_found;
                 Debug.Log("Stage 1 update runs - load save data from save");
                                    
                 }
@@ -352,6 +357,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 watchCollected = digiWavesSaveData.stage_2_watch_collected;
                 stage2ItemsCollected = digiWavesSaveData.stage_2_items_collected;
                 stage2LightsOn = digiWavesSaveData.stage_2_lights_on;
+                taskNumberCrewQuarters = digiWavesSaveData.task_number_crew_quarter;
+                stage2CodeFound = digiWavesSaveData.stage_2_code_found;
                 Debug.Log("Loaded Stage 2");
                 }
 
@@ -441,7 +448,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             digiWavesSaveData.task_number = taskNumber;
             Save();
         }
-   
+        public void TaskNumberCrewQuartersSaver()
+        {
+            digiWavesSaveData.task_number_crew_quarter = taskNumberCrewQuarters;
+            Save();
+        }
+
         public void SaveBadgeCollected()
         {
             digiWavesSaveData.employee_badge_collected = true;
@@ -486,7 +498,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             digiWavesSaveData.stage_2_lights_on = stage2LightsOn;
             Save();
         }
-
+         
+        public void Stage2FoundDoorCode()
+        {
+            stage2CodeFound = true;
+            digiWavesSaveData.stage_2_code_found = stage2CodeFound;
+        }
 
         #endregion
     }

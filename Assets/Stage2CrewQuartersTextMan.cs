@@ -10,23 +10,14 @@ namespace Digi.Waves.Alpha.Phases.Games
     {
         TUSOMMain digiWaves;
         RobotController ronCont;
-      //  public ExitStage1 exitScript;
-     //   public GameObject consoleScreen;
-
         public bool stopTaskRepeating;
 
           public GameObject smartPhone;
         public GameObject smartTablet;
         public GameObject smartWatch;
 
-        //   public BoxCollider clockBox;
-        //   public BoxCollider speakersBox;
-        //    public BoxCollider keyboardBox;
         public Light roomLight;
         public Light spotLight;
-     //   public BoxCollider analogClockBox;
-
-    //    public Button messageButton;
 
         public GameObject parentTextPanalObject;
         public GameObject introText1;
@@ -222,7 +213,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText3");
-
+                    digiWaves.taskNumberCrewQuarters = 1;
                     introText2.SetActive(false);
                     ttsIntro2.gameObject.SetActive(false);
 
@@ -250,7 +241,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText4");
-
+                    digiWaves.taskNumberCrewQuarters = 2;
 
                     introText4.SetActive(true);
                     ttsIntro4.gameObject.SetActive(true);

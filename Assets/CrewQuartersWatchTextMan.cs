@@ -29,10 +29,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public int currentStageOfText;
 
+        TUSOMMain digiMain;
 
+        private void Awake()
+        {
+            digiMain = FindObjectOfType<TUSOMMain>(); 
+        }
 
-        // Start is called before the first frame update
-        void Start()
+            // Start is called before the first frame update
+            void Start()
         {
             currentStageOfText = 0;
             progressText.onClick.AddListener(OnClick);
@@ -88,7 +93,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(true);
                     ttsIntro2.gameObject.SetActive(true);
-
+                    digiMain.taskNumberCrewQuarters = 5;
 
                   
 

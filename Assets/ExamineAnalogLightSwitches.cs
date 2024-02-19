@@ -21,6 +21,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
 
             digiMain.LightsOnStage2();
+            digiMain.taskNumberCrewQuarters = 3;
             Debug.Log("This clicked");
             textMan.currentStageOfText = 5;
         }

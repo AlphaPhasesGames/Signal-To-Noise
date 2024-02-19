@@ -14,9 +14,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool stopRepeat;
         public bool stopRepeat2;
         public GameObject consoleWindow;
-
+        TUSOMMain digiMain;
+             
         private void Awake()
         {
+            digiMain = FindObjectOfType<TUSOMMain>();
             openFolder.onClick.AddListener(OpenCommsConsoleWindow);
             closeFolder.onClick.AddListener(OpenCommsConsoleWindow);
         }
@@ -29,6 +31,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     consoleWindow.gameObject.SetActive(true); // enable the INV UI
                     textMan.currentStageOfText = 13;
+                    digiMain.taskNumberCrewQuarters = 5;
+                    digiMain.Stage2FoundDoorCode();
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
                 }
@@ -60,6 +64,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             stopRepeat = false; // Set stopRepeat bool to false
             stopRepeat2 = false; // set stoprepeat bool to true
                                  //   robCont.StopRobotMoving();
+            
         }
     }
 }

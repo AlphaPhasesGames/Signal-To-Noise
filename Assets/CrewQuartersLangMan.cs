@@ -30,6 +30,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI reply1;
         public TextMeshProUGUI reply2;
         public TextMeshProUGUI reply3;
+        public TextMeshProUGUI task1;
+        public TextMeshProUGUI task2;
+        public TextMeshProUGUI task3;
+        public TextMeshProUGUI task4;
+        public TextMeshProUGUI task5;
+        public TextMeshProUGUI task6;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -53,6 +59,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             crewQuartersText15.text = defs["stage2IntroText18"];
             crewQuartersText16.text = defs["stage2IntroText19DoorCorrect"];
             crewQuartersText17.text = defs["stage2IntroText20"];
+            task1.text = defs["stage2Task1"];
+            task2.text = defs["stage2Task2"];
+            task3.text = defs["stage2Task3"];
+            task4.text = defs["stage2Task4"];
+            task5.text = defs["stage2Task5"];
+            task6.text = defs["stage2Task6"];
+
+
         }
 
         
