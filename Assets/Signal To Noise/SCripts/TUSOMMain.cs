@@ -503,6 +503,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             stage2CodeFound = true;
             digiWavesSaveData.stage_2_code_found = stage2CodeFound;
+            Save();
         }
 
         #endregion

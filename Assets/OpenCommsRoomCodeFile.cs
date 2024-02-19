@@ -31,7 +31,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     consoleWindow.gameObject.SetActive(true); // enable the INV UI
                     textMan.currentStageOfText = 13;
-                    digiMain.taskNumberCrewQuarters = 5;
+                    digiMain.taskNumberCrewQuarters = 6;
                     digiMain.Stage2FoundDoorCode();
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over

@@ -93,7 +93,11 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(true);
                     ttsIntro2.gameObject.SetActive(true);
-                    digiMain.taskNumberCrewQuarters = 5;
+                    if (!digiMain.stage2CodeFound)
+                    {
+                        digiMain.taskNumberCrewQuarters = 5;
+                    }
+                   
 
                   
 
