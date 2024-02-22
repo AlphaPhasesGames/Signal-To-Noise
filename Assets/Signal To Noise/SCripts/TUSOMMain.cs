@@ -32,6 +32,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stage_1_started_already;
         public bool stage_2_started_already;
+        public bool stage_3_started_already;
 
         public bool employee_badge_collected;
         public bool keyboad_collected;
@@ -176,37 +177,37 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 SceneManager.LoadScene("CrewQuaters");
             }
-            /*
+           
             if (Input.GetKeyDown(KeyCode.Keypad3))
             {
-                SceneManager.LoadScene("S1Gas");
+                SceneManager.LoadScene("CommsRoom");
             }
+            /*
 
-              
-                 if (Input.GetKeyDown(KeyCode.Keypad1))
-                 {
-                     SceneManager.LoadScene("S1Solid");
-                 }
+                if (Input.GetKeyDown(KeyCode.Keypad1))
+                {
+                    SceneManager.LoadScene("S1Solid");
+                }
 
-                 
 
-            if (Input.GetKeyDown(KeyCode.Keypad3))
-                 {
-                     SceneManager.LoadScene("S1Gas");
-                 }
 
-             
-            if (Input.GetKeyDown(KeyCode.Keypad4))
-                 {
-                     SceneManager.LoadScene("S2Solid");
-                 }
+           if (Input.GetKeyDown(KeyCode.Keypad3))
+                {
+                    SceneManager.LoadScene("S1Gas");
+                }
 
-                 if (Input.GetKeyDown(KeyCode.Keypad5))
-                 {
-                     SceneManager.LoadScene("S2Liquid");
-                 }
 
-           */
+           if (Input.GetKeyDown(KeyCode.Keypad4))
+                {
+                    SceneManager.LoadScene("S2Solid");
+                }
+
+                if (Input.GetKeyDown(KeyCode.Keypad5))
+                {
+                    SceneManager.LoadScene("S2Liquid");
+                }
+
+          */
         }
         //save function - not actually used much
         public void Save()
@@ -270,10 +271,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!loadInvItemsOnce)
                 {
 
-                 
+                    commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                  //   taskNumberLiquid1 = tusomSaveData.task_number_liquid_1;
                   //  currentStage = tusomSaveData.current_stage;
-                    loadInvItemsOnce = true;
+                  //  loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
 
                 }
@@ -364,7 +365,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                 if (currentStage == 3)
                 {
-               
+                commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                 }
 
                 if (currentStage == 4)
@@ -506,6 +507,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             Save();
         }
 
+        public void Stage3StartedAlready()
+        {
+            commsRoom3StartedAkready = true;
+            digiWavesSaveData.comms_room_3_started_already = commsRoom3StartedAkready;
+            Save();
+        }
         #endregion
     }
 }
