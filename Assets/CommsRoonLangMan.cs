@@ -19,7 +19,16 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI bridgeText7;
         public TextMeshProUGUI bridgeText8;
         public TextMeshProUGUI bridgeText9;
+        public TextMeshProUGUI bridgeText9a;
         public TextMeshProUGUI bridgeText10;
+
+        public TextMeshProUGUI reply1;
+        public TextMeshProUGUI reply2;
+        public TextMeshProUGUI reply3;
+
+        public TextMeshProUGUI carryOnText1;
+        public TextMeshProUGUI carryOnText2;
+
         /*
         public TextMeshProUGUI bridgeText11;
         public TextMeshProUGUI bridgeText12;
@@ -47,8 +56,15 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeText7.text = defs["stage3IntroText7"];
             bridgeText8.text = defs["stage3IntroText8"];
             bridgeText9.text = defs["stage3IntroText9"];
+            bridgeText9a.text = defs["stage3IntroText9a"];
             bridgeText10.text = defs["stage3IntroText10"];
-          
+
+            reply1.text = defs["stage3IntroText12R1"];
+            reply2.text = defs["stage3IntroText13R2"];
+            reply3.text = defs["stage3IntroText14R3"];
+
+            carryOnText1.text = defs["stage3IntroText15"];
+            carryOnText2.text = defs["stage3IntroText16"];
         }
     }
 }
