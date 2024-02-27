@@ -10,6 +10,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject consolePanal;
         public SetupStage3CommsRoom setup;
         public CommsRoomConsoleTextMan textMan;
+        public bool runOnce;
         //TUSOMMain digiwaveMain;
 
         private void Awake()
@@ -20,9 +21,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void OnMouseDown()
         {
             consolePanal.gameObject.SetActive(true);
-           textMan.currentStageOfText = 1;
-                  
-                    Debug.Log("Opened New Test");
+            if (!runOnce)
+            {               
+                textMan.currentStageOfText = 1;
+                runOnce = true;
+                Debug.Log("Opened New Test");
+            }
+         
         }
     }
 }

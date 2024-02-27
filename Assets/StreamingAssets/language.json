@@ -104,6 +104,10 @@
       "stage3IntroText21": 30,
       "stage3IntroText22": 90,
       "stage3IntroText23": 70,
+      "stage3IntroTextMorseCodeDoc1": 70,
+      "stage3IntroTextMorseCodeDoc2": 70,
+      "stage3IntroTextMorseCodeDoc2": 70,
+      "stage3IntroTextMorseCodeComplete": 110,
 
       "autoSave": 40
     }
@@ -211,7 +215,11 @@
     "stage3IntroText20": "Use the decoding document to decode the Morse code and get the safe combination.",
     "stage3IntroText21": "Enter the code here.",
     "stage3IntroText22": "That is not correct, head back to the console and decode the Morse code again.",
-    "stage3IntroText23": "Excellent, the safe is open. Let's get to the cargo deck.",    
+    "stage3IntroText23": "Excellent, the safe is open. Let's get to the cargo deck.",
+    "stage3IntroTextMorseCodeDoc1": "Excellent, we found the numbers 1 to 3 in Morse code.",
+    "stage3IntroTextMorseCodeDoc2": "Amazing, these are the numbers 4 to 7 in Morse code.",
+    "stage3IntroTextMorseCodeDoc3": "Fantastic. These are the numbers 8 to 0 in Morse code.",
+    "stage3IntroTextMorseCodeComplete": "That’s the entire document collected. Let’s decipher the safe combination on the main console.",    
     "autoSave": "Autosaving..."
   },
   "es": {
@@ -317,7 +325,11 @@
     "stage3IntroText20": "Use the decoding document to decode the Morse code and get the safe combination.",
     "stage3IntroText21": "Enter the code here.",
     "stage3IntroText22": "That is not correct, head back to the console and decode the Morse code again.",
-    "stage3IntroText23": "Excellent, the safe is open. Let's get to the cargo deck.",   
+    "stage3IntroText23": "Excellent, the safe is open. Let's get to the cargo deck.",
+    "stage3IntroTextMorseCodeDoc1": "Excellent, we found the numbers 1 to 3 in Morse code.",
+    "stage3IntroTextMorseCodeDoc2": "Amazing, these are the numbers 4 to 7 in Morse code.",
+    "stage3IntroTextMorseCodeDoc3": "Fantastic. These are the numbers 8 to 0 in Morse code.",
+    "stage3IntroTextMorseCodeComplete": "That’s the entire document collected. Let’s decipher the safe combination on the main console.",     
     "autoSave": "Autosaving..."
   },
   "zh": {

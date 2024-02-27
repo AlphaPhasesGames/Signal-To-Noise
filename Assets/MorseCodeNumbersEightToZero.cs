@@ -8,7 +8,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class MorseCodeNumbersEightToZero : MonoBehaviour
     {
-        //public Stage1BridgeTextMan textMan;
+        public CommsRoomTextMan textMan;
         public GameObject morseCodeFolder8To0;
         public GameObject morseCodeNumbers8To0;
         public GameObject morseCodePanal;
@@ -19,7 +19,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             morseCodeFolder8To0.gameObject.SetActive(false);
             morseCodeNumbers8To0.gameObject.SetActive(true);
             // exitCollider.enabled = true;
-            //  textMan.currentStageOfText = 34;
+            textMan.currentStageOfText = 8;
             Debug.Log("This clicked");
         }
     }

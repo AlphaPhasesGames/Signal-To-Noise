@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b028b2254d5204ca7ce1f29e19147a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380652}
   morseCodeFolder8To0: {fileID: 71823278}
   morseCodeNumbers8To0: {fileID: 354620055}
   morseCodePanal: {fileID: 1177837419}
@@ -846,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15fcbcc2313aea44a89c524f9630bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380652}
   morseCodeFolder1To3: {fileID: 133438668}
   morseCodeNumbers1To3: {fileID: 160951748}
   morseCodePanal: {fileID: 1177837419}
@@ -6609,6 +6611,7 @@ MonoBehaviour:
   consolePanal: {fileID: 1029444640344487319}
   setup: {fileID: 1984380650}
   textMan: {fileID: 1984380653}
+  runOnce: 0
 --- !u!1 &829033971
 GameObject:
   m_ObjectHideFlags: 0
@@ -7390,6 +7393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ea114dbd13a2c4796dc8a2d4c86c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380652}
   morseCodeFolder4To7: {fileID: 914265278}
   morseCodeNumbers4To7: {fileID: 848713404}
   morseCodePanal: {fileID: 1177837419}
@@ -10362,126 +10366,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267507187}
   m_CullTransparentMesh: 1
---- !u!1 &1271678343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1271678344}
-  - component: {fileID: 1271678347}
-  - component: {fileID: 1271678346}
-  - component: {fileID: 1271678345}
-  m_Layer: 5
-  m_Name: CarryOnNextBackText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!224 &1271678344
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271678343}
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2163409, y: 1.2163409, z: 1.2163409}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3412271920011430993}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384.99997, y: -3.0000312}
-  m_SizeDelta: {x: 67.3862, y: 75.1869}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1271678345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271678343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1271678346}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1271678346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271678343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1271678347
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271678343}
-  m_CullTransparentMesh: 1
 --- !u!1 &1315201064
 GameObject:
   m_ObjectHideFlags: 0
@@ -11136,126 +11020,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &1392088108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1392088109}
-  - component: {fileID: 1392088112}
-  - component: {fileID: 1392088111}
-  - component: {fileID: 1392088110}
-  m_Layer: 5
-  m_Name: CarryOnNextText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!224 &1392088109
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392088108}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2163409, y: 1.2163409, z: 1.2163409}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3412271920011430993}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: -3.0000312}
-  m_SizeDelta: {x: 67.3862, y: 75.1869}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1392088110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392088108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1392088111}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1392088111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392088108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1392088112
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392088108}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1395786254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14577,6 +14341,9 @@ MonoBehaviour:
   reply3: {fileID: 425969646}
   carryOnText1: {fileID: 797093548256658514}
   carryOnText2: {fileID: 9219893273734157075}
+  morseCodeText1: {fileID: 8881621609117165425}
+  morseCodeText2: {fileID: 8179389415965143019}
+  morseCodeText3: {fileID: 588078526576401410}
 --- !u!114 &1984380652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14594,6 +14361,11 @@ MonoBehaviour:
   introText1: {fileID: 6529324721874598763}
   introText2: {fileID: 6660607244446489615}
   introText3: {fileID: 7753024805333407772}
+  carryOnText1: {fileID: 81024779218546524}
+  carryOnText2: {fileID: 4191897575786511951}
+  foundMCode1: {fileID: 3067654680780631763}
+  foundMCode2: {fileID: 4621614747236152735}
+  foundMCode3: {fileID: 2682775738207467303}
   textBeenRead: 0
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
@@ -14601,9 +14373,19 @@ MonoBehaviour:
   textSection1Read: 0
   textSection2Read: 0
   textSection3Read: 0
+  carryOnText1Read: 0
+  carryOnText2Read: 0
+  foundMCode1Read: 0
+  foundMCode2Read: 0
+  foundMCode3Read: 0
   ttsIntro1: {fileID: 9069096799269312469}
   ttsIntro2: {fileID: 1176876737379115276}
   ttsIntro3: {fileID: 3908022590691917570}
+  ttsCarryOnText1: {fileID: 9185822199008081630}
+  ttsCarryOnText2: {fileID: 6730516131588186128}
+  ttsFoundMCode1: {fileID: 5703349208315571877}
+  ttsFoundMCode2: {fileID: 8131490491021182232}
+  ttsFoundMCode3: {fileID: 2186443191657514267}
   progressText: {fileID: 3068156148260281201}
   progressTextBack: {fileID: 846865127684490827}
   currentStageOfText: 0
@@ -14620,6 +14402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consoleWindow: {fileID: 1029444640344487319}
+  textMan: {fileID: 1984380652}
   parentTextPanalObject: {fileID: 1029444640344487319}
   introText1: {fileID: 5319487225745395713}
   introText2: {fileID: 149118995}
@@ -14629,9 +14412,6 @@ MonoBehaviour:
   introText6: {fileID: 1315201064}
   introText7: {fileID: 900163581}
   introText8: {fileID: 454349663}
-  parentCarryOnTextObject: {fileID: 6970692333635345087}
-  carryOnText1: {fileID: 81024779218546524}
-  carryOnText2: {fileID: 4191897575786511951}
   textBeenRead: 0
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
@@ -14644,8 +14424,6 @@ MonoBehaviour:
   textSection6Read: 0
   textSection7Read: 0
   textSection8Read: 0
-  carryOnText1Read: 0
-  carryOnText2Read: 0
   ttsIntro1: {fileID: 7452606672960693001}
   ttsIntro2: {fileID: 1505195495}
   ttsIntro3: {fileID: 1018918088}
@@ -14654,8 +14432,6 @@ MonoBehaviour:
   ttsIntro6: {fileID: 988817353}
   ttsIntro7: {fileID: 179436430}
   ttsIntro8: {fileID: 1770982028}
-  ttsCarryOnText1: {fileID: 9185822199008081630}
-  ttsCarryOnText2: {fileID: 6730516131588186128}
   reply1Button: {fileID: 2062649874}
   reply2Button: {fileID: 1396938352}
   reply3Button: {fileID: 218026290}
@@ -14664,10 +14440,6 @@ MonoBehaviour:
   morseCodeMessage: {fileID: 71147874}
   progressText: {fileID: 1373506228}
   progressTextBack: {fileID: 1147850190}
-  progressTextCarryOn: {fileID: 1392088110}
-  progressTextCarryOnBack: {fileID: 1271678345}
-  oldProgssTextOn: {fileID: 3068156148260281201}
-  oldProgssBackTextOn: {fileID: 846865127684490827}
   currentStageOfText: 0
 --- !u!114 &1984380654
 MonoBehaviour:
@@ -16572,7 +16344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Excellent a digital smartphone. Test
+  m_text: Fantastic. These are the numbers 8 to 0 in Morse code. Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20212,8 +19984,6 @@ RectTransform:
   - {fileID: 8244709000749189855}
   - {fileID: 65842422450612670}
   - {fileID: 8764614760317631111}
-  - {fileID: 1392088109}
-  - {fileID: 1271678344}
   m_Father: {fileID: 3833297089541242649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -25031,7 +24801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can you find 3 digital devices around the crew quarters? test
+  m_text: Amazing, these are the numbers 4 to 7 in Morse code. testr
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25939,8 +25709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It is important to know, that modern technologies use digitized signals
-    as a reliable way to encode and transmit information. test
+  m_text: '"Excellent, we found the numbers 1 to 3 in Morse code. test'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

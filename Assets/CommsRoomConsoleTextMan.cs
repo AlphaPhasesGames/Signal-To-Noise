@@ -9,7 +9,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CommsRoomConsoleTextMan : MonoBehaviour
     {
         public GameObject consoleWindow;
-
+        public CommsRoomTextMan textMan;
         public GameObject parentTextPanalObject;
       //  public GameObject preTextPanal1;
         public GameObject introText1;
@@ -20,11 +20,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText6;
         public GameObject introText7;
         public GameObject introText8;
-
-        public GameObject parentCarryOnTextObject;
-        public GameObject carryOnText1;
-        public GameObject carryOnText2;
-
+ 
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -39,8 +35,6 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection7Read;
         public bool textSection8Read;
 
-        public bool carryOnText1Read;
-        public bool carryOnText2Read;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
@@ -50,9 +44,6 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro6;
         public Button ttsIntro7;
         public Button ttsIntro8;
-
-        public Button ttsCarryOnText1;
-        public Button ttsCarryOnText2;
 
 
         public Button reply1Button;
@@ -66,13 +57,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public Button progressText;
         public Button progressTextBack;
-
-        public Button progressTextCarryOn;
-        public Button progressTextCarryOnBack;
-
-        public Button oldProgssTextOn;
-        public Button oldProgssBackTextOn;
-
+   
         public int currentStageOfText;
 
         TUSOMMain digiMain;
@@ -89,10 +74,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             progressText.onClick.AddListener(OnClick);
             progressTextBack.onClick.AddListener(OnClickBack);
 
-            progressTextCarryOn.onClick.AddListener(OnClickCarryOn);
-            progressTextCarryOnBack.onClick.AddListener(OnClickCarryOnBack);
-
-            ttsIntro1.onClick.AddListener(IntroTTSSpeak1);
+             ttsIntro1.onClick.AddListener(IntroTTSSpeak1);
             ttsIntro2.onClick.AddListener(IntroTTSSpeak2);
             ttsIntro3.onClick.AddListener(IntroTTSSpeak3);
             ttsIntro4.onClick.AddListener(IntroTTSSpeak4);
@@ -104,9 +86,6 @@ namespace Digi.Waves.Alpha.Phases.Games
             reply1Button.onClick.AddListener(RemoveReplies);
             reply2Button.onClick.AddListener(RemoveReplies);
             reply3Button.onClick.AddListener(RemoveReplies);
-
-            ttsCarryOnText1.onClick.AddListener(CarryOnText1);
-            ttsCarryOnText2.onClick.AddListener(CarryOnText2);
 
             morseCodeButton.onClick.AddListener(OpenMorseCode);
             closeConsoleButton.onClick.AddListener(CloseConsoleWindow);
@@ -374,100 +353,6 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                 }
             }
-
-            if (!carryOnText1Read)
-            {
-                if (currentStageOfText == 9)
-                {
-                    if (!textBeenRead)
-                    {
-                        progressTextCarryOn.gameObject.SetActive(true);
-                    }
-                    LOLSDK.Instance.SpeakText("stage3IntroText15");
-
-                    progressText.gameObject.SetActive(false);
-
-                    parentCarryOnTextObject.gameObject.SetActive(true);
-                    progressTextCarryOnBack.gameObject.SetActive(false);
-
-                    oldProgssBackTextOn.gameObject.SetActive(false);
-                    oldProgssTextOn.gameObject.SetActive(false);
-
-                    carryOnText1.SetActive(true);
-                    ttsCarryOnText1.gameObject.SetActive(true);
-
-                    carryOnText2.SetActive(false);
-                    ttsCarryOnText2.gameObject.SetActive(false);
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2());
-                        progressTextIsShowing = true;
-                    }
-
-                    Debug.Log("This hidwe text funtion executed once");
-
-                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
-                    //  Debug.Log("This apple bot correct funtion called");
-                    carryOnText1Read = true;
-                    // hasTextplayerOnce = true;
-
-                }
-            }
-
-            if (!carryOnText2Read)
-            {
-                if (currentStageOfText == 10)
-                {
-                    if (!textBeenRead)
-                    {
-                        progressTextCarryOn.gameObject.SetActive(false);
-                    }
-                    progressTextCarryOnBack.gameObject.SetActive(true);
-                    LOLSDK.Instance.SpeakText("stage3IntroText16");
-
-                   // preTextPanal1.gameObject.SetActive(false);
-                    
-                    carryOnText1.SetActive(false);
-                    ttsCarryOnText1.gameObject.SetActive(false);
-
-                    carryOnText2.SetActive(true);
-                    ttsCarryOnText2.gameObject.SetActive(true);
-                    StartCoroutine(MoveCorrectGuessOnD2());
-                    Debug.Log("This hidwe text funtion executed once");
-
-                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
-                    //  Debug.Log("This apple bot correct funtion called");
-                    carryOnText2Read = true;
-                    // hasTextplayerOnce = true;
-
-                }
-            }
-
-
-            if (currentStageOfText == 50)
-            {
-
-                if (!hasTextplayerOnce)
-                {
-
-                    parentCarryOnTextObject.gameObject.SetActive(false);
-
-                    carryOnText1.SetActive(false);
-                    ttsCarryOnText1.gameObject.SetActive(false);
-
-                    carryOnText2.SetActive(false);
-                    ttsCarryOnText2.gameObject.SetActive(false);
-                    Debug.Log("This hidwe text funtion executed once");
-
-                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
-                    //  Debug.Log("This apple bot correct funtion called");
-                    hasTextplayerOnce = true;
-
-                }
-
-
-            }
-
         }
     
 
@@ -493,31 +378,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             textSection6Read = false;
             textSection7Read = false;
             textSection8Read = false;
-
-            carryOnText1Read = false;
-            carryOnText2Read = false;
+                      
             progressTextIsShowing = false;
             //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
         }
 
-        void OnClickCarryOn()
-        {
-            textBeenRead = false;
-            progressTextIsShowing = false;
-            currentStageOfText++;
-            //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
-            // robotControl.NewNavmeshStop();
-        }
-        void OnClickCarryOnBack()
-        {
-            currentStageOfText--;
-            textBeenRead = false;
-
-            carryOnText1Read = false;
-            carryOnText2Read = false;
-            progressTextIsShowing = false;
-            //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
-        }
         public void IntroTTSSpeak1()
         {
             LOLSDK.Instance.SpeakText("stage3IntroText4");
@@ -596,7 +461,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void OpenMorseCode()
         {
             morseCodeMessage.gameObject.SetActive(true);
-            currentStageOfText = 9;
+            textMan.currentStageOfText = 4;
         }
 
         public void CloseConsoleWindow()
