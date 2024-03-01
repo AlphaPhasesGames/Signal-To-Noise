@@ -21,11 +21,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public GameObject carryOnText1;
         public GameObject carryOnText2;
+        public GameObject carryOnText3;
 
         public GameObject foundMCode1;
         public GameObject foundMCode2;
         public GameObject foundMCode3;
         //public GameObject
+
+        public GameObject foundAllCode;
 
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -43,6 +46,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool foundMCode2Read;
         public bool foundMCode3Read;
 
+        public bool foundAllMCodeRead;
+
+        public bool carryOnText3Read;
+
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
@@ -54,8 +61,18 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsFoundMCode2;
         public Button ttsFoundMCode3;
 
+        public Button ttsFoundAllCode;
+
+        public Button ttsCarryOnText3;
+
         public Button progressText;
         public Button progressTextBack;
+
+        public bool folder1Found;
+        public bool folder2Found;
+        public bool folder3Found;
+
+        public bool allFoldersFound;
 
         public int currentStageOfText;
 
@@ -77,6 +94,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsFoundMCode2.onClick.AddListener(MCode2Found);
             ttsFoundMCode3.onClick.AddListener(MCode3Found);
 
+            ttsFoundAllCode.onClick.AddListener(MCodeAllFound);
+
+            ttsCarryOnText3.onClick.AddListener(CarryOnText3);
+
             if (!digiWaves.commsRoom3StartedAkready)
             {
                 currentStageOfText = 1;
@@ -87,6 +108,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         void Update()
         {
+            if (!allFoldersFound)
+            {
+                if (folder1Found && folder2Found && folder3Found)
+                {
+                    StartCoroutine(FireAllFolderCollectedText());
+                    allFoldersFound = true;
+                }
+            }
+            
 
             if (!textSection1Read)
             {
@@ -336,6 +366,74 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!foundAllMCodeRead)
+            {
+                if (currentStageOfText == 9)
+                {
+                    progressText.gameObject.SetActive(false);
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroTextMorseCodeComplete");
+
+                    // preTextPanal1.gameObject.SetActive(false);
+
+                    foundMCode1.SetActive(false);
+                    ttsFoundMCode1.gameObject.SetActive(false);
+
+                    foundMCode2.SetActive(false);
+                    ttsFoundMCode2.gameObject.SetActive(false);
+
+                    foundMCode3.SetActive(false);
+                    ttsFoundMCode3.gameObject.SetActive(false);
+
+                    foundAllCode.SetActive(true);
+                    ttsFoundAllCode.gameObject.SetActive(true);
+
+                    allFoldersFound = true;
+                    //  carryOnText2.SetActive(true);
+                    //  ttsCarryOnText2.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    Debug.Log("This hidwe text funtion executed once");
+
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    foundAllMCodeRead = true;
+                    // hasTextplayerOnce = true;
+
+                }
+            }
+
+            if (!carryOnText3Read)
+            {
+                if (currentStageOfText == 10)
+                {
+                    progressText.gameObject.SetActive(false);
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText20");
+
+                    // preTextPanal1.gameObject.SetActive(false);
+
+
+                    carryOnText3.SetActive(true);
+                    ttsCarryOnText3.gameObject.SetActive(true);
+
+                 
+                    //  carryOnText2.SetActive(true);
+                    //  ttsCarryOnText2.gameObject.SetActive(true);
+
+              //      StartCoroutine(MoveCorrectGuessOnD2());
+                    Debug.Log("This hidwe text funtion executed once");
+
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    carryOnText3Read = true;
+                    hasTextplayerOnce = false;
+
+                }
+            }
+
             if (currentStageOfText == 50)
             {
 
@@ -366,7 +464,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     foundMCode3.SetActive(false);
                     ttsFoundMCode3.gameObject.SetActive(false);
-                    ronCont.enabled = true;
+
+                    foundAllCode.SetActive(false);
+                    ttsFoundAllCode.gameObject.SetActive(false);
+
+                    carryOnText3.SetActive(false);
+                    ttsCarryOnText3.gameObject.SetActive(false);
+                    //ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
 
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -452,6 +556,19 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("stage3IntroTextMorseCodeDoc3 Button is pressed");
         }
 
+        public void MCodeAllFound()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroTextMorseCodeComplete");
+            Debug.Log("stage3IntroTextMorseCodeComplete Button is pressed");
+        }
+
+        public void CarryOnText3()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText20");
+            Debug.Log("stage3IntroTextMorseCodeComplete Button is pressed");
+        }
+
+
 
         public void CorrectGuess()
         {
@@ -515,11 +632,27 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
+        public IEnumerator MoveCorrectGuessOnD3()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(10f);
+            currentStageOfText = 50;
+
+        }
+
         public IEnumerator MoveCorrectGuessOn2()
         {
             yield return new WaitForSeconds(3);
             currentStageOfText = 50;
             Debug.Log("This coroutine fired");
+
+        }
+
+        public IEnumerator FireAllFolderCollectedText()
+        {
+            yield return new WaitForSeconds(7);
+            currentStageOfText = 9;
+            Debug.Log("This new coroutine fired");
 
         }
     }

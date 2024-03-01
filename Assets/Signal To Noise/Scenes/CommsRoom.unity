@@ -6611,7 +6611,9 @@ MonoBehaviour:
   consolePanal: {fileID: 1029444640344487319}
   setup: {fileID: 1984380650}
   textMan: {fileID: 1984380653}
+  stageTextMan: {fileID: 1984380652}
   runOnce: 0
+  runTwice: 0
 --- !u!1 &829033971
 GameObject:
   m_ObjectHideFlags: 0
@@ -14341,9 +14343,11 @@ MonoBehaviour:
   reply3: {fileID: 425969646}
   carryOnText1: {fileID: 797093548256658514}
   carryOnText2: {fileID: 9219893273734157075}
+  carryOnText3: {fileID: 1396850043014036621}
   morseCodeText1: {fileID: 8881621609117165425}
   morseCodeText2: {fileID: 8179389415965143019}
   morseCodeText3: {fileID: 588078526576401410}
+  allMorseCodeFound: {fileID: 8451981988582890567}
 --- !u!114 &1984380652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14363,9 +14367,11 @@ MonoBehaviour:
   introText3: {fileID: 7753024805333407772}
   carryOnText1: {fileID: 81024779218546524}
   carryOnText2: {fileID: 4191897575786511951}
+  carryOnText3: {fileID: 3906630527091665172}
   foundMCode1: {fileID: 3067654680780631763}
   foundMCode2: {fileID: 4621614747236152735}
   foundMCode3: {fileID: 2682775738207467303}
+  foundAllCode: {fileID: 2206719717433641006}
   textBeenRead: 0
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
@@ -14378,6 +14384,8 @@ MonoBehaviour:
   foundMCode1Read: 0
   foundMCode2Read: 0
   foundMCode3Read: 0
+  foundAllMCodeRead: 0
+  carryOnText3Read: 0
   ttsIntro1: {fileID: 9069096799269312469}
   ttsIntro2: {fileID: 1176876737379115276}
   ttsIntro3: {fileID: 3908022590691917570}
@@ -14386,8 +14394,14 @@ MonoBehaviour:
   ttsFoundMCode1: {fileID: 5703349208315571877}
   ttsFoundMCode2: {fileID: 8131490491021182232}
   ttsFoundMCode3: {fileID: 2186443191657514267}
+  ttsFoundAllCode: {fileID: 5922081584647678743}
+  ttsCarryOnText3: {fileID: 3126457218125498662}
   progressText: {fileID: 3068156148260281201}
   progressTextBack: {fileID: 846865127684490827}
+  folder1Found: 0
+  folder2Found: 0
+  folder3Found: 0
+  allFoldersFound: 0
   currentStageOfText: 0
 --- !u!114 &1984380653
 MonoBehaviour:
@@ -17518,7 +17532,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh wonderful, a smartwatch. Test
+  m_text: Use the decoding document to decode the Morse code and get the safe combination.
+    Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25145,7 +25160,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fantastic. A digital tablet. test
+  m_text: "That\u2019s the entire document collected. Let\u2019s decipher the safe
+    combination on the main console. Test"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

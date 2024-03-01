@@ -19,6 +19,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             morseCodeFolder8To0.gameObject.SetActive(false);
             morseCodeNumbers8To0.gameObject.SetActive(true);
             // exitCollider.enabled = true;
+            textMan.folder3Found = true;
             textMan.currentStageOfText = 8;
             Debug.Log("This clicked");
         }

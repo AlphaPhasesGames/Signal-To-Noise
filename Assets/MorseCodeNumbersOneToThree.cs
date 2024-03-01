@@ -12,12 +12,14 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject morseCodeFolder1To3;
         public GameObject morseCodeNumbers1To3;
         public GameObject morseCodePanal;
+       
         // Start is called before the first frame update
         public void OnMouseDown()
         {
             morseCodePanal.gameObject.SetActive(true);
             morseCodeFolder1To3.gameObject.SetActive(false);
             morseCodeNumbers1To3.gameObject.SetActive(true);
+            textMan.folder1Found = true;
            // exitCollider.enabled = true;
             textMan.currentStageOfText = 6;
             Debug.Log("This clicked");

@@ -29,9 +29,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI carryOnText1;
         public TextMeshProUGUI carryOnText2;
 
+        public TextMeshProUGUI carryOnText3;
+
         public TextMeshProUGUI morseCodeText1;
         public TextMeshProUGUI morseCodeText2;
         public TextMeshProUGUI morseCodeText3;
+
+        public TextMeshProUGUI allMorseCodeFound;
         /*
         public TextMeshProUGUI bridgeText11;
         public TextMeshProUGUI bridgeText12;
@@ -72,6 +76,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             morseCodeText1.text = defs["stage3IntroTextMorseCodeDoc1"];
             morseCodeText2.text = defs["stage3IntroTextMorseCodeDoc2"];
             morseCodeText3.text = defs["stage3IntroTextMorseCodeDoc3"];
+
+            allMorseCodeFound.text = defs["stage3IntroTextMorseCodeComplete"];
+
+            carryOnText3.text = defs["stage3IntroText20"];
         }
     }
 }

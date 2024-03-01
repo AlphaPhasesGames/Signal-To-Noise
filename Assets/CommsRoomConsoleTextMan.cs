@@ -468,6 +468,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             consoleWindow.gameObject.SetActive(false);
             parentTextPanalObject.gameObject.SetActive(false);
+            textMan.currentStageOfText = 50;
         }
 
         public void RemoveReplies()
