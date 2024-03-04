@@ -9,6 +9,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CommsRoomConsoleTextMan : MonoBehaviour
     {
         public GameObject consoleWindow;
+        public GameObject messageWindow;
         public CommsRoomTextMan textMan;
         public GameObject parentTextPanalObject;
       //  public GameObject preTextPanal1;
@@ -341,8 +342,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro8.gameObject.SetActive(true);
 
                     morseCodeButton.gameObject.SetActive(true);
-
-
+                    digiMain.Stage3ConsoleReadAlready();
+                    StartCoroutine(ShowNextText());
                     Debug.Log("This hidwe text funtion executed once");
 
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -461,7 +462,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void OpenMorseCode()
         {
             morseCodeMessage.gameObject.SetActive(true);
-            textMan.currentStageOfText = 4;
+           // textMan.currentStageOfText = 4;
         }
 
         public void CloseConsoleWindow()
@@ -476,6 +477,15 @@ namespace Digi.Waves.Alpha.Phases.Games
             reply1Button.gameObject.SetActive(false);
             reply2Button.gameObject.SetActive(false);
             reply3Button.gameObject.SetActive(false);
+        }
+
+        public IEnumerator ShowNextText()
+        {
+            yield return new WaitForSeconds(5);
+            messageWindow.gameObject.SetActive(false);
+            textMan.currentStageOfText = 4;
+            textBeenRead = true;
+
         }
     }
 }

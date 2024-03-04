@@ -11,6 +11,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool runOnce;
         public bool runTwice;
 
+        public GameObject mCode1;
+        public GameObject mCode2;
+        public GameObject mCode3;
+
+        public GameObject folder1;
+        public GameObject folder2;
+        public GameObject folder3;
         //public bool collectedPhone;
         //public bool pickedUpKeyB;
 
@@ -28,8 +35,19 @@ namespace Digi.Waves.Alpha.Phases.Games
         void Update()
         {
             if (!runOnce)
-            {               
+            {
+                if (digiMain.stage3FolderCollected)
+                {
+                    folder1.gameObject.SetActive(false);
+                    folder2.gameObject.SetActive(false);
+                    folder3.gameObject.SetActive(false);
+
+                    mCode1.gameObject.SetActive(true);
+                    mCode2.gameObject.SetActive(true);
+                    mCode3.gameObject.SetActive(true);
                     runOnce = true;
+                }
+                  
             }
 
             if (!runTwice)

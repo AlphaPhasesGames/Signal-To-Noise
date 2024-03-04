@@ -113,6 +113,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (folder1Found && folder2Found && folder3Found)
                 {
                     StartCoroutine(FireAllFolderCollectedText());
+                    digiWaves.Stage3FoldersAlreadyCollected();
                     allFoldersFound = true;
                 }
             }

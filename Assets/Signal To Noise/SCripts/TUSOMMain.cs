@@ -47,7 +47,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool stage_2_code_found;
 
-        public bool lobby_reminder_1;
+        public bool stage_3_console_read;
+
+        public bool stage_3_folders_collected;
+
+        public int task_number;
+        public int task_number_crew_quarter;
+ /*       public bool lobby_reminder_1;
         public bool lobby_reminder_2;
 
         public bool solid_reminder_3;
@@ -66,14 +72,14 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool solid_2_reminder_13;
         public bool solid_2_reminder_14;
 
-        public int task_number;
-        public int task_number_crew_quarter;
+
         public int task_number_liquid_1;
         public int task_number_gas_1;
         public int task_number_solid_2;
         public int task_number_liquid_2;
         public int task_number_liquid_3;
         public int task_number_gas_3;
+ */
     }
 
          public class TUSOMMain : MonoBehaviour
@@ -105,37 +111,25 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool watchCollected;
             public bool stage2CodeFound;
 
-           public int taskNumber;
+            public bool stage3ConsoleRead;
+            public bool stage3FolderCollected;
+            public int taskNumber;
             public int taskNumberCrewQuarters;
-            public int taskNumberLiquid1;
-            public int taskNumberGas1;
-            public int taskNumberSolid2;
-            public int taskNumberLiquid2;
-            public int taskNumberLiquid3;
-            public int taskNumberGas3;
-
-            public bool lobbyReminder1;
-            public bool lobbyReminder2;
-            public bool solidReminder3;
-            public bool solidReminder4;
-            public bool solidReminder5;
-            public bool liquidReminder6;
-            public bool liquidReminder7;
-            public bool liquidReminder8;
+         
 
             public bool reminderBoolStage1;
-          //  public bool playerAppleTree;
 
             public int currentStage;
-         //   public GameObject robotPlayer;
             public bool runMainOnce;
 
             public bool loadInvItemsOnce;
             public GameObject logo;
+
             [SerializeField] Button continueButton, newGameButton; // declare two buttons for the start new game and continue game options
+           
             public TextMeshProUGUI newGameText; // TMP for the new game button
             public TextMeshProUGUI continueText; // TMP for the continue game button
-        public Animator logoAnim;
+            public Animator logoAnim;
         //   public GameObject logoImage;
          //   public GameObject blackFade;
           //  public Animator fadeBlack;
@@ -272,7 +266,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
 
                     commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
-                 //   taskNumberLiquid1 = tusomSaveData.task_number_liquid_1;
+                    stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
+                    stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
+                    //   taskNumberLiquid1 = tusomSaveData.task_number_liquid_1;
                   //  currentStage = tusomSaveData.current_stage;
                   //  loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
@@ -366,9 +362,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (currentStage == 3)
                 {
                 commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
-                }
+                stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
+                stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
 
-                if (currentStage == 4)
+            }
+
+            if (currentStage == 4)
                 {
                
                 }
@@ -511,6 +510,20 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             commsRoom3StartedAkready = true;
             digiWavesSaveData.comms_room_3_started_already = commsRoom3StartedAkready;
+            Save();
+        }
+
+        public void Stage3ConsoleReadAlready()
+        {
+            stage3ConsoleRead = true;
+            digiWavesSaveData.stage_3_console_read = stage3ConsoleRead;
+            Save();
+        }
+
+        public void Stage3FoldersAlreadyCollected()
+        {
+            stage3FolderCollected = true;
+            digiWavesSaveData.stage_3_folders_collected = stage3FolderCollected;
             Save();
         }
         #endregion
