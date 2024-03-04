@@ -50,36 +50,38 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool stage_3_console_read;
 
         public bool stage_3_folders_collected;
+        public bool stage_3_door_key_collected;
 
         public int task_number;
         public int task_number_crew_quarter;
- /*       public bool lobby_reminder_1;
-        public bool lobby_reminder_2;
+        public int task_number_comms_room;
+        /*       public bool lobby_reminder_1;
+               public bool lobby_reminder_2;
 
-        public bool solid_reminder_3;
-        public bool solid_reminder_4;
-        public bool solid_reminder_5;
+               public bool solid_reminder_3;
+               public bool solid_reminder_4;
+               public bool solid_reminder_5;
 
-        public bool liquid_reminder_6;
-        public bool liquid_reminder_7;
-        public bool liquid_reminder_8;
+               public bool liquid_reminder_6;
+               public bool liquid_reminder_7;
+               public bool liquid_reminder_8;
 
-        public bool gas_reminder_9;
-        public bool gas_reminder_10;
-        public bool gas_reminder_11;
+               public bool gas_reminder_9;
+               public bool gas_reminder_10;
+               public bool gas_reminder_11;
 
-        public bool solid_2_reminder_12;
-        public bool solid_2_reminder_13;
-        public bool solid_2_reminder_14;
+               public bool solid_2_reminder_12;
+               public bool solid_2_reminder_13;
+               public bool solid_2_reminder_14;
 
 
-        public int task_number_liquid_1;
-        public int task_number_gas_1;
-        public int task_number_solid_2;
-        public int task_number_liquid_2;
-        public int task_number_liquid_3;
-        public int task_number_gas_3;
- */
+               public int task_number_liquid_1;
+               public int task_number_gas_1;
+               public int task_number_solid_2;
+               public int task_number_liquid_2;
+               public int task_number_liquid_3;
+               public int task_number_gas_3;
+        */
     }
 
          public class TUSOMMain : MonoBehaviour
@@ -113,9 +115,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             public bool stage3ConsoleRead;
             public bool stage3FolderCollected;
+            public bool stage3DoorKeyCollected;
             public int taskNumber;
             public int taskNumberCrewQuarters;
-         
+            public int taskNumberCommsRoom;
 
             public bool reminderBoolStage1;
 
@@ -268,9 +271,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                     stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
                     stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
+                    stage3DoorKeyCollected = digiWavesSaveData.stage_3_door_key_collected;
                     //   taskNumberLiquid1 = tusomSaveData.task_number_liquid_1;
-                  //  currentStage = tusomSaveData.current_stage;
-                  //  loadInvItemsOnce = true;
+                    taskNumberCommsRoom = digiWavesSaveData.task_number_comms_room;
+
+                    //  loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
 
                 }
@@ -364,7 +369,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                 stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
                 stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
-
+                stage3DoorKeyCollected = digiWavesSaveData.stage_3_door_key_collected;
+                taskNumberCommsRoom = digiWavesSaveData.task_number_comms_room;
             }
 
             if (currentStage == 4)
@@ -454,6 +460,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             Save();
         }
 
+        public void TaskNumberCommsRoomSaver()
+        {
+            digiWavesSaveData.task_number_comms_room = taskNumberCommsRoom;
+            Save();
+        }
+
         public void SaveBadgeCollected()
         {
             digiWavesSaveData.employee_badge_collected = true;
@@ -524,6 +536,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             stage3FolderCollected = true;
             digiWavesSaveData.stage_3_folders_collected = stage3FolderCollected;
+            Save();
+        }
+
+        public void Stage3DoorKeyCollected()
+        {
+            stage3DoorKeyCollected = true;
+            digiWavesSaveData.stage_3_door_key_collected = stage3DoorKeyCollected;
             Save();
         }
         #endregion

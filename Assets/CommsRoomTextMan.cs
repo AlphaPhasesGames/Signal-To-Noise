@@ -33,6 +33,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject safeFoundText2;
         public GameObject safeFoundText3;
 
+        public GameObject exitText;
+
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -57,6 +59,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool safeFound2Read;
         public bool safeFound3Read;
 
+        public bool exitRead;
+
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
@@ -75,6 +79,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsSafeFound1;
         public Button ttsSafeFound2;
         public Button ttsSafeFound3;
+
+        public Button ttsExit;
 
         public Button progressText;
         public Button progressTextBack;
@@ -113,6 +119,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsSafeFound2.onClick.AddListener(SafeFound2TTS);
             ttsSafeFound3.onClick.AddListener(SafeFound3TTS);
 
+            ttsExit.onClick.AddListener(SafeFound1TTS);
 
 
             if (!digiWaves.commsRoom3StartedAkready)
@@ -213,6 +220,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText3.SetActive(true);
                     ttsIntro3.gameObject.SetActive(true);
                     digiWaves.Stage3StartedAlready();
+                    digiWaves.taskNumberCommsRoom = 1;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection3Read = true;
@@ -269,7 +278,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     carryOnText2.SetActive(true);
                     ttsCarryOnText2.gameObject.SetActive(true);
-
+                    digiWaves.taskNumberCommsRoom = 2;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -410,7 +420,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     allFoldersFound = true;
                     //  carryOnText2.SetActive(true);
                     //  ttsCarryOnText2.gameObject.SetActive(true);
-
+                    digiWaves.taskNumberCommsRoom = 3;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -443,7 +454,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
               //      StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");
-
+                    digiWaves.taskNumberCommsRoom = 4;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
                     //  Debug.Log("This apple bot correct funtion called");
                     carryOnText3Read = true;
@@ -515,6 +527,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsSafeFound3.gameObject.SetActive(true);
 
                     Debug.Log("This hidwe text funtion executed once");
+                    digiWaves.taskNumberCommsRoom = 5;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     StartCoroutine(MoveCorrectGuessOn2());
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
                     //  Debug.Log("This apple bot correct funtion called");
@@ -524,12 +538,36 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!exitRead)
+            {
+                if (currentStageOfText == 14)
+                {
+                    progressText.gameObject.SetActive(false);
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText23");
+
+                    safeFoundText3.SetActive(false);
+                    ttsSafeFound3.gameObject.SetActive(false);
+
+                    exitText.SetActive(true);
+                    ttsExit.gameObject.SetActive(true);
+
+                    Debug.Log("This hidwe text funtion executed once");
+                    StartCoroutine(MoveCorrectGuessOn2());
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    exitRead = true;
+                    hasTextplayerOnce = false;
+
+                }
+            }
+
+
             if (currentStageOfText == 50)
             {
-
                 if (!hasTextplayerOnce)
                 {
-
                     parentTextPanalObject.gameObject.SetActive(false);
                     introText1.SetActive(false);
                     ttsIntro1.gameObject.SetActive(false);
@@ -566,15 +604,20 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     safeFoundText2.SetActive(false);
                     ttsSafeFound2.gameObject.SetActive(false);
+
+                    safeFoundText3.SetActive(false);
+                    ttsSafeFound3.gameObject.SetActive(false);
+
+                    exitText.SetActive(false);
+                    ttsExit.gameObject.SetActive(false);
+
                     //ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
 
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
                     //  Debug.Log("This apple bot correct funtion called");
                     hasTextplayerOnce = true;
-
                 }
-
             }
         }
 

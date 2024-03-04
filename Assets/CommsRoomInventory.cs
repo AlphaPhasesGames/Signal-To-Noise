@@ -27,7 +27,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
 
         //  public Button employeeBadge;
-        //   public Button keyboardItem;
+           public Button doorKeyItem;
 
         public bool stopRepeat5;
         public bool stopRepeat6;

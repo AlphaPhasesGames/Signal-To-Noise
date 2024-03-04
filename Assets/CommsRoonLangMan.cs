@@ -42,6 +42,15 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI safe3;
 
         public TextMeshProUGUI doorKey;
+
+        public TextMeshProUGUI exitText;
+
+        public TextMeshProUGUI task1;
+        public TextMeshProUGUI task2;
+        public TextMeshProUGUI task3;
+        public TextMeshProUGUI task4;
+        public TextMeshProUGUI task5;
+
         /*
         public TextMeshProUGUI bridgeText11;
         public TextMeshProUGUI bridgeText12;
@@ -92,6 +101,16 @@ namespace Digi.Waves.Alpha.Phases.Games
             safe3.text = defs["stage3IntroText23"];
 
             doorKey.text = defs["inventoryDoorKey"];
+
+            exitText.text = defs["stage3IntroText24"];
+
+            task1.text = defs["stage3Task1"];
+            task2.text = defs["stage3Task2"];
+            task3.text = defs["stage3Task3"];
+            task4.text = defs["stage3Task4"];
+            task5.text = defs["stage3Task5"];
+
+
         }
     }
 }

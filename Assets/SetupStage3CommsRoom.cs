@@ -11,6 +11,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool runOnce;
         public bool runTwice;
 
+
         public GameObject mCode1;
         public GameObject mCode2;
         public GameObject mCode3;
@@ -18,7 +19,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject folder1;
         public GameObject folder2;
         public GameObject folder3;
-        //public bool collectedPhone;
+
+        public GameObject doorKey;
+        public Button doorKeyButton;
+        public bool collectedDoorKey;
         //public bool pickedUpKeyB;
 
         private void Awake()
@@ -51,8 +55,15 @@ namespace Digi.Waves.Alpha.Phases.Games
             }
 
             if (!runTwice)
-            {               
+            {
+                if (digiMain.stage3DoorKeyCollected)
+                {
+                    doorKey.gameObject.SetActive(false);
+                    doorKeyButton.gameObject.SetActive(true);
+                    collectedDoorKey = true;
                     runTwice = true;
+                }
+                   
             }           
         }
 
