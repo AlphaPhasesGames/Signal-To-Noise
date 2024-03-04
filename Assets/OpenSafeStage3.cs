@@ -1,0 +1,179 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.AI;
+using TMPro;
+
+namespace Digi.Waves.Alpha.Phases.Games
+{
+    public class OpenSafeStage3 : MonoBehaviour
+    {
+        public TMP_InputField doorCode;
+        public BoxCollider doorCollider;
+        public GameObject doorCodeImage;
+        public CommsRoomTextMan textMan;
+        public bool doorCodeEntered;
+        public Animator doorOpen;
+        public int charLimitl;
+        public Button number1;
+        public Button number2;
+        public Button number3;
+        public Button number4;
+        public Button number5;
+        public Button number6;
+        public Button number7;
+        public Button number8;
+        public Button number9;
+        public Button number0;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            number1.onClick.AddListener(PlaceNo1);
+            number2.onClick.AddListener(PlaceNo2);
+            number3.onClick.AddListener(PlaceNo3);
+            number4.onClick.AddListener(PlaceNo4);
+            number5.onClick.AddListener(PlaceNo5);
+            number6.onClick.AddListener(PlaceNo6);
+            number7.onClick.AddListener(PlaceNo7);
+            number8.onClick.AddListener(PlaceNo8);
+            number9.onClick.AddListener(PlaceNo9);
+            number0.onClick.AddListener(PlaceNo0);
+            doorCode.characterLimit = charLimitl;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (!doorCodeEntered)
+            {
+                if (doorCode.text == "150")
+                {
+                    doorCollider.enabled = true;
+                    doorCodeImage.gameObject.SetActive(false);
+                    doorCodeEntered = true;
+                    doorOpen.SetBool("safeOpen", true);
+                    textMan.currentStageOfText = 13;
+                    doorCode.gameObject.SetActive(false);
+                    doorCodeImage.gameObject.SetActive(false);
+                    Debug.Log("The door code was entered");
+                }
+            }
+
+            if (charLimitl == 3)
+            {
+                if (doorCode.text != "150")
+                {
+                    doorCode.text = "";
+                    charLimitl = 0;
+                    textMan.currentStageOfText = 12;
+                    textMan.safeFound1Read = false;
+                    doorCode.gameObject.SetActive(false);
+                    doorCodeImage.gameObject.SetActive(false);
+                    Debug.Log("Does this run forever");
+                }
+            }
+        }
+
+        private void OnMouseDown()
+        {
+            doorCode.gameObject.SetActive(true);
+            doorCodeImage.gameObject.SetActive(true);
+            textMan.currentStageOfText = 11;
+            textMan.safeFound2Read = false;
+        }
+
+        public void PlaceNo1()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 1;
+                charLimitl++;
+            }
+
+        }
+
+        public void PlaceNo2()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 2;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo3()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 3;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo4()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 4;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo5()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 5;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo6()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 6;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo7()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 7;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo8()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 8;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo9()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 9;
+                charLimitl++;
+            }
+        }
+
+        public void PlaceNo0()
+        {
+            if (charLimitl < 4)
+            {
+                doorCode.text += 0;
+                charLimitl++;
+            }
+        }
+    }
+}
+

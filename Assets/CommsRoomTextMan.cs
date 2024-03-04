@@ -27,8 +27,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject foundMCode2;
         public GameObject foundMCode3;
         //public GameObject
-
         public GameObject foundAllCode;
+
+        public GameObject safeFoundText1;
+        public GameObject safeFoundText2;
+        public GameObject safeFoundText3;
 
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -50,6 +53,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool carryOnText3Read;
 
+        public bool safeFound1Read;
+        public bool safeFound2Read;
+        public bool safeFound3Read;
+
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
@@ -64,6 +71,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsFoundAllCode;
 
         public Button ttsCarryOnText3;
+
+        public Button ttsSafeFound1;
+        public Button ttsSafeFound2;
+        public Button ttsSafeFound3;
 
         public Button progressText;
         public Button progressTextBack;
@@ -97,6 +108,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsFoundAllCode.onClick.AddListener(MCodeAllFound);
 
             ttsCarryOnText3.onClick.AddListener(CarryOnText3);
+
+            ttsSafeFound1.onClick.AddListener(SafeFound1TTS);
+            ttsSafeFound2.onClick.AddListener(SafeFound2TTS);
+            ttsSafeFound3.onClick.AddListener(SafeFound3TTS);
+
+
 
             if (!digiWaves.commsRoom3StartedAkready)
             {
@@ -435,6 +452,78 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!safeFound1Read)
+            {
+                if (currentStageOfText == 11)
+                {
+                    progressText.gameObject.SetActive(false);
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText21");
+
+                    safeFoundText1.SetActive(true);
+                    ttsSafeFound1.gameObject.SetActive(true);
+
+                    Debug.Log("This hidwe text funtion executed once");
+
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    safeFound1Read = true;
+                    hasTextplayerOnce = false;
+
+                }
+            }
+
+            if (!safeFound2Read)
+            {
+                if (currentStageOfText == 12)
+                {
+                    progressText.gameObject.SetActive(false);
+                  //  parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText22");
+
+                    safeFoundText1.SetActive(false);
+                    ttsSafeFound1.gameObject.SetActive(false);
+
+                    safeFoundText2.SetActive(true);
+                    ttsSafeFound2.gameObject.SetActive(true);
+
+                    Debug.Log("This hidwe text funtion executed once");
+                    StartCoroutine(MoveCorrectGuessOn2());
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    safeFound2Read = true;
+                    hasTextplayerOnce = false;
+
+                }
+            }
+
+            if (!safeFound3Read)
+            {
+                if (currentStageOfText == 13)
+                {
+                    progressText.gameObject.SetActive(false);
+                    //  parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText23");
+
+                    safeFoundText1.SetActive(false);
+                    ttsSafeFound1.gameObject.SetActive(false);
+
+                    safeFoundText3.SetActive(true);
+                    ttsSafeFound3.gameObject.SetActive(true);
+
+                    Debug.Log("This hidwe text funtion executed once");
+                    StartCoroutine(MoveCorrectGuessOn2());
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                    safeFound3Read = true;
+                    hasTextplayerOnce = false;
+
+                }
+            }
+
             if (currentStageOfText == 50)
             {
 
@@ -471,6 +560,12 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     carryOnText3.SetActive(false);
                     ttsCarryOnText3.gameObject.SetActive(false);
+
+                    safeFoundText1.SetActive(false);
+                    ttsSafeFound1.gameObject.SetActive(false);
+
+                    safeFoundText2.SetActive(false);
+                    ttsSafeFound2.gameObject.SetActive(false);
                     //ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -569,7 +664,23 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("stage3IntroTextMorseCodeComplete Button is pressed");
         }
 
+        public void SafeFound1TTS()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText21");
+            Debug.Log("stage3IntroText21 Button is pressed");
+        }
 
+        public void SafeFound2TTS()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText22");
+            Debug.Log("stage3IntroText21 Button is pressed");
+        }
+
+        public void SafeFound3TTS()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText23");
+            Debug.Log("stage3IntroText21 Button is pressed");
+        }
 
         public void CorrectGuess()
         {

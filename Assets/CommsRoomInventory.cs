@@ -11,6 +11,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public CrewQuartersPhoneObjectIvProperties phoneInv;
         public CrewQuartersTabletObjectIvProperties tabletInv;
         public CommsRoomWatchInventoryProperties watchInv;
+        public CommsRoomQuartersDoorKeyInventoryProperties doorKeyInv;
+
         public Button closeInv;
         public Button openInv;
 
@@ -70,7 +72,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 phoneInv.DeSelectGoldItem();
                 tabletInv.DeSelectGoldItem();
                 watchInv.DeSelectGoldItem();
-
+                doorKeyInv.DeSelectGoldItem();
             }
         }
 
