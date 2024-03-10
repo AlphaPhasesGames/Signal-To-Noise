@@ -20,7 +20,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI consoleText4;
         public TextMeshProUGUI consoleText5;
 
-
+        public TextMeshProUGUI floppyText1;
+        public TextMeshProUGUI floppyText2;
+        public TextMeshProUGUI floppyText3;
+        public TextMeshProUGUI floppyText4;
 
         private void Awake()
         {
@@ -35,6 +38,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             consoleText3.text = defs["stage4IntroText7"];
             consoleText4.text = defs["stage4IntroText8"];
             consoleText5.text = defs["stage4IntroText9"];
+
+            floppyText1.text = defs["stage4IntroText11"];
+            floppyText2.text = defs["stage4IntroText13"];
+            floppyText3.text = defs["stage4IntroText14"];
+            floppyText4.text = defs["stage4IntroText15"]; 
         }
     }
 }
