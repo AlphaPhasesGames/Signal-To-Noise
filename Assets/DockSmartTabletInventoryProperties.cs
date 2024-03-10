@@ -7,13 +7,13 @@ using TMPro;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
-    public class CommsRoomWatchInventoryProperties : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class DockSmartTabletInventoryProperties : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         // This script holds the properties and fucntions to allow the player
         // to select and hold the inventory item they wish to use
 
         TUSOMMain digiWaveMain;
-       // public CrewQuartersWatchTextMan crewTextMan;
+        public DockTextMan crewTextMan;
         public TextMeshProUGUI watchName; //TMP text to appear at bottom of inv for gold item
         public bool playerPickedUpObject; // bool to check is the player has oicked up the item
         public bool playerHasWatchObject;
@@ -24,7 +24,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool checkBool2;
         public bool watchHeld;
 
-      //  public GameObject watchFace;
+        public GameObject watchFace;
 
         // Start is called before the first frame update
         private void Start()
@@ -91,6 +91,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         }
 
 
+        public void OpenWatchFace()
+        {
+            crewTextMan.currentStageOfText = 3;
+            watchFace.gameObject.SetActive(true);
+        }
         public void DeSelectGoldItem() // gold fucntion for mouse click
         {
             //    robCont.StopRobotMoving(); // stop the robot moving when in use
@@ -102,10 +107,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         }
         public void TurnOnAndOff()
         {
-           
-             watchHeld = !watchHeld;
-          //   robCont.StopRobotMoving(); // stop the robot moving when in use
+            OpenWatchFace();
+            // watchHeld = !watchHeld;
+            //    robCont.StopRobotMoving(); // stop the robot moving when in use
         }
     }
 }
-

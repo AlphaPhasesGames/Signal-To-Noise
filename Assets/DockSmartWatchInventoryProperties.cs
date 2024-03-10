@@ -7,30 +7,27 @@ using TMPro;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
-    public class CommsRoomWatchInventoryProperties : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class DockSmartWatchInventoryProperties : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         // This script holds the properties and fucntions to allow the player
         // to select and hold the inventory item they wish to use
 
         TUSOMMain digiWaveMain;
-       // public CrewQuartersWatchTextMan crewTextMan;
         public TextMeshProUGUI watchName; //TMP text to appear at bottom of inv for gold item
         public bool playerPickedUpObject; // bool to check is the player has oicked up the item
-        public bool playerHasWatchObject;
+        public bool playerHasPhoneObject;
         public GameObject invItemImage; // this gameobject holds the image for the gold item when being held
-        public Button watchButton; // this button holds the image for the gold item when in inventory
+        public Button phoneButton; // this button holds the image for the gold item when in inventory
                                    // public RobotController robCont; //  this declares the script for the robot controller, so we can stop him moving when picking item from inventory
         public bool checkBool1;
         public bool checkBool2;
         public bool watchHeld;
 
-      //  public GameObject watchFace;
-
         // Start is called before the first frame update
         private void Start()
         {
             digiWaveMain = FindObjectOfType<TUSOMMain>();
-            watchButton.onClick.AddListener(TurnOnAndOff); // add listener to button for gold item
+            phoneButton.onClick.AddListener(TurnOnAndOff); // add listener to button for gold item
         }
         // Update is called once per frame
         void Update()
@@ -85,27 +82,24 @@ namespace Digi.Waves.Alpha.Phases.Games
             //  robCont.StopRobotMoving(); // stop the robot moving when in use
             playerPickedUpObject = true; // playerPickedUpObject = true, to pick up object from inventory
             invItemImage.gameObject.SetActive(true); // this enables the image of the game obect to be held
-            playerHasWatchObject = true;
+            playerHasPhoneObject = true;
             watchHeld = true;
             Debug.Log("Inv Item Picked");
         }
-
 
         public void DeSelectGoldItem() // gold fucntion for mouse click
         {
             //    robCont.StopRobotMoving(); // stop the robot moving when in use
             playerPickedUpObject = false; // playerPickedUpObject = true, to pick up object from inventory
             invItemImage.gameObject.SetActive(false); // this enables the image of the game obect to be held
-            playerHasWatchObject = false;
+            playerHasPhoneObject = false;
             watchHeld = false;
             Debug.Log("Inv Item Picked");
         }
         public void TurnOnAndOff()
         {
-           
-             watchHeld = !watchHeld;
-          //   robCont.StopRobotMoving(); // stop the robot moving when in use
+            watchHeld = !watchHeld;
+            //    robCont.StopRobotMoving(); // stop the robot moving when in use
         }
     }
 }
-

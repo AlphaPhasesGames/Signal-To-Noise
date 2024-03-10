@@ -179,6 +179,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 SceneManager.LoadScene("CommsRoom");
             }
+
+            if (Input.GetKeyDown(KeyCode.Keypad4))
+            {
+                SceneManager.LoadScene("Stage4DockingBay");
+            }
+
             /*
 
                 if (Input.GetKeyDown(KeyCode.Keypad1))
@@ -194,10 +200,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
 
 
-           if (Input.GetKeyDown(KeyCode.Keypad4))
-                {
-                    SceneManager.LoadScene("S2Solid");
-                }
+          
 
                 if (Input.GetKeyDown(KeyCode.Keypad5))
                 {
@@ -286,13 +289,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (digiWavesSaveData.current_stage == 4)
             {
-                SceneManager.LoadScene("S1Gas");
+                SceneManager.LoadScene("Stage4DockingBay");
                 if (!loadInvItemsOnce)
                 {
 
-                   
+                    dockingBay4StartedAlready = digiWavesSaveData.docking_bay_4_started_already;
                   //  taskNumberGas1 = tusomSaveData.task_number_gas_1;
-                   // currentStage = tusomSaveData.current_stage;
+                  // currentStage = tusomSaveData.current_stage;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
 
@@ -375,7 +378,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (currentStage == 4)
                 {
-               
+                dockingBay4StartedAlready = digiWavesSaveData.docking_bay_4_started_already;
                 }
 
                 if (currentStage == 5)
@@ -543,6 +546,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             stage3DoorKeyCollected = true;
             digiWavesSaveData.stage_3_door_key_collected = stage3DoorKeyCollected;
+            Save();
+        }
+
+        public void Stage4StartedAlready()
+        {
+            dockingBay4StartedAlready = true;
+            digiWavesSaveData.docking_bay_4_started_already = dockingBay4StartedAlready;
             Save();
         }
         #endregion
