@@ -28,6 +28,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI tabletBinaryText1;
         public TextMeshProUGUI tabletBinaryText2;
 
+        public TextMeshProUGUI finalConsoleText1;
+        public TextMeshProUGUI finalConsoleText2;
+        public TextMeshProUGUI finalConsoleText3;
+
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -49,6 +53,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             tabletBinaryText1.text = defs["stage4IntroText16"];
             tabletBinaryText2.text = defs["stage4IntroText17"];
+
+            finalConsoleText1.text = defs["stage4IntroText18"];
+            finalConsoleText2.text = defs["stage4IntroText19"];
+            finalConsoleText3.text = defs["stage4IntroText20"];
         }
     }
 }

@@ -10,7 +10,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject binaryPanal; // declare gameobject for UI inventory panal
         public Button closeMCode;
         public Button openMCode;
-
+        TUSOMMain digiMain;
+        public DockTextMan textMan;
         [SerializeField]
         public bool isInvOpen; // bool to check is the inventory is open 
       //  public bool resetBools; // this book
@@ -30,7 +31,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         private void Awake()
         {
-         //   resetBools = true;
+            digiMain = FindObjectOfType<TUSOMMain>();
             openMCode.onClick.AddListener(OpenInventory);
             closeMCode.onClick.AddListener(OpenInventory);
         }
@@ -66,6 +67,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         //Function for opening the inventory
         public void OpenInventory()
         {
+            if (digiMain.stage4FloppysCollected)
+            {
+                textMan.currentStageOfText = 10;
+            }
             isInvOpen = !isInvOpen; // if inventory is closed, open. If open, then close it
             stopRepeat = false; // Set stopRepeat bool to false
             stopRepeat2 = false; // set stoprepeat bool to true
