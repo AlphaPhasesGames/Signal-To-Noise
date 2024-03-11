@@ -10,7 +10,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // public Stage2CrewQuartersTextMan textMan;
         public bool runOnce;
         public bool runTwice;
-
+        public GameObject floppyDisks;
 
         //public bool pickedUpKeyB;
 
@@ -29,7 +29,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             if (!runOnce)
             {
-                runOnce = true;
+                if (digiMain.stage4FloppysCollected)
+                {
+                    floppyDisks.gameObject.SetActive(false);
+                    runOnce = true;
+                }
+              
             }
 
             if (!runTwice)

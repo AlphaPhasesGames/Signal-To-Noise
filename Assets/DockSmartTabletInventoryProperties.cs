@@ -13,7 +13,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // to select and hold the inventory item they wish to use
 
         TUSOMMain digiWaveMain;
-        public DockTextMan crewTextMan;
+        public DockTextMan dockTextMan;
         public TextMeshProUGUI watchName; //TMP text to appear at bottom of inv for gold item
         public bool playerPickedUpObject; // bool to check is the player has oicked up the item
         public bool playerHasWatchObject;
@@ -24,6 +24,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool checkBool2;
         public bool watchHeld;
 
+        public GameObject binaryDecoder;
         public GameObject watchFace;
 
         // Start is called before the first frame update
@@ -93,8 +94,19 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void OpenWatchFace()
         {
-            crewTextMan.currentStageOfText = 3;
-            watchFace.gameObject.SetActive(true);
+            if (!digiWaveMain.stage4FloppysCollected)
+            {
+                dockTextMan.currentStageOfText = 3;
+                watchFace.gameObject.SetActive(true);
+            }
+
+            if (digiWaveMain.stage4FloppysCollected)
+            {
+                dockTextMan.currentStageOfText = 9;
+                watchFace.gameObject.SetActive(true);
+                binaryDecoder.gameObject.SetActive(true);
+            }
+
         }
         public void DeSelectGoldItem() // gold fucntion for mouse click
         {

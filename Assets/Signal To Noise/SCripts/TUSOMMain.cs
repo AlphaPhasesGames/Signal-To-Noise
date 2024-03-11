@@ -52,6 +52,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool stage_3_folders_collected;
         public bool stage_3_door_key_collected;
 
+        public bool stage_4_floppys_collected;
+
         public int task_number;
         public int task_number_crew_quarter;
         public int task_number_comms_room;
@@ -116,6 +118,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             public bool stage3ConsoleRead;
             public bool stage3FolderCollected;
             public bool stage3DoorKeyCollected;
+
+            public bool stage4FloppysCollected;
+
             public int taskNumber;
             public int taskNumberCrewQuarters;
             public int taskNumberCommsRoom;
@@ -294,6 +299,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
 
                     dockingBay4StartedAlready = digiWavesSaveData.docking_bay_4_started_already;
+                    stage4FloppysCollected = digiWavesSaveData.stage_4_floppys_collected;
                   //  taskNumberGas1 = tusomSaveData.task_number_gas_1;
                   // currentStage = tusomSaveData.current_stage;
                     loadInvItemsOnce = true;
@@ -553,6 +559,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             dockingBay4StartedAlready = true;
             digiWavesSaveData.docking_bay_4_started_already = dockingBay4StartedAlready;
+            Save();
+        }
+
+        public void Stage4FloppyCollected()
+        {
+            stage4FloppysCollected = true;
+            digiWavesSaveData.stage_4_floppys_collected = stage4FloppysCollected;
             Save();
         }
         #endregion
