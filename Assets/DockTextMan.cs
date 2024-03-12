@@ -13,7 +13,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // public GameObject consoleScreen;
 
         public DockTabletTextMan textman2;
-        public GameObject messageButton;
+        public Button messageButton;
         public bool stopTaskRepeating;
 
         public GameObject parentTextPanalObject;
@@ -87,6 +87,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             progressText.onClick.AddListener(OnClick);
             progressTextBack.onClick.AddListener(OnClickBack);
 
+            messageButton.onClick.AddListener(OpenMessage);
 
             ttsIntro1.onClick.AddListener(IntroTTSSpeak1);
             ttsIntro2.onClick.AddListener(IntroTTSSpeak2);
@@ -348,6 +349,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage4IntroText15");
 
+                    consoleBinaryText2.SetActive(false);
+                    ttsIntro10.gameObject.SetActive(false);
+
                     consoleBinaryText1.SetActive(true);
                     ttsIntro9.gameObject.SetActive(true);
 
@@ -372,6 +376,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage4IntroText15");
 
+                    consoleBinaryText1.SetActive(false);
+                    ttsIntro9.gameObject.SetActive(false);
+
                     consoleBinaryText2.SetActive(true);
                     ttsIntro10.gameObject.SetActive(true);
 
@@ -390,10 +397,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    parentTextPanalObject.gameObject.SetActive(true);
+                    //parentTextPanalObject.gameObject.SetActive(true);
 
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage4IntroText18");
+
+
 
                     consoleCoordsText1.SetActive(true);
                     ttsIntro11.gameObject.SetActive(true);
@@ -682,6 +691,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             textBeenRead = false;
             Debug.Log("This coroutine fired");
 
+        }
+
+        public void OpenMessage()
+        {
+            textman2.currentStageOfText = 1;
         }
 
     }

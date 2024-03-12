@@ -655,6 +655,7 @@ MonoBehaviour:
   doorCodeImage: {fileID: 1708545482}
   textMan: {fileID: 1984380656}
   doorCodeEntered: 0
+  shipLanding: {fileID: 453176841}
   charLimitl: 0
   number1: {fileID: 200267019}
   number2: {fileID: 1205835931}
@@ -4577,6 +4578,104 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425969644}
   m_CullTransparentMesh: 1
+--- !u!1001 &453176839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.5100603
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.5100603
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.5100603
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -71.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5608322
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.82792956
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 248.22699
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      propertyPath: m_Name
+      value: Spaceship
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30293c379923fcc48951851c923095c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 453176841}
+  m_SourcePrefab: {fileID: 100100000, guid: 30293c379923fcc48951851c923095c8, type: 3}
+--- !u!1 &453176840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30293c379923fcc48951851c923095c8, type: 3}
+  m_PrefabInstance: {fileID: 453176839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &453176841
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453176840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6873138d6604172408a699f812d01bfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &454349663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8112,7 +8211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1146187543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13701,6 +13800,7 @@ MonoBehaviour:
   runOnce: 0
   runTwice: 0
   floppyDisks: {fileID: 189016385}
+  coordButton: {fileID: 1146187542}
 --- !u!114 &1984380656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13714,7 +13814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textman2: {fileID: 1984380662}
-  messageButton: {fileID: 6365358936248215279}
+  messageButton: {fileID: 8089480540861590233}
   stopTaskRepeating: 0
   parentTextPanalObject: {fileID: 6970692333635345087}
   introText1: {fileID: 6529324721874598763}
@@ -13895,6 +13995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consoleScreen: {fileID: 1029444640344487319}
+  textMan: {fileID: 1984380656}
   consoleTextPanalObject: {fileID: 8830452451837398434}
   consoleText1: {fileID: 5319487225745395713}
   consoleText2: {fileID: 149118995}
@@ -13914,6 +14015,7 @@ MonoBehaviour:
   progressConsoleText: {fileID: 1373506228}
   progressConsoleTextBack: {fileID: 1147850190}
   closeConsoleButton: {fileID: 343942187}
+  landingCoordsButton: {fileID: 1146187547}
   textBeenRead: 0
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
@@ -25491,3 +25593,4 @@ SceneRoots:
   - {fileID: 417835756}
   - {fileID: 1249335677}
   - {fileID: 189016386}
+  - {fileID: 453176839}

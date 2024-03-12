@@ -9,9 +9,9 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class DockTabletTextMan : MonoBehaviour
     {
         TUSOMMain digiWaves;
-        RobotController ronCont;
+       // RobotController ronCont;
         public GameObject consoleScreen;
-
+        public DockTextMan textMan;
         public GameObject consoleTextPanalObject;
         public GameObject consoleText1;
         public GameObject consoleText2;
@@ -38,6 +38,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public Button closeConsoleButton;
 
+        public Button landingCoordsButton;
+
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -47,7 +49,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         private void Start()
         {
             digiWaves = FindObjectOfType<TUSOMMain>();
-            ronCont = FindObjectOfType<RobotController>();
+           // ronCont = FindObjectOfType<RobotController>();
             currentStageOfText = 0;
             progressConsoleText.onClick.AddListener(OnClick);
             progressConsoleTextBack.onClick.AddListener(OnClickBack);
@@ -59,7 +61,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsConsoleText5.onClick.AddListener(IntroTTSSpeak5);
             if (!digiWaves.dockingBay4StartedAlready)
             {
-                currentStageOfText = 1;
+              //  currentStageOfText = 1;
             }
 
         }
@@ -201,6 +203,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText5.SetActive(true);
                     ttsConsoleText5.gameObject.SetActive(true);
+
+                    landingCoordsButton.gameObject.SetActive(true);
+
 
                     StartCoroutine(MoveCorrectGuessOn());
 
@@ -362,6 +367,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void CloseConsoleWindow()
         {
             consoleScreen.gameObject.SetActive(false);
+            textMan.currentStageOfText = 50;
         }
 
         public IEnumerator MoveCorrectGuessOnD3()

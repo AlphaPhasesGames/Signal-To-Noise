@@ -14,7 +14,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject doorCodeImage;
         public DockTextMan textMan;
         public bool doorCodeEntered;
-
+        public Animator shipLanding;
         public int charLimitl;
         public Button number1;
         public Button number2;
@@ -54,6 +54,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     doorCodeImage.gameObject.SetActive(false);
                     doorCodeEntered = true;
                     textMan.currentStageOfText = 12;
+                    shipLanding.SetBool("land", true);
                     Debug.Log("The door code was entered");
                 }
             }

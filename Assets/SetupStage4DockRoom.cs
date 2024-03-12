@@ -11,7 +11,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool runOnce;
         public bool runTwice;
         public GameObject floppyDisks;
-
+        public GameObject coordButton;
         //public bool pickedUpKeyB;
 
         private void Awake()
@@ -32,6 +32,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (digiMain.stage4FloppysCollected)
                 {
                     floppyDisks.gameObject.SetActive(false);
+                    coordButton.gameObject.SetActive(true);
                     runOnce = true;
                 }
               
