@@ -33,7 +33,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
                 }
             }
-            else
+            if (!folderOpen)
             {
                 if (!stopRepeat2) // if stopRepeat 2 is false
                 {

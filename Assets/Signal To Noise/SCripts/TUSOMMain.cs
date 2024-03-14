@@ -57,6 +57,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public int task_number;
         public int task_number_crew_quarter;
         public int task_number_comms_room;
+        public int task_number_dock;
         /*       public bool lobby_reminder_1;
                public bool lobby_reminder_2;
 
@@ -124,6 +125,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             public int taskNumber;
             public int taskNumberCrewQuarters;
             public int taskNumberCommsRoom;
+            public int taskNumberDock;
 
             public bool reminderBoolStage1;
 
@@ -300,7 +302,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     dockingBay4StartedAlready = digiWavesSaveData.docking_bay_4_started_already;
                     stage4FloppysCollected = digiWavesSaveData.stage_4_floppys_collected;
-                  //  taskNumberGas1 = tusomSaveData.task_number_gas_1;
+                    taskNumberDock = digiWavesSaveData.task_number_dock;
                   // currentStage = tusomSaveData.current_stage;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
@@ -313,7 +315,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (digiWavesSaveData.current_stage == 5)
             {
-                SceneManager.LoadScene("S2Solid");
+                SceneManager.LoadScene("Stage5InsideShip");
                 if (!loadInvItemsOnce)
                 {
 
@@ -385,6 +387,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             if (currentStage == 4)
                 {
                 dockingBay4StartedAlready = digiWavesSaveData.docking_bay_4_started_already;
+                taskNumberDock = digiWavesSaveData.task_number_dock;
                 }
 
                 if (currentStage == 5)
@@ -472,6 +475,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void TaskNumberCommsRoomSaver()
         {
             digiWavesSaveData.task_number_comms_room = taskNumberCommsRoom;
+            Save();
+        }
+
+        public void TaskNumberDockSaver()
+        {
+            digiWavesSaveData.task_number_dock = taskNumberDock;
             Save();
         }
 

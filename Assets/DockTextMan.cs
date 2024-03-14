@@ -161,8 +161,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro3.gameObject.SetActive(false);
 
                     digiWaves.Stage4StartedAlready();
-                   // digiWaves.taskNumberCommsRoom = 1;
-                   // digiWaves.TaskNumberCommsRoomSaver();
+                     digiWaves.taskNumberDock = 1;
+                     digiWaves.TaskNumberDockSaver();
                     StartCoroutine(MoveCorrectGuessOn());
 
                     // if (!progressTextIsShowing)
@@ -224,7 +224,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText4.SetActive(true);
                     ttsIntro4.gameObject.SetActive(true);
-
+                    digiWaves.taskNumberDock = 2;
+                    digiWaves.TaskNumberDockSaver();
                     messageButton.gameObject.SetActive(true);
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("Is stage4IntroText4 3 running");
@@ -328,6 +329,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     floppyText3.SetActive(false);
                     ttsIntro7.gameObject.SetActive(false);
+                    digiWaves.taskNumberDock = 3;
+                    digiWaves.TaskNumberDockSaver();
                     digiWaves.Stage4FloppyCollected();
                     //   messageButton.gameObject.SetActive(true);
                     StartCoroutine(MoveCorrectGuessOn());
@@ -381,7 +384,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleBinaryText2.SetActive(true);
                     ttsIntro10.gameObject.SetActive(true);
-
+                    digiWaves.taskNumberDock = 4;
+                    digiWaves.TaskNumberDockSaver();
                     //   messageButton.gameObject.SetActive(true);
                     //  StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is stage4IntroText4 3 running");
@@ -464,6 +468,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleCoordsText2.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
+
+                    digiWaves.taskNumberDock = 5;
+                    digiWaves.TaskNumberDockSaver();
 
                     StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is stage4IntroText4 3 running");

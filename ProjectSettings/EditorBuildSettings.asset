@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Signal To Noise/Scenes/Stage4DockingBay.unity
     guid: 7b007c614ab431e4e8f96449d7d38734
+  - enabled: 1
+    path: Assets/Signal To Noise/Scenes/Stage5InsideShip.unity
+    guid: d89ea5bd480c5d740bf13dcd73138239
   m_configObjects: {}
