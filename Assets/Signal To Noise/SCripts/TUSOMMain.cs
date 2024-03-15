@@ -318,7 +318,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 SceneManager.LoadScene("Stage5InsideShip");
                 if (!loadInvItemsOnce)
                 {
-
+                    aboardTheShip5StartedAlready = digiWavesSaveData.abour_ship_5_started_already;
                   //  taskNumberSolid2 = tusomSaveData.task_number_solid_2;
                  //   currentStage = tusomSaveData.current_stage;
                     loadInvItemsOnce = true;
@@ -392,7 +392,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                 if (currentStage == 5)
                 {
-            
+                aboardTheShip5StartedAlready = digiWavesSaveData.abour_ship_5_started_already;
                 }
 
             Debug.Log("Loaded Save");
@@ -506,6 +506,14 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SaveStage2Started()
         {
             digiWavesSaveData.crew_quaters_2_started_already = crewQuarters2StartedAlready;
+
+            Save();
+        }
+
+        public void SaveStage5Started()
+        {
+            aboardTheShip5StartedAlready = true;
+            digiWavesSaveData.abour_ship_5_started_already = aboardTheShip5StartedAlready;
 
             Save();
         }
