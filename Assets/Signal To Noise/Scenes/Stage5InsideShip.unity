@@ -14346,6 +14346,9 @@ MonoBehaviour:
   shipText3: {fileID: 4085236303847689470}
   shipText4: {fileID: 797093548256658514}
   shipText5: {fileID: 9219893273734157075}
+  shipText6: {fileID: 8881621609117165425}
+  shipText7: {fileID: 8179389415965143019}
+  shipText8: {fileID: 588078526576401410}
   talkToPilotText1: {fileID: 997734966}
   talkToPilotText2: {fileID: 1956720158}
   talkToPilotText3: {fileID: 1547221546}
@@ -14369,16 +14372,25 @@ MonoBehaviour:
   introText3: {fileID: 7753024805333407772}
   introText4: {fileID: 81024779218546524}
   introText5: {fileID: 4191897575786511951}
+  consoleText1: {fileID: 3067654680780631763}
+  consoleText2: {fileID: 4621614747236152735}
+  consoleText3: {fileID: 2682775738207467303}
   textSection1Read: 0
   textSection2Read: 0
   textSection3Read: 0
   textSection4Read: 0
   textSection5Read: 0
+  textSection6Read: 0
+  textSection7Read: 0
+  textSection8Read: 0
   ttsIntro1: {fileID: 9069096799269312469}
   ttsIntro2: {fileID: 1176876737379115276}
   ttsIntro3: {fileID: 3908022590691917570}
   ttsIntro4: {fileID: 9185822199008081630}
   ttsIntro5: {fileID: 6730516131588186128}
+  ttsIntro6: {fileID: 5703349208315571877}
+  ttsIntro7: {fileID: 8131490491021182232}
+  ttsIntro8: {fileID: 2186443191657514267}
   progressText: {fileID: 3068156148260281201}
   progressTextBack: {fileID: 846865127684490827}
   textBeenRead: 0
@@ -14397,6 +14409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91113090279838e46aad08a0a7e38911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxToEnable: {fileID: 2017980418}
   stopTaskRepeating: 0
   npcCam: {fileID: 1412106504}
   playerCam: {fileID: 1178682253}
@@ -14623,7 +14636,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2017980416}
+      addedObject: {fileID: 2017980418}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2017980417}
   m_SourcePrefab: {fileID: 100100000, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
 --- !u!4 &2017980414 stripped
 Transform:
@@ -14635,7 +14651,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b3fe149c7a776e4d853a0df6d20ae7a, type: 3}
   m_PrefabInstance: {fileID: 2017980413}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2017980416
+--- !u!114 &2017980417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017980415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04709a6651d88a458f3441440202721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMan: {fileID: 1984380664}
+  consoleScreen: {fileID: 1029444640344487319}
+  runOnce: 0
+--- !u!65 &2017980418
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14652,7 +14683,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.013187679, y: 0.020472225, z: 0.030820906}
   m_Center: {x: -0.002610222, y: -0.00006466806, z: 0.0044240924}
@@ -22426,7 +22457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18012e854a22b8b4d95a4ad8b8fd7ca8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 829da045e969d714fbf9d6f0b2bca3e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

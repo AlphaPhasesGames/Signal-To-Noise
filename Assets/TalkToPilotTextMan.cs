@@ -11,7 +11,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         TUSOMMain digiWaves;
         RobotController ronCont;
         // public GameObject consoleScreen;
-
+        public BoxCollider boxToEnable;
         // public DockTabletTextMan textman2;
         //  public Button messageButton;
         public bool stopTaskRepeating;
@@ -217,6 +217,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText4.SetActive(false);
                     ttsIntro4.gameObject.SetActive(false);
+
+                    boxToEnable.enabled = true;
 
                     npcCam.gameObject.SetActive(false);
                     npcCam.enabled = false;

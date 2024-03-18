@@ -15,6 +15,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI shipText4;
         public TextMeshProUGUI shipText5;
 
+        public TextMeshProUGUI shipText6;
+        public TextMeshProUGUI shipText7;
+        public TextMeshProUGUI shipText8;
+
         public TextMeshProUGUI talkToPilotText1;
         public TextMeshProUGUI talkToPilotText2;
         public TextMeshProUGUI talkToPilotText3;
@@ -29,10 +33,16 @@ namespace Digi.Waves.Alpha.Phases.Games
             shipText4.text = defs["stage5IntroText4"];
             shipText5.text = defs["stage5IntroText5"];
 
+
+
             talkToPilotText1.text = defs["stage5IntroText6"];
             talkToPilotText2.text = defs["stage5IntroText7"];
             talkToPilotText3.text = defs["stage5IntroText8"];
             talkToPilotText4.text = defs["stage5IntroText9"];
+
+            shipText6.text = defs["stage5IntroText10"];
+            shipText7.text = defs["stage5IntroText11"];
+            shipText8.text = defs["stage5IntroText12"];
 
         }
     }
