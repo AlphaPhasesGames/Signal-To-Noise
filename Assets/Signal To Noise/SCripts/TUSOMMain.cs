@@ -191,7 +191,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 SceneManager.LoadScene("Stage4DockingBay");
             }
-
+            if (Input.GetKeyDown(KeyCode.Keypad5))
+            {
+                SceneManager.LoadScene("Stage5InsideShip");
+            }
             /*
 
                 if (Input.GetKeyDown(KeyCode.Keypad1))

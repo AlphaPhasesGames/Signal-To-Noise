@@ -8,8 +8,8 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class DockInventory : MonoBehaviour
     {
         public GameObject invUIPanal; // declare gameobject for UI inventory panal
-        public DockSmartPhoneInventoryProperties phoneProp;
-        public DockSmartTabletInventoryProperties tabletProp;
+        public ShipSmartPhoneInventoryProperties phoneProp;
+        public ShipTabletInventoryProperties tabletProp;
         public DockSmartWatchInventoryProperties watchProp;
         public Button closeInv;
         public Button openInv;
@@ -72,8 +72,6 @@ namespace Digi.Waves.Alpha.Phases.Games
                 tabletProp.DeSelectGoldItem();
             }
         }
-
-
         //Function for opening the inventory
         public void OpenInventory()
         {
@@ -82,9 +80,6 @@ namespace Digi.Waves.Alpha.Phases.Games
             stopRepeat2 = false; // set stoprepeat bool to true
                                  //   robCont.StopRobotMoving();
         }
-
     }
-
-
 }
 

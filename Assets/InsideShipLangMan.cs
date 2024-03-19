@@ -29,7 +29,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI consoleText3PhoneCall;
         public TextMeshProUGUI consoleText4PhoneCall2;
 
-
+        public TextMeshProUGUI phoneText1Mech;
+        public TextMeshProUGUI phoneText2Mech;
+        public TextMeshProUGUI phoneText3Mom;
+        public TextMeshProUGUI phoneText4Pizza;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -55,7 +58,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             consoleText3PhoneCall.text = defs["stage5IntroText13"];
             consoleText4PhoneCall2.text = defs["stage5IntroText13a"];
 
-
+            phoneText1Mech.text = defs["stage5IntroText16"];
+            phoneText2Mech.text = defs["stage5IntroText17"];
+            phoneText3Mom.text = defs["stage5IntroText26Mom"];
+            phoneText4Pizza.text = defs["stage5IntroText25GuysPizza"];
         }
     }
 }

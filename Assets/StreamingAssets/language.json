@@ -118,7 +118,7 @@
       "stage3IntroText24": 60,
       "stage3IntroTextMorseCodeDoc1": 70,
       "stage3IntroTextMorseCodeDoc2": 70,
-      "stage3IntroTextMorseCodeDoc2": 70,
+      "stage3IntroTextMorseCodeDoc3": 70,
       "stage3IntroTextMorseCodeComplete": 110,
       "stage4IntroText1": 90,
       "stage4IntroText2": 110,
@@ -162,7 +162,10 @@
       "stage5IntroText19": 30,
       "stage5IntroText20": 60,
       "stage5IntroText21": 90,
-
+      "stage5IntroText22": 60,
+      "stage5IntroText23": 90,
+      "stage5IntroText25GuysPizza": 90,
+      "stage5IntroText26Mom": 90,
       "autoSave": 40
     }
   },
@@ -305,7 +308,7 @@
     "stage4IntroText17": "Excellent. Let’s input the data we decoded into the docks landing console.",
     "stage4IntroText18": "That code doesn’t work. Try and decode the message again and have another go!",
     "stage4IntroText19": "Fantastic. The ship has safely docked.",
-    "stage5IntroText20": "Let's go into the ship and talk to the pilot.",
+    "stage4IntroText20": "Let's go into the ship and talk to the pilot.",
     "stage5IntroText1": "Welcome aboard the USS Esses!",
     "stage5IntroText2": "We need to talk to the pilot but first, we should talk about analog signals.",
     "stage5IntroText3": "Analog signals vary continuously.",
@@ -323,11 +326,13 @@
     "stage5IntroText14": "Morse code is digital. Try again!",
     "stage5IntroText15": "Binary is digital. Try again!",
     "stage5IntroText16": "Hello? I'm getting strange readings from your ship.",
-    "stage5IntroText17": "Could you please search the ship for an analog thermometer and get the temperature reading?",
+    "stage5IntroText17": "Could you please search the ship for an analog thermometer?",
     "stage5IntroText18": "Wow, 200 degrees! We need to purge the ship of heat. Can you hit the giant red button on the console, please?",
     "stage5IntroText19": "Thank you very much!",
     "stage5IntroText20": "Feel free to finish work for the day. I'll take over.",
     "stage5IntroText21": "Thank you for working hard to help understand digital and analog signals.",
+    "stage5IntroText25GuysPizza": "This is Guys Pizza. We open at 11 pm. Please call back later!",
+    "stage5IntroText26Mom": "Hi honey. I’m not home right now. Call me later.",
     "autoSave": "Autosaving..."
   },
   "es": {
@@ -487,11 +492,13 @@
     "stage5IntroText14": "Morse code is digital. Try again!",
     "stage5IntroText15": "Binary is digital. Try again!",
     "stage5IntroText16": "Hello? I'm getting strange readings from your ship.",
-    "stage5IntroText17": "Could you please search the ship for an analog thermometer and get the temperature reading?",
+    "stage5IntroText17": "Could you please search the ship for an analog thermometer?",
     "stage5IntroText18": "Wow, 200 degrees! We need to purge the ship of heat. Can you hit the giant red button on the console, please?",
     "stage5IntroText19": "Thank you very much!",
     "stage5IntroText20": "Feel free to finish work for the day. I'll take over.",
     "stage5IntroText21": "Thank you for working hard to help understand digital and analog signals.",
+    "stage5IntroText25GuysPizza": "This is Guys Pizza. We open at 11 pm. Please call back later!",
+    "stage5IntroText26Mom": "Hi honey. I’m not home right now. Call me later.",
     "autoSave": "Autosaving..."
   },
   "zh": {
