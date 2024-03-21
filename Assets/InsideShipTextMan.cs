@@ -32,6 +32,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject consoleText6;
         public GameObject consoleText7;
 
+        public GameObject thermText1;
+
         public bool textSection1Read;
         public bool textSection2Read;
         public bool textSection3Read;
@@ -46,6 +48,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection10Read;
         public bool textSection11Read;
         public bool textSection12Read;
+        public bool textSection13Read;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
@@ -59,6 +62,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro10;
         public Button ttsIntro11;
         public Button ttsIntro12;
+        public Button ttsIntro13;
         /*
                 public bool textSection5Read;
                 public bool textSection6Read;
@@ -122,6 +126,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro11.onClick.AddListener(IntroTTSSpeak4);
             ttsIntro12.onClick.AddListener(IntroTTSSpeak5);
 
+            ttsIntro13.onClick.AddListener(IntroTTSSpeak13);
             if (!digiWaves.aboardTheShip5StartedAlready)
             {
                 currentStageOfText = 1;
@@ -522,6 +527,29 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!textSection13Read)
+            {
+                //  jobotIntroStage1
+                if (currentStageOfText == 13)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+
+
+                    thermText1.SetActive(true);
+                    ttsIntro13.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    Debug.Log("Is stage4IntroText1 1 running");
+                    textSection13Read = true;
+                }
+            }
+
 
             if (currentStageOfText == 50)
             {
@@ -563,6 +591,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
+
+                    thermText1.SetActive(false);
+                    ttsIntro13.gameObject.SetActive(false);
 
                     Debug.Log("This hidwe text funtion executed once");
                     textBeenRead = false;
@@ -669,7 +700,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             LOLSDK.Instance.SpeakText("stage5IntroText13a");
             Debug.Log(" introText1 Button is pressed");
         }
-
+        public void IntroTTSSpeak13()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText18");
+            Debug.Log(" introText1 Button is pressed");
+        }
         public void CorrectGuess()
         {
 
