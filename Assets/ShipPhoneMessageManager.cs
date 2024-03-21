@@ -8,7 +8,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class ShipPhoneMessageManager : MonoBehaviour
     {
-       // TUSOMMain digiWaves;
+        TUSOMMain digiWaves;
       //  RobotController ronCont;
         // public GameObject consoleScreen;
        // public BoxCollider boxToEnable;
@@ -54,7 +54,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         private void Start()
         {
-          //  digiWaves = FindObjectOfType<TUSOMMain>();
+            digiWaves = FindObjectOfType<TUSOMMain>();
           //  ronCont = FindObjectOfType<RobotController>();
 
             currentStageOfText = 0;
@@ -133,9 +133,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(true);
                     ttsIntro2.gameObject.SetActive(true);
-
-                  //  introText3.SetActive(false);
-                //    ttsIntro3.gameObject.SetActive(false);
+                    digiWaves.taskNumberShip = 4;
+                    digiWaves.TaskNumberShipSaver();
+                    //  introText3.SetActive(false);
+                    //    ttsIntro3.gameObject.SetActive(false);
 
 
                     StartCoroutine(MoveCorrectGuessOn());

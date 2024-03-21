@@ -14,18 +14,6 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject consoleScreen;
         public bool runOnce;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         private void OnMouseDown()
         {
             if (!runOnce)

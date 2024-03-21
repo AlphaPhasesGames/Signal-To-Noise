@@ -58,6 +58,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public int task_number_crew_quarter;
         public int task_number_comms_room;
         public int task_number_dock;
+        public int task_number_ship;
         /*       public bool lobby_reminder_1;
                public bool lobby_reminder_2;
 
@@ -126,6 +127,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             public int taskNumberCrewQuarters;
             public int taskNumberCommsRoom;
             public int taskNumberDock;
+            public int taskNumberShip;
 
             public bool reminderBoolStage1;
 
@@ -195,29 +197,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 SceneManager.LoadScene("Stage5InsideShip");
             }
-            /*
-
-                if (Input.GetKeyDown(KeyCode.Keypad1))
-                {
-                    SceneManager.LoadScene("S1Solid");
-                }
-
-
-
-           if (Input.GetKeyDown(KeyCode.Keypad3))
-                {
-                    SceneManager.LoadScene("S1Gas");
-                }
-
-
           
-
-                if (Input.GetKeyDown(KeyCode.Keypad5))
-                {
-                    SceneManager.LoadScene("S2Liquid");
-                }
-
-          */
         }
         //save function - not actually used much
         public void Save()
@@ -322,7 +302,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!loadInvItemsOnce)
                 {
                     aboardTheShip5StartedAlready = digiWavesSaveData.abour_ship_5_started_already;
-                  //  taskNumberSolid2 = tusomSaveData.task_number_solid_2;
+                    taskNumberShip = digiWavesSaveData.task_number_ship;
+                    //  taskNumberSolid2 = tusomSaveData.task_number_solid_2;
                  //   currentStage = tusomSaveData.current_stage;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
@@ -396,7 +377,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (currentStage == 5)
                 {
                 aboardTheShip5StartedAlready = digiWavesSaveData.abour_ship_5_started_already;
-                }
+                taskNumberShip = digiWavesSaveData.task_number_ship;
+
+            }
 
             Debug.Log("Loaded Save");
             }
@@ -484,6 +467,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void TaskNumberDockSaver()
         {
             digiWavesSaveData.task_number_dock = taskNumberDock;
+            Save();
+        }
+
+        public void TaskNumberShipSaver()
+        {
+            digiWavesSaveData.task_number_ship = taskNumberShip;
             Save();
         }
 

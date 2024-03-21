@@ -16250,6 +16250,7 @@ GameObject:
   - component: {fileID: 1984380668}
   - component: {fileID: 1984380667}
   - component: {fileID: 1984380669}
+  - component: {fileID: 1984380670}
   m_Layer: 0
   m_Name: NonMovingScripts
   m_TagString: Untagged
@@ -16370,6 +16371,11 @@ MonoBehaviour:
   talkToPilotText5: {fileID: 1000703979}
   talkToPilotText6: {fileID: 903826155}
   talkToPilotText7: {fileID: 1602852226}
+  task1: {fileID: 6651589153761235785}
+  task2: {fileID: 1525381747133171073}
+  task3: {fileID: 1693785921414501146}
+  task4: {fileID: 4024885306763667736}
+  task5: {fileID: 183593874}
 --- !u!114 &1984380664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16576,6 +16582,29 @@ MonoBehaviour:
   progressTextIsShowing: 0
   hasTextplayerOnce: 0
   currentStageOfText: 0
+--- !u!114 &1984380670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984380643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98170adaade4084e865b499441b4b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task1: {fileID: 6651589153761235785}
+  task2: {fileID: 1525381747133171073}
+  task3: {fileID: 1693785921414501146}
+  task4: {fileID: 4024885306763667736}
+  task5: {fileID: 183593874}
+  taskPanal: {fileID: 866587773413476771}
+  miniBool1: 0
+  miniBool2: 0
+  miniBool3: 0
+  miniBool4: 0
+  miniBool5: 0
 --- !u!1 &2011309621
 GameObject:
   m_ObjectHideFlags: 0

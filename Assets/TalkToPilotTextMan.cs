@@ -205,7 +205,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText4.SetActive(true);
                     ttsIntro4.gameObject.SetActive(true);
 
-
+                    digiWaves.taskNumberShip = 2;
+                    digiWaves.TaskNumberShipSaver();
                     StartCoroutine(MoveCorrectGuessOnD2());
 
                     Debug.Log("Is stage4IntroText4 3 running");

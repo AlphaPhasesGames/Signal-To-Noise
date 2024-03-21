@@ -293,8 +293,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     LOLSDK.Instance.SpeakText("stage5IntroText5");
                       digiWaves.SaveStage5Started();
-                    //   digiWaves.taskNumberDock = 1;
-                    //   digiWaves.TaskNumberDockSaver();
+                    digiWaves.taskNumberShip = 1;
+                    digiWaves.TaskNumberShipSaver();
                     //  StartCoroutine(MoveCorrectGuessOn());
 
                     //   messageButton.gameObject.SetActive(true);
@@ -396,14 +396,14 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleText3.SetActive(true);
                     ttsIntro8.gameObject.SetActive(true);
 
-                  //  introText4.SetActive(false);
-                  //  ttsIntro3.gameObject.SetActive(false);
+                    //  introText4.SetActive(false);
+                    //  ttsIntro3.gameObject.SetActive(false);
 
-                 //   if (!progressTextIsShowing)
-                 //   { // 3 second delay
-                 //       StartCoroutine(DelayProgressButtonVar2());
-                 //       progressTextIsShowing = true;
-                //    }
+                    //   if (!progressTextIsShowing)
+                    //   { // 3 second delay
+                    //       StartCoroutine(DelayProgressButtonVar2());
+                    //       progressTextIsShowing = true;
+                    //    }
 
                     Debug.Log("Is stage4IntroText3 3 running");
                     textSection8Read = true;
@@ -490,7 +490,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
-
+                    
+                    digiWaves.taskNumberShip = 3;
+                    digiWaves.TaskNumberShipSaver();
                     if (!progressTextIsShowing)
                           { // 3 second delay
                               StartCoroutine(DelayProgressButtonVar2());
@@ -520,7 +522,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(true);
                     ttsIntro12.gameObject.SetActive(true);
-
+                  //  digiWaves.taskNumberShip = 4;
+                 //   digiWaves.TaskNumberShipSaver();
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("Is stage4IntroText1 1 running");
                     textSection12Read = true;
@@ -540,7 +543,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage5IntroText1");
 
-
+                    digiWaves.taskNumberShip = 5;
+                    digiWaves.TaskNumberShipSaver();
                     thermText1.SetActive(true);
                     ttsIntro13.gameObject.SetActive(true);
 
