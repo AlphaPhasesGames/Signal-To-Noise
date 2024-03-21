@@ -63,33 +63,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro11;
         public Button ttsIntro12;
         public Button ttsIntro13;
-        /*
-                public bool textSection5Read;
-                public bool textSection6Read;
-                public bool textSection7Read;
-                public bool textSection8Read;
-
-                public bool textSection9Read;
-                public bool textSection10Read;
-
-                public bool textSection11Read;
-                public bool textSection12Read;
-                public bool textSection13Read;
 
 
-
-                public Button ttsIntro5;
-                public Button ttsIntro6;
-                public Button ttsIntro7;
-                public Button ttsIntro8;
-
-                public Button ttsIntro9;
-                public Button ttsIntro10;
-
-                public Button ttsIntro11;
-                public Button ttsIntro12;
-                public Button ttsIntro13;
-        */
 
         public GameObject consoleScreen;
         public Button progressText;

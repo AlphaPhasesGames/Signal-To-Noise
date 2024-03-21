@@ -48,6 +48,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button progressText;
         public Button progressTextBack;
 
+        public GameObject blackFade;
+        public Animator fadeAnim;
+
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -295,6 +298,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText7.SetActive(true);
                     ttsIntro7.gameObject.SetActive(true);
+
+
+
                     StartCoroutine(MoveFinalTextOn());
 
                     Debug.Log("Is stage4IntroText2 2 running");
@@ -319,6 +325,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro4.gameObject.SetActive(false);
 
                     boxToEnable.enabled = true;
+
+
 
                     npcCam.gameObject.SetActive(false);
                     npcCam.enabled = false;
@@ -426,6 +434,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator MoveFinalTextOn()
         {
             yield return new WaitForSeconds(5f);
+            blackFade.gameObject.SetActive(true);
+            fadeAnim.SetBool("fade", true);
             LOLSDK.Instance.CompleteGame();
 
         }

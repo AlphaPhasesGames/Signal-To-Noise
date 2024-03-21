@@ -22,7 +22,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         TUSOMMain tusomMain;
         //   public EmployeeBadgeInvProperties badgeProp;
         //    public DigiKeyBaordInvProperties keyBProp;
-
+        public BoxCollider pilotCollider;
+        public BoxCollider consoleCollider;
+        public BoxCollider thermCollider;
+        public BoxCollider purgeButton;
         //   public BoxCollider consoleCol;
 
         //   public bool loadTaskOnce;
@@ -53,6 +56,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+                    consoleCollider.enabled = false;
+                    thermCollider.enabled = false;
                     miniBool1 = true;
                     Debug.Log("Task fired once");
                 }
@@ -69,6 +74,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+                    pilotCollider.enabled = false;
+                    consoleCollider.enabled = true;
+                    thermCollider.enabled = false;
+
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     miniBool2 = true;
@@ -88,6 +97,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     miniBool3 = true;
+                    pilotCollider.enabled = false;
+                    consoleCollider.enabled = false;
+                    thermCollider.enabled = false;
+
                     // reminder1.gameObject.SetActive(true);
                     //  reminder2.gameObject.SetActive(true);
                     //  reminder3.gameObject.SetActive(true);
@@ -111,6 +124,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     // reminder2.gameObject.SetActive(true);
                     //reminder3.gameObject.SetActive(true);
                     miniBool4 = true;
+                    pilotCollider.enabled = false;
+                    consoleCollider.enabled = false;
+                    thermCollider.enabled = true;
+
                     Debug.Log("Task fired once");
                 }
 
@@ -131,6 +148,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     // reminder2.gameObject.SetActive(true);
                     // reminder3.gameObject.SetActive(true);
                     miniBool5 = true;
+                    pilotCollider.enabled = false;
+                    consoleCollider.enabled = false;
+                    thermCollider.enabled = false;
+                    purgeButton.enabled = true;
+
                     Debug.Log("Task fired once");
                 }
 
