@@ -14,6 +14,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI inventoryText;
         public TextMeshProUGUI keycardText;
         public TextMeshProUGUI keyboardText;
+        public TextMeshProUGUI helpText;
         public TextMeshProUGUI bridgeText1;
         public TextMeshProUGUI bridgeText2;
         public TextMeshProUGUI bridgeText3;
@@ -56,6 +57,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task2;
         public TextMeshProUGUI task3;
         public TextMeshProUGUI task4;
+        public TextMeshProUGUI task5;
 
         public TextMeshProUGUI reminder1;
         public TextMeshProUGUI reminder2;
@@ -75,6 +77,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             inventoryText.text = defs["inventoryTitle"];
             keycardText.text = defs["inventoryKeycard"];
             keyboardText.text = defs["inventoryKeyboard"];
+            helpText.text = defs["help"];
             bridgeText1.text = defs["stage1IntroText1"];
             bridgeText2.text = defs["stage1IntroText2"];
             bridgeText3.text = defs["stage1IntroText3"];
@@ -117,6 +120,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             task2.text = defs["stage1Task2"];
             task3.text = defs["stage1Task3"];
             task4.text = defs["stage1Task4"];
+            task5.text = defs["stage1Task5"];
 
             reminder1.text = defs["stage1Reminder1"];
             reminder2.text = defs["stage1Reminder2"];

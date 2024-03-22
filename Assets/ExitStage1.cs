@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using LoLSDK;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
@@ -23,6 +24,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             if (other.CompareTag("Player"))
             {
+                LOLSDK.Instance.SubmitProgress(0, 20, 100);
                 SceneManager.LoadScene("CrewQuaters");
                 Debug.Log("Changed Scene");
             }

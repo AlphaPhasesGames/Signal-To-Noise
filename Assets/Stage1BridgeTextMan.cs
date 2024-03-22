@@ -329,6 +329,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ronCont.enabled = true;
                     introText5.SetActive(true);
                     ttsIntro5.gameObject.SetActive(true);
+                    LOLSDK.Instance.SubmitProgress(0, 0, 100);
                     digiWaves.stage1Started = true;
                     digiWaves.SaveStage1Started();
                     digiWaves.taskNumber = 1;
@@ -683,6 +684,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    progressTextBack.gameObject.SetActive(false);
+
                     LOLSDK.Instance.SpeakText("stage1IntroText16");
                     introText16.SetActive(false);
                     ttsIntro16.gameObject.SetActive(false);
@@ -711,6 +714,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    progressTextBack.gameObject.SetActive(false);
+
                     LOLSDK.Instance.SpeakText("stage1IntroText17");
                     introText16.SetActive(false);
                     ttsIntro16.gameObject.SetActive(false);
@@ -744,6 +749,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    progressTextBack.gameObject.SetActive(false);
+
                     LOLSDK.Instance.SpeakText("stage1IncorrectSpeakerItem");
                     introText16.SetActive(false);
                     ttsIntro16.gameObject.SetActive(false);
@@ -776,6 +783,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    progressTextBack.gameObject.SetActive(false);
+
                     LOLSDK.Instance.SpeakText("stage1IncorrectClockItem");
                     introText16.SetActive(false);
                     ttsIntro16.gameObject.SetActive(false);
@@ -809,7 +818,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText18");
-  
+                    progressTextBack.gameObject.SetActive(false);
+
 
                     introText19NoBadge.SetActive(true);
                     ttsIntro19NoBadge.gameObject.SetActive(true);
@@ -831,6 +841,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText19");
+                    progressTextBack.gameObject.SetActive(false);
 
 
                     introText20FoundBadge.SetActive(true);
@@ -853,6 +864,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText20");
+                    progressTextBack.gameObject.SetActive(false);
 
 
                     introText21CollectedBothItems.SetActive(true);
@@ -941,7 +953,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText22.SetActive(false);
                     ttsIntro22.gameObject.SetActive(false);
-
+                    LOLSDK.Instance.SubmitProgress(0, 10, 100);
                     introText23.SetActive(false);
                     ttsIntro23.gameObject.SetActive(false);
 
