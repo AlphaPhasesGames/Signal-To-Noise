@@ -50,6 +50,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI bridgeTextClockRight28;
         public TextMeshProUGUI bridgeTextClockWrong29;
 
+        public TextMeshProUGUI bridgeConsoleAnaWrong;
+
         public TextMeshProUGUI task1;
         public TextMeshProUGUI task2;
         public TextMeshProUGUI task3;
@@ -59,6 +61,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI reminder2;
         public TextMeshProUGUI reminder3;
 
+        public TextMeshProUGUI menuTitle;
+        public TextMeshProUGUI item1;
+        public TextMeshProUGUI item2;
+        public TextMeshProUGUI item3;
+        public TextMeshProUGUI item4;
+        public TextMeshProUGUI item5;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -103,6 +111,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeTextClockRight28.text = defs["stage1IntroText32"];
             bridgeTextClockWrong29.text = defs["stage1IntroText31"];
 
+            bridgeConsoleAnaWrong.text = defs["stage1IntroText33AnaMessage"];
+
             task1.text = defs["stage1Task1"];
             task2.text = defs["stage1Task2"];
             task3.text = defs["stage1Task3"];
@@ -111,6 +121,13 @@ namespace Digi.Waves.Alpha.Phases.Games
             reminder1.text = defs["stage1Reminder1"];
             reminder2.text = defs["stage1Reminder2"];
             reminder3.text = defs["stage1Reminder3"];
+
+            menuTitle.text = defs["stage1LunchMenuTitle"];
+            item1.text = defs["stage1LunchMenuItem1"];
+            item2.text = defs["stage1LunchMenuItem2"];
+            item3.text = defs["stage1LunchMenuItem3"];
+            item4.text = defs["stage1LunchMenuItem4"];
+            item5.text = defs["stage1LunchMenuItem5"];
         }
 
     }

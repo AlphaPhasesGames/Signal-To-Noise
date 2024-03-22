@@ -60,6 +60,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText29;
         public GameObject introText30;
 
+        public GameObject anaFolderReplyMessage;
         public bool textBeenRead;
         public bool progressTextIsShowing;
         public bool hasTextplayerOnce;
@@ -98,7 +99,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection28Read;
         public bool textSection29Read;
         public bool textSection30Read;
-
+        public bool textSection31Read;
 
         public bool consoleImageRead;
 
@@ -137,7 +138,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro28;
         public Button ttsIntro29;
         public Button ttsIntro30;
-
+        public Button ttsIntro31;
         public Button progressText;
         public Button progressTextBack;
 
@@ -183,6 +184,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro28.onClick.AddListener(IntroTTSSpeak28);
             ttsIntro29.onClick.AddListener(IntroTTSSpeak29);
             ttsIntro30.onClick.AddListener(IntroTTSSpeak30);
+            ttsIntro31.onClick.AddListener(IntroTTSSpeak31);
             if (!digiWaves.stage1Started)
             {
                 currentStageOfText = 1;
@@ -1186,6 +1188,36 @@ namespace Digi.Waves.Alpha.Phases.Games
                     Debug.Log("Is stage1IntroText25b  running");
                 }
             }
+
+            if (!textSection31Read)
+            {
+                if (currentStageOfText == 35)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1IntroText33AnaMessage");
+
+                    anaFolderReplyMessage.SetActive(true);
+                    ttsIntro31.gameObject.SetActive(true);
+
+                    introText26b.SetActive(false);
+                    ttsIntro26b.gameObject.SetActive(false);
+
+                    introText27.SetActive(false);
+                    ttsIntro27.gameObject.SetActive(false);
+
+                    introText28.SetActive(false);
+                    ttsIntro28.gameObject.SetActive(false);
+
+               
+                    StartCoroutine(MoveCorrectGuessOnD2());
+                    textSection31Read = true;
+                    Debug.Log("Is currentStageOfText 5 running");
+                }
+            }
+
             if (currentStageOfText == 50)
             {
 
@@ -1287,6 +1319,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText27.SetActive(false);
                     ttsIntro27.gameObject.SetActive(false);
 
+                    anaFolderReplyMessage.SetActive(false);
+                    ttsIntro31.gameObject.SetActive(false);
 
                     introText28.SetActive(false);
                     ttsIntro28.gameObject.SetActive(false);
@@ -1340,6 +1374,30 @@ namespace Digi.Waves.Alpha.Phases.Games
             textSection8Read = false;
             textSection9Read = false;
             textSection10Read = false;
+            textSection11Read = false;
+            textSection12Read = false;
+            textSection13Read = false;
+            textSection14Read = false;
+            textSection15Read = false;
+            textSection16Read = false;
+            textSection17CorrectDigiItemRead = false;
+            textSection18IncorrectDigiItemRead = false;
+            textSection18IncorrectDigiItemRead2 = false;
+            textSection18IncorrectDigiItemRead3 = false;
+            textSection19ReadNoBadge = false;
+            textSection20ReadFoundBadge = false;
+            textSection21ReadCollectedBothItems = false;
+            textSection22Read = false;
+            textSection23Read = false;
+            textSection24Read = false;
+            textSection26Read = false;
+            textSection26aRead = false;
+            textSection26bRead = false;
+            textSection27Read = false;
+            textSection28Read = false;
+            textSection29Read = false;
+            textSection30Read = false;
+            textSection31Read = false;
             progressTextIsShowing = false;
             //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
         }
@@ -1544,20 +1602,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("introText 18 Button is pressed");
         }
 
-        public void CorrectGuess()
+        public void IntroTTSSpeak31()
         {
-
-            currentStageOfText = 6;
-            Debug.Log("Correct");
+            LOLSDK.Instance.SpeakText("stage1IntroText33AnaMessage");
+            Debug.Log("introText 18 Button is pressed");
         }
-
-        public void IncorrectGuess()
-        {
-            // StartCoroutine(RestartCount());
-            currentStageOfText = 5;
-            Debug.Log("Incorrect");
-        }
-
 
         public IEnumerator DelayProgressButtonVar3()
         {
@@ -1583,21 +1632,6 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
-        public IEnumerator MoveFinalTextOn()
-        {
-            yield return new WaitForSeconds(3.5f);
-            currentStageOfText = 40;
-
-        }
-
-        public IEnumerator MoveCorrectGuessOn()
-        {
-            yield return new WaitForSeconds(3.5f);
-            currentStageOfText = 50;
-
-        }
-
-
         public IEnumerator MoveCorrectGuessOnD2()
         {
             hasTextplayerOnce = false;
@@ -1606,13 +1640,6 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
-        public IEnumerator MoveCorrectGuessOn2()
-        {
-            yield return new WaitForSeconds(3);
-            currentStageOfText = 50;
-            Debug.Log("This coroutine fired");
-
-        }
     }
 }
 
