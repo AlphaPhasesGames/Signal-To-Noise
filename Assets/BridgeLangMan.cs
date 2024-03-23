@@ -77,7 +77,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             inventoryText.text = defs["inventoryTitle"];
             keycardText.text = defs["inventoryKeycard"];
             keyboardText.text = defs["inventoryKeyboard"];
-            helpText.text = defs["help"];
+            helpText.text = defs["helpText"];
             bridgeText1.text = defs["stage1IntroText1"];
             bridgeText2.text = defs["stage1IntroText2"];
             bridgeText3.text = defs["stage1IntroText3"];

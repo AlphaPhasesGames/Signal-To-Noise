@@ -20,6 +20,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider speakersBox;
         public BoxCollider keyboardBox;
 
+        public BoxCollider consoleCollider;
+        public BoxCollider consoleColliderNonTrigger;
+
+        public GameObject lunchFolder;
+        public GameObject commsFolder;
+        public GameObject partyFolder;
+
         public BoxCollider analogClockBox;
 
         public Button messageButton;
@@ -668,7 +675,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     clockBox.enabled = true;
                     //  introText16.SetActive(false);
                     //  ttsIntro16.gameObject.SetActive(false);
-
+                    consoleCollider.enabled = false;
+                    consoleColliderNonTrigger.enabled = false;
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection16Read = true;
                     Debug.Log("Is currentStageOfText 15 running");
@@ -820,11 +828,19 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage1IntroText18");
                     progressTextBack.gameObject.SetActive(false);
 
+                    introText17CorrectDigitalItem.SetActive(false);
+                    ttsIntro17CorrectDigiItem.gameObject.SetActive(false);
+
+                    introText16.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
 
                     introText19NoBadge.SetActive(true);
                     ttsIntro19NoBadge.gameObject.SetActive(true);
 
-                  
+
+                    introText20FoundBadge.SetActive(false);
+                    ttsIntro20FoundBadge.gameObject.SetActive(false);
+
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection19ReadNoBadge = true;
                     Debug.Log("Is stage1IntroText18  running");
@@ -842,7 +858,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText19");
                     progressTextBack.gameObject.SetActive(false);
-
+                    introText19NoBadge.SetActive(false);
+                    ttsIntro19NoBadge.gameObject.SetActive(false);
 
                     introText20FoundBadge.SetActive(true);
                     ttsIntro20FoundBadge.gameObject.SetActive(true);
@@ -932,7 +949,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText23.SetActive(true);
                     ttsIntro23.gameObject.SetActive(true);
-
+                    //consoleCollider.enabled = true;
+                    consoleColliderNonTrigger.enabled = true;
                     StartCoroutine(MoveCorrectGuessOnD2());
                     textSection23Read = true;
                     Debug.Log("Is stage1IntroText22  running");
@@ -982,6 +1000,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     // LOLSDK.Instance.SpeakText("stage1IntroText23");
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
+
                     introText24.SetActive(false);
                     ttsIntro24.gameObject.SetActive(false);
 
@@ -1049,6 +1074,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText25a");
 
+
+
+                    introText25.SetActive(false);
+                    ttsIntro25.gameObject.SetActive(false);
+
                     introText26.SetActive(false);
                     ttsIntro26.gameObject.SetActive(false);
 
@@ -1081,12 +1111,17 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText25b");
 
+                    introText25.SetActive(false);
+                    ttsIntro25.gameObject.SetActive(false);
+
                     introText26a.SetActive(false);
                     ttsIntro26a.gameObject.SetActive(false);
 
                     introText26b.SetActive(true);
                     ttsIntro26b.gameObject.SetActive(true);
-
+                    partyFolder.gameObject.SetActive(true);
+                    commsFolder.gameObject.SetActive(true);
+                    lunchFolder.gameObject.SetActive(true);
                     //  StartCoroutine(MoveCorrectGuessOnD2());
                     textSection26bRead = true;
                     Debug.Log("Is stage1IntroText25b  running");
@@ -1106,6 +1141,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage1IntroText29");
                     consoleScreen.gameObject.SetActive(false);
                     analogClockBox.enabled = true;
+
+                    introText25.SetActive(false);
+                    ttsIntro25.gameObject.SetActive(false);
+
                     introText26b.SetActive(false);
                     ttsIntro26b.gameObject.SetActive(false);
 
@@ -1140,7 +1179,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText30");
-                  
+
+                    introText25.SetActive(false);
+                    ttsIntro25.gameObject.SetActive(false);
+
                     introText27.SetActive(false);
                     ttsIntro27.gameObject.SetActive(false);
 
@@ -1352,8 +1394,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             if (currentStageOfText == 40)
             {
                 parentTextPanalObject.gameObject.SetActive(false);
-                LOLSDK.Instance.SubmitProgress(0, 48, 100);
-                Debug.Log("This apple bot correct funtion called");
+                //LOLSDK.Instance.SubmitProgress(0, 48, 100);
+               // Debug.Log("This apple bot correct funtion called");
                 //  ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
                 SceneManager.LoadScene("CrewQuaters");
 
