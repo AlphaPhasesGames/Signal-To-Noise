@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using LoLSDK;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 namespace Digi.Waves.Alpha.Phases.Games
 {
     public class CrewQuartersWatchTextMan : MonoBehaviour
@@ -118,7 +116,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         introText2.SetActive(false);
                         ttsIntro2.gameObject.SetActive(false);
                         //   StartCoroutine(MoveCorrectGuessOn2());
-                     
+                        LOLSDK.Instance.SubmitProgress(0, 30, 100);
                         Debug.Log("This hidwe text funtion executed once");
 
                         //LOLSDK.Instance.SubmitProgress(0, 10, 100);

@@ -9,6 +9,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class CrewQuartersLangMan : MonoBehaviour
     {
+        public TextMeshProUGUI invTablet;
+        public TextMeshProUGUI invPhone;
+        public TextMeshProUGUI invWatch;
+
+        public TextMeshProUGUI inventoryTitle;
+        public TextMeshProUGUI inventoryTitleBUtton;
+        public TextMeshProUGUI helpTitle;
 
         public TextMeshProUGUI crewQuartersText1;
         public TextMeshProUGUI crewQuartersText2;
@@ -27,6 +34,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI crewQuartersText15;
         public TextMeshProUGUI crewQuartersText16;
         public TextMeshProUGUI crewQuartersText17;
+        public TextMeshProUGUI crewQuartersText18VHS;
+        public TextMeshProUGUI crewQuartersText19Comp;
         public TextMeshProUGUI reply1;
         public TextMeshProUGUI reply2;
         public TextMeshProUGUI reply3;
@@ -66,7 +75,16 @@ namespace Digi.Waves.Alpha.Phases.Games
             task5.text = defs["stage2Task5"];
             task6.text = defs["stage2Task6"];
 
+            inventoryTitleBUtton.text = defs["inventoryTitle"];
+            inventoryTitle.text = defs["inventoryTitle"];
+            helpTitle.text = defs["helpText"];
 
+            invTablet.text = defs["s2InventoryTablet"];
+            invPhone.text = defs["s2InventoryPhones"];
+            invWatch.text = defs["2InventoryWatch"];
+
+            crewQuartersText18VHS.text = defs["stage2IntroText22"];
+            crewQuartersText19Comp.text = defs["stage2IntroText21"];
         }
 
         
