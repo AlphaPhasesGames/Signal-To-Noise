@@ -25,6 +25,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button progressText;
         public Button progressTextBack;
 
+        public GameObject settingsFolder;
+        public GameObject codesFolder;
+        public GameObject spareFolder;
+
         public int currentStageOfText;
 
         TUSOMMain digiMain;
@@ -91,6 +95,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(true);
                     ttsIntro2.gameObject.SetActive(true);
+                    LOLSDK.Instance.SubmitProgress(0, 30, 100);
+                    codesFolder.gameObject.SetActive(true);
+                    settingsFolder.gameObject.SetActive(true);
+                    spareFolder.gameObject.SetActive(true);
                     if (!digiMain.stage2CodeFound)
                     {
                         digiMain.taskNumberCrewQuarters = 5;
@@ -116,7 +124,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         introText2.SetActive(false);
                         ttsIntro2.gameObject.SetActive(false);
                         //   StartCoroutine(MoveCorrectGuessOn2());
-                        LOLSDK.Instance.SubmitProgress(0, 30, 100);
+
                         Debug.Log("This hidwe text funtion executed once");
 
                         //LOLSDK.Instance.SubmitProgress(0, 10, 100);

@@ -245,7 +245,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText3.SetActive(true);
                     ttsIntro3.gameObject.SetActive(true);
-
+                    spotLight.gameObject.SetActive(true);
                     digiWaves.crewQuarters2StartedAlready = true;
                     digiWaves.SaveStage2Started();
                     StartCoroutine(MoveCorrectGuessOnD2());
@@ -543,7 +543,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage2IntroText13");
+                    LOLSDK.Instance.SpeakText("stage2IntroText18");
 
                     introText12.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
@@ -650,7 +650,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage2IntroText21");
+                    LOLSDK.Instance.SpeakText("stage2IntroText22");
 
                     introTextComp.SetActive(true);
                     ttsIntroCOMP17.gameObject.SetActive(true);

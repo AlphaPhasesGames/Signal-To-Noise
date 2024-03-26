@@ -65,7 +65,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             task4TTS.onClick.AddListener(IntroTTSSpeak4);
 
             task5TTS.onClick.AddListener(IntroTTSSpeak5);
-            task6TTS.onClick.AddListener(IntroTTSSpeak5);
+            task6TTS.onClick.AddListener(IntroTTSSpeak6);
 
         }
 

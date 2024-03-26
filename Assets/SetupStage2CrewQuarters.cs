@@ -155,7 +155,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 digiMain.stage2ItemsCollected = true;
                 digiMain.ItemsCollectedStage2();
-                yield return new WaitForSeconds(6f);
+                yield return new WaitForSeconds(5.1f);
                 textMan.currentStageOfText = 11;
             }
 
