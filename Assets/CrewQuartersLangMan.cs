@@ -17,6 +17,21 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI inventoryTitleBUtton;
         public TextMeshProUGUI helpTitle;
 
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
+
+        public TextMeshProUGUI spareFolder;
+        public TextMeshProUGUI codesFolder;
+        public TextMeshProUGUI toiletCodeFile;
+        public TextMeshProUGUI trashRoomCodeFile;
+        public TextMeshProUGUI commsRoomCodeFile;
+        public TextMeshProUGUI toiletCodeTitle;
+        public TextMeshProUGUI trashRoomCodeTitle;
+        public TextMeshProUGUI commsRoomCodeTitle;
+        public TextMeshProUGUI settingsFolder;
+        public TextMeshProUGUI settingsFile;
+        public TextMeshProUGUI incomingMessage;
+
         public TextMeshProUGUI crewQuartersText1;
         public TextMeshProUGUI crewQuartersText2;
         public TextMeshProUGUI crewQuartersText3;
@@ -75,13 +90,28 @@ namespace Digi.Waves.Alpha.Phases.Games
             task5.text = defs["stage2Task5"];
             task6.text = defs["stage2Task6"];
 
+            spareFolder.text = defs["stage2CnslSpareFold"];
+            codesFolder.text = defs["stage2CnslCodesFold"];
+            toiletCodeFile.text = defs["stage2CnslToiletFile"];
+            trashRoomCodeFile.text = defs["stage2CnslTrashFile"];
+            commsRoomCodeFile.text = defs["stage2CnslCommsRoomFile"];
+            settingsFolder.text = defs["stage2CnslSettingsFolder"];
+            settingsFile.text = defs["stage2CnslSettingsFolder"];
+            incomingMessage.text = defs["stage1CnslIncomMess"];
+            toiletCodeTitle.text = defs["stage2CnslToiletFile"];
+            trashRoomCodeTitle.text = defs["stage2CnslTrashFile"];
+            commsRoomCodeTitle.text = defs["stage2CnslCommsRoomFile"];
+
+            reminder1.text = defs["stage2Reminder1"];
+            reminder2.text = defs["stage2Reminder2"];
+
             inventoryTitleBUtton.text = defs["inventoryTitle"];
             inventoryTitle.text = defs["inventoryTitle"];
             helpTitle.text = defs["helpText"];
 
             invTablet.text = defs["s2InventoryTablet"];
-            invPhone.text = defs["s2InventoryPhones"];
-            invWatch.text = defs["2InventoryWatch"];
+            invPhone.text = defs["s2InventoryPhone"];
+            invWatch.text = defs["s2InventoryWatch"];
 
             crewQuartersText18VHS.text = defs["stage2IntroText22"];
             crewQuartersText19Comp.text = defs["stage2IntroText21"];

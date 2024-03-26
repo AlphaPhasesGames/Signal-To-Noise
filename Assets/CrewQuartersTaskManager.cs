@@ -32,6 +32,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider compBox;
         public BoxCollider vhsBox;
 
+        public GameObject reminderText1;
+        public GameObject reminderText2;
+
         ///      public TextMeshProUGUI reminder1;
         //      public TextMeshProUGUI reminder2;
         //     public TextMeshProUGUI reminder3;
@@ -124,7 +127,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
-
+                    reminderText1.gameObject.SetActive(true);
                    // phoneBox.enabled = true;
                   //  tabletBox.enabled = true;
                   //  watchBox.enabled = true;
@@ -153,8 +156,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(true);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
-
-
+                    reminderText1.gameObject.SetActive(true);
+                    reminderText2.gameObject.SetActive(true);
                     phoneBox.enabled = false;
                     tabletBox.enabled = false;
                     watchBox.enabled = false;
@@ -182,9 +185,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(true);
                     task6.gameObject.SetActive(false);
-                   // reminder1.gameObject.SetActive(true);
-                   // reminder2.gameObject.SetActive(true);
-                   // reminder3.gameObject.SetActive(true);
+                    reminderText1.gameObject.SetActive(true);
+                    reminderText2.gameObject.SetActive(true);
+
+                    // reminder1.gameObject.SetActive(true);
+                    // reminder2.gameObject.SetActive(true);
+                    // reminder3.gameObject.SetActive(true);
                     miniBool5 = true;
                     Debug.Log("Task fired once");
                 }
@@ -205,9 +211,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(true);
-                   // reminder1.gameObject.SetActive(true);
-                   // reminder2.gameObject.SetActive(true);
-                   // reminder3.gameObject.SetActive(true);
+
+                    reminderText1.gameObject.SetActive(true);
+                    reminderText2.gameObject.SetActive(true);
+                    // reminder1.gameObject.SetActive(true);
+                    // reminder2.gameObject.SetActive(true);
+                    // reminder3.gameObject.SetActive(true);
                     miniBool6 = true;
                     Debug.Log("Task fired once");
                 }
