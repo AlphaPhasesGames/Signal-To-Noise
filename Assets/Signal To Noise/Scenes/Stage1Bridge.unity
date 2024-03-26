@@ -7095,7 +7095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Send Analog Signal
+  m_text: Send Analog Signal test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11390,6 +11390,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1840790756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7864612664761782239, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2819313160811286516, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790758 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3720608715844248037, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6434445770357164317, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8670913674938180930, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8317547053844599851, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1840790762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2330119703941762756, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1868343016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11829,7 +11906,6 @@ MonoBehaviour:
   introText13: {fileID: 1446445499}
   introText14: {fileID: 1979896410}
   introText15: {fileID: 103503355}
-  introText16: {fileID: 53942628}
   introText17CorrectDigitalItem: {fileID: 53942628}
   introText18IncorrectDigitalItem: {fileID: 1210464004}
   introText18IncorrectDigitalItem2: {fileID: 128417293}
@@ -11905,7 +11981,6 @@ MonoBehaviour:
   ttsIntro13: {fileID: 1535451811}
   ttsIntro14: {fileID: 814878970}
   ttsIntro15: {fileID: 346857131}
-  ttsIntro16: {fileID: 318648736}
   ttsIntro17CorrectDigiItem: {fileID: 318648736}
   ttsIntro18IncorrectDigiItem: {fileID: 1643995924}
   ttsIntro18IncorrectDigiItem2: {fileID: 1687150106}
@@ -11946,6 +12021,15 @@ MonoBehaviour:
   keycardText: {fileID: 4835358825540938320}
   keyboardText: {fileID: 175378869}
   helpText: {fileID: 1078144955}
+  incomingMessageButtontext: {fileID: 1840790759}
+  communicationFolderText: {fileID: 1840790762}
+  xmasPartyFoldertext: {fileID: 1840790761}
+  lunchFolder: {fileID: 1840790760}
+  lrFolder: {fileID: 1840790758}
+  srFolder: {fileID: 1840790757}
+  sendDigiReplyText: {fileID: 1840790756}
+  sendAnalogReplyText: {fileID: 1091390362}
+  lunchButtonText: {fileID: 1053528528}
   bridgeText1: {fileID: 6290121755291488883}
   bridgeText2: {fileID: 144947388677574191}
   bridgeText3: {fileID: 5685258152960421231}
@@ -13298,6 +13382,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2330119703941762756, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Communications test
+      objectReference: {fileID: 0}
     - target: {fileID: 2367095047874677343, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_text
       value: 'Help test
@@ -13327,6 +13415,12 @@ PrefabInstance:
     - target: {fileID: 2816379286007861855, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819313160811286516, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: 'Short Range test
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2866807508541582733, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_Name
@@ -13372,6 +13466,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2112a10ba98f90147a6ccf3d1f0bcb85, type: 3}
+    - target: {fileID: 3720608715844248037, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Long Range test
+      objectReference: {fileID: 0}
     - target: {fileID: 3816420018868701285, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13680,6 +13778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage1IntroText21 TTs
       objectReference: {fileID: 0}
+    - target: {fileID: 6434445770357164317, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Incoming Mesage test
+      objectReference: {fileID: 0}
     - target: {fileID: 6456021161590487568, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13748,6 +13850,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7864612664761782239, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Send Digital Signal test
+      objectReference: {fileID: 0}
     - target: {fileID: 7879831818430525385, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_fontSize
       value: 23
@@ -13779,6 +13885,10 @@ PrefabInstance:
     - target: {fileID: 8295734961359372469, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_Name
       value: Stage1IntroText20 TTs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317547053844599851, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Xmas party pictures test
       objectReference: {fileID: 0}
     - target: {fileID: 8383949110587743202, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_Name
@@ -13819,6 +13929,10 @@ PrefabInstance:
     - target: {fileID: 8569235006397846081, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670913674938180930, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_text
+      value: Lunch test
       objectReference: {fileID: 0}
     - target: {fileID: 8724948707071961249, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive

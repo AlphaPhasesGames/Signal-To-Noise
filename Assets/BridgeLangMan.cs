@@ -15,6 +15,17 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI keycardText;
         public TextMeshProUGUI keyboardText;
         public TextMeshProUGUI helpText;
+        
+        public TextMeshProUGUI incomingMessageButtontext;
+        public TextMeshProUGUI communicationFolderText;
+        public TextMeshProUGUI xmasPartyFoldertext;
+        public TextMeshProUGUI lunchFolder;
+        public TextMeshProUGUI lrFolder;
+        public TextMeshProUGUI srFolder;
+        public TextMeshProUGUI sendDigiReplyText;
+        public TextMeshProUGUI sendAnalogReplyText;
+        public TextMeshProUGUI lunchButtonText;
+
         public TextMeshProUGUI bridgeText1;
         public TextMeshProUGUI bridgeText2;
         public TextMeshProUGUI bridgeText3;
@@ -78,6 +89,17 @@ namespace Digi.Waves.Alpha.Phases.Games
             keycardText.text = defs["inventoryKeycard"];
             keyboardText.text = defs["inventoryKeyboard"];
             helpText.text = defs["helpText"];
+
+            incomingMessageButtontext.text = defs["stage1CnslIncomMess"];
+            communicationFolderText.text = defs["stage1CnslCommsFold"];
+            xmasPartyFoldertext.text = defs["stage1CnslXmasPartPict"];
+            lunchFolder.text = defs["stage1CnslLunchFold"];
+            lrFolder.text = defs["stage1CnslLRFolder"];
+            srFolder.text = defs["stage1CnslSRFolder"];
+            sendDigiReplyText.text = defs["stage1CnslSendDigReply"];
+            sendAnalogReplyText.text = defs["stage1CnslSendAnalReply"];
+            lunchButtonText.text = defs["stage1CnslLunchButtontext"];
+
             bridgeText1.text = defs["stage1IntroText1"];
             bridgeText2.text = defs["stage1IntroText2"];
             bridgeText3.text = defs["stage1IntroText3"];
