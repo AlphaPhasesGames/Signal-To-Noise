@@ -10,6 +10,21 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CommsRoonLangMan : MonoBehaviour
     {
 
+        public TextMeshProUGUI invTablet;
+        public TextMeshProUGUI invPhone;
+        public TextMeshProUGUI invWatch;
+        public TextMeshProUGUI invDoorKey;
+
+        public TextMeshProUGUI morseCodeButton;
+        public TextMeshProUGUI morseCodeSheet;
+
+        public TextMeshProUGUI inventoryTitle;
+        public TextMeshProUGUI inventoryTitleBUtton;
+        public TextMeshProUGUI helpTitle;
+
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
+
         public TextMeshProUGUI bridgeText1;
         public TextMeshProUGUI bridgeText2;
         public TextMeshProUGUI bridgeText3;
@@ -44,6 +59,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI doorKey;
 
         public TextMeshProUGUI exitText;
+
+        public TextMeshProUGUI fakeCabinetText;
 
         public TextMeshProUGUI task1;
         public TextMeshProUGUI task2;
@@ -104,13 +121,28 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             exitText.text = defs["stage3IntroText24"];
 
+            fakeCabinetText.text = defs["stage3IntroText25"];
+
             task1.text = defs["stage3Task1"];
             task2.text = defs["stage3Task2"];
             task3.text = defs["stage3Task3"];
             task4.text = defs["stage3Task4"];
             task5.text = defs["stage3Task5"];
 
+            reminder1.text = defs["stage3Reminder1"];
+            reminder2.text = defs["stage3Reminder2"];
 
+            inventoryTitleBUtton.text = defs["inventoryTitle"];
+            inventoryTitle.text = defs["inventoryTitle"];
+            helpTitle.text = defs["helpText"];
+
+            invTablet.text = defs["s2InventoryTablet"];
+            invPhone.text = defs["s2InventoryPhone"];
+            invWatch.text = defs["s2InventoryWatch"];
+            invDoorKey.text = defs["inventoryDoorKey"];
+
+            morseCodeButton.text = defs["morseCode"];
+            morseCodeSheet.text = defs["morseCode"];
         }
     }
 }

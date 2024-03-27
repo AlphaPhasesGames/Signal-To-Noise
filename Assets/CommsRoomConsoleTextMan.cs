@@ -51,6 +51,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button reply2Button;
         public Button reply3Button;
 
+        public Button reply1ButtonTTS1;
+        public Button reply2ButtonTTS2;
+        public Button reply3ButtonTTS3;
+
+
         public Button morseCodeButton;
         public Button closeConsoleButton;
 
@@ -87,6 +92,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             reply1Button.onClick.AddListener(RemoveReplies);
             reply2Button.onClick.AddListener(RemoveReplies);
             reply3Button.onClick.AddListener(RemoveReplies);
+
+            reply1ButtonTTS1.onClick.AddListener(Reply1);
+            reply2ButtonTTS2.onClick.AddListener(Reply2);
+            reply3ButtonTTS3.onClick.AddListener(Reply3);
 
             morseCodeButton.onClick.AddListener(OpenMorseCode);
             closeConsoleButton.onClick.AddListener(CloseConsoleWindow);
@@ -444,6 +453,25 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("stage3IntroText16 Button is pressed");
         }
 
+
+        public void Reply1()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText12R1");
+            Debug.Log("stage3IntroText10 Button is pressed");
+        }
+
+        public void Reply2()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText13R2");
+            Debug.Log("stage3IntroText15 Button is pressed");
+        }
+
+        public void Reply3()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText14R3");
+            Debug.Log("stage3IntroText16 Button is pressed");
+        }
+
         public IEnumerator DelayProgressButtonVar2()
         {
             yield return new WaitForSeconds(4);
@@ -482,7 +510,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator ShowNextText()
         {
             yield return new WaitForSeconds(5);
-            messageWindow.gameObject.SetActive(false);
+            //messageWindow.gameObject.SetActive(false);
             textMan.currentStageOfText = 4;
             textBeenRead = true;
 

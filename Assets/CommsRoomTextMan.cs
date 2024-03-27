@@ -33,7 +33,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject safeFoundText2;
         public GameObject safeFoundText3;
 
+        public GameObject textFromFakeCabinet;
+
         public GameObject exitText;
+
+        public BoxCollider consoleBox;
 
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -59,6 +63,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool safeFound2Read;
         public bool safeFound3Read;
 
+        public bool wrongCabientFoundRead;
+
         public bool exitRead;
 
         public Button ttsIntro1;
@@ -79,6 +85,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsSafeFound1;
         public Button ttsSafeFound2;
         public Button ttsSafeFound3;
+
+        public Button ttsFakeCabientFound;
 
         public Button ttsExit;
 
@@ -119,12 +127,19 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsSafeFound2.onClick.AddListener(SafeFound2TTS);
             ttsSafeFound3.onClick.AddListener(SafeFound3TTS);
 
-            ttsExit.onClick.AddListener(SafeFound1TTS);
-
+            ttsExit.onClick.AddListener(ExitStageTTS);
+            ttsFakeCabientFound.onClick.AddListener(FakeCabinetFound);
 
             if (!digiWaves.commsRoom3StartedAkready)
             {
                 currentStageOfText = 1;
+
+            }
+
+            else 
+            {
+                consoleBox.enabled = true;
+
             }
 
         }
@@ -138,6 +153,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     StartCoroutine(FireAllFolderCollectedText());
                     digiWaves.Stage3FoldersAlreadyCollected();
+                    LOLSDK.Instance.SubmitProgress(0, 55, 100);
                     allFoldersFound = true;
                 }
             }
@@ -219,6 +235,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText3.SetActive(true);
                     ttsIntro3.gameObject.SetActive(true);
+                    LOLSDK.Instance.SubmitProgress(0, 45, 100);
+                    consoleBox.enabled = true;
                     digiWaves.Stage3StartedAlready();
                     digiWaves.taskNumberCommsRoom = 1;
                     digiWaves.TaskNumberCommsRoomSaver();
@@ -545,7 +563,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     progressText.gameObject.SetActive(false);
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage3IntroText23");
+                    LOLSDK.Instance.SpeakText("stage3IntroText24");
 
                     safeFoundText3.SetActive(false);
                     ttsSafeFound3.gameObject.SetActive(false);
@@ -563,6 +581,27 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!wrongCabientFoundRead)
+            {
+                if (currentStageOfText == 15)
+                {
+                    progressText.gameObject.SetActive(false);
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage3IntroText25");
+
+                    textFromFakeCabinet.SetActive(true);
+                    ttsFakeCabientFound.gameObject.SetActive(true);
+                                      
+                    Debug.Log("This hidwe text funtion executed once");
+                    StartCoroutine(MoveCorrectGuessOn2());
+                    //LOLSDK.Instance.SubmitProgress(0, 10, 100);
+                    //  Debug.Log("This apple bot correct funtion called");
+                  //  exitRead = true;
+                    wrongCabientFoundRead = false;
+
+                }
+            }
 
             if (currentStageOfText == 50)
             {
@@ -610,6 +649,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     exitText.SetActive(false);
                     ttsExit.gameObject.SetActive(false);
+
+
+                    textFromFakeCabinet.SetActive(false);
+                    ttsFakeCabientFound.gameObject.SetActive(false);
 
                     //ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
@@ -722,6 +765,18 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void SafeFound3TTS()
         {
             LOLSDK.Instance.SpeakText("stage3IntroText23");
+            Debug.Log("stage3IntroText21 Button is pressed");
+        }
+
+        public void ExitStageTTS()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText24");
+            Debug.Log("stage3IntroText21 Button is pressed");
+        }
+
+        public void FakeCabinetFound()
+        {
+            LOLSDK.Instance.SpeakText("stage3IntroText25");
             Debug.Log("stage3IntroText21 Button is pressed");
         }
 

@@ -387,7 +387,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    //progressTextBack.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText8");
 
                     smartPhone.gameObject.SetActive(false);
@@ -418,7 +418,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    //progressTextBack.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText9");
 
                     smartTablet.gameObject.SetActive(false);
@@ -449,7 +449,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    //progressTextBack.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText10");
 
                     smartWatch.gameObject.SetActive(false);
@@ -618,7 +618,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage2IntroText21");
+                    LOLSDK.Instance.SpeakText("stage2IntroText22");
 
                     introTextVHS.SetActive(true);
                     ttsIntroVHS16.gameObject.SetActive(true);
@@ -650,7 +650,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage2IntroText22");
+                    LOLSDK.Instance.SpeakText("stage2IntroText21");
 
                     introTextComp.SetActive(true);
                     ttsIntroCOMP17.gameObject.SetActive(true);
@@ -879,12 +879,12 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void IntroTTSSpeak16VHS()
         {
-            LOLSDK.Instance.SpeakText("stage2IntroText21");
+            LOLSDK.Instance.SpeakText("stage2IntroText22");
             Debug.Log("stage2IntroText21 Button is pressed");
         }
         public void IntroTTSSpeak17COMP()
         {
-            LOLSDK.Instance.SpeakText("stage2IntroText22");
+            LOLSDK.Instance.SpeakText("stage2IntroText21");
             Debug.Log("stage2IntroText22 Button is pressed");
         }
         public void CorrectGuess()
