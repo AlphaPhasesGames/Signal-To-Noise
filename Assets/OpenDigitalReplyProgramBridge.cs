@@ -59,13 +59,13 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void IntroTTSSpeak2()
         {
-            LOLSDK.Instance.SpeakText("stage1IntroText27");
+            LOLSDK.Instance.SpeakText("stage1IntroText28");
             Debug.Log("stage1Task2 Button is pressed");
         }
 
         public void IntroTTSSpeak3()
         {
-            LOLSDK.Instance.SpeakText("stage1IntroText28");
+            LOLSDK.Instance.SpeakText("stage1IntroText27");
             Debug.Log("stage1Task3 Button is pressed");
         }
 

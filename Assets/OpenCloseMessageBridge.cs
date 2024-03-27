@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using LoLSDK;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
@@ -11,6 +11,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Stage1BridgeTextMan textMan;
         public Button openMessage;
         public Button closeMessage;
+        public Button ttsMessage;
         public bool folderOpen;
         public bool stopRepeat;
         public bool stopRepeat2;
@@ -20,6 +21,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             openMessage.onClick.AddListener(OpenMessage);
             closeMessage.onClick.AddListener(OpenMessage);
+            ttsMessage.onClick.AddListener(IntroTTSSpeak1);
         }
 
         void Update()
@@ -62,5 +64,13 @@ namespace Digi.Waves.Alpha.Phases.Games
             openMessage.gameObject.SetActive(false);
             textMan.currentStageOfText = 28;
         }
+
+        public void IntroTTSSpeak1()
+        {
+            LOLSDK.Instance.SpeakText("stage1IntroText24");
+            Debug.Log(" stage1Task1 Button is pressed");
+        }
+
+
     }
 }
