@@ -65,7 +65,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     doorCode.text = "";
                     charLimitl = 0;
-                    textMan.currentStageOfText = 11;
+                    textMan.currentStageOfText = 15;
                     Debug.Log("Does this run forever");
                 }
             }

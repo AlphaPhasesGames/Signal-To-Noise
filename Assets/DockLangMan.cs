@@ -40,7 +40,21 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
 
+        public TextMeshProUGUI invTitle;
+        public TextMeshProUGUI invButton;
+        public TextMeshProUGUI phoneName;
+        public TextMeshProUGUI tabletName;
+        public TextMeshProUGUI watchName;
+        public TextMeshProUGUI helpButton;
+        public TextMeshProUGUI incomingMessage;
+        public TextMeshProUGUI landingCoords;
+        public TextMeshProUGUI binaryLandingCoords;
+        public TextMeshProUGUI binaryDecimal;
 
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
+
+        public TextMeshProUGUI wrongCode;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -73,7 +87,22 @@ namespace Digi.Waves.Alpha.Phases.Games
             task4.text = defs["stage4Task4"];
             task5.text = defs["stage4Task5"];
 
+            invTitle.text = defs["inventoryTitle"];
+            invButton.text = defs["inventoryTitle"];
+            phoneName.text = defs["s2InventoryPhone"];
+            tabletName.text = defs["s2InventoryTablet"];
+            watchName.text = defs["s2InventoryWatch"];
+            helpButton.text = defs["helpText"];
+            incomingMessage.text = defs["stage1CnslIncomMess"];
+            binaryLandingCoords.text = defs["stage4BinaryCoordsTitle"];
+            landingCoords.text = defs["stage4LandinCoords"];
+            binaryDecimal.text = defs["stage4BinaryDecimal"];
+
+            reminder1.text = defs["stage4Reminder1"];
+            reminder2.text = defs["stage4Reminder2"];
+
             wrongMedia.text = defs["stage4IntroText12"];
+            wrongCode.text = defs["stage4IntroText21WrongCode"];
         }
     }
 }

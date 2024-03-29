@@ -16,8 +16,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
         
-        ///      public TextMeshProUGUI reminder1;
-        //      public TextMeshProUGUI reminder2;
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
         //     public TextMeshProUGUI reminder3;
         public GameObject taskPanal;
         public Animator shipAnimator;
@@ -71,6 +71,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     miniBool1 = true;
+                    floppy1.gameObject.SetActive(false);
+                    floppy2.gameObject.SetActive(false);
+                    floppy3.gameObject.SetActive(false);
                     Debug.Log("Task fired once");
                 }
 
@@ -86,6 +89,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+                    floppy1.gameObject.SetActive(true);
+                    floppy2.gameObject.SetActive(true);
+                    floppy3.gameObject.SetActive(true);
+                    reminder1.gameObject.SetActive(true);
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     miniBool2 = true;
@@ -108,7 +115,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
                     floppy3.gameObject.SetActive(false);
-
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
                     miniBool3 = true;
                     // reminder1.gameObject.SetActive(true);
                     //  reminder2.gameObject.SetActive(true);
@@ -130,7 +138,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(true);
                     task5.gameObject.SetActive(false);
                     consoleCollider.enabled = true;
-
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
                     floppy3.gameObject.SetActive(false);
@@ -156,7 +165,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task5.gameObject.SetActive(true);
                     shipAnimator.SetBool("land", true);
                     consoleCollider.enabled = false;
-
+                    reminder1.gameObject.SetActive(true);
+                    reminder2.gameObject.SetActive(true);
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
                     floppy3.gameObject.SetActive(false);

@@ -265,7 +265,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             textSection1Read = false;
             textSection2Read = false;
             textSection3Read = false;
-
+            textSection4Read = false;
+            textSection5Read = false;
 
             progressTextIsShowing = false;
             //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();

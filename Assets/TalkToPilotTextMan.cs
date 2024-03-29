@@ -72,9 +72,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro3.onClick.AddListener(IntroTTSSpeak3);
             ttsIntro4.onClick.AddListener(IntroTTSSpeak4);
 
-            ttsIntro5.onClick.AddListener(IntroTTSSpeak2);
-            ttsIntro6.onClick.AddListener(IntroTTSSpeak3);
-            ttsIntro7.onClick.AddListener(IntroTTSSpeak4);
+            ttsIntro5.onClick.AddListener(IntroTTSSpeak5);
+            ttsIntro6.onClick.AddListener(IntroTTSSpeak6);
+            ttsIntro7.onClick.AddListener(IntroTTSSpeak7);
 
             //if (!digiWaves.aboardTheShip5StartedAlready)
             // {
@@ -178,7 +178,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro3.gameObject.SetActive(true);
 
                     introText4.SetActive(false);
-                    ttsIntro3.gameObject.SetActive(false);
+                    ttsIntro4.gameObject.SetActive(false);
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -228,7 +228,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage5IntroText6");
+                    LOLSDK.Instance.SpeakText("stage5IntroText19");
 
                     npcCam.gameObject.SetActive(true);
                     npcCam.enabled = true;
@@ -260,7 +260,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
-                    LOLSDK.Instance.SpeakText("stage5IntroText7");
+                    LOLSDK.Instance.SpeakText("stage5IntroText20");
 
                     introText5.SetActive(false);
                     ttsIntro5.gameObject.SetActive(false);
@@ -291,7 +291,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
-                    LOLSDK.Instance.SpeakText("stage5IntroText7");
+                    LOLSDK.Instance.SpeakText("stage5IntroText21");
 
                     introText6.SetActive(false);
                     ttsIntro6.gameObject.SetActive(false);
@@ -325,7 +325,14 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro4.gameObject.SetActive(false);
 
                     boxToEnable.enabled = true;
+                    introText5.SetActive(false);
+                    ttsIntro5.gameObject.SetActive(false);
+                    //   StartCoroutine(MoveCorrectGuessOn2());
+                    introText6.SetActive(false);
+                    ttsIntro6.gameObject.SetActive(false);
 
+                    introText7.SetActive(false);
+                    ttsIntro7.gameObject.SetActive(false);
 
 
                     npcCam.gameObject.SetActive(false);
@@ -392,6 +399,23 @@ namespace Digi.Waves.Alpha.Phases.Games
         }
 
 
+        public void IntroTTSSpeak5()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText19");
+            Debug.Log("introText2 Button is pressed");
+        }
+
+        public void IntroTTSSpeak6()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText20");
+            Debug.Log("introText3 Button is pressed");
+        }
+
+        public void IntroTTSSpeak7()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText21");
+            Debug.Log("stage4IntroText4 Button is pressed");
+        }
         public void CorrectGuess()
         {
 

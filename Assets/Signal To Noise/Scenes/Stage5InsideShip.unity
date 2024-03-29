@@ -16307,8 +16307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invUIPanal: {fileID: 5542169034279189338}
-  phoneProp: {fileID: 1984380667}
-  tabletProp: {fileID: 1984380668}
+  phoneProp: {fileID: 0}
+  tabletProp: {fileID: 0}
   watchProp: {fileID: 1984380658}
   closeInv: {fileID: 8746634364681183428}
   openInv: {fileID: 3406751860974015672}
@@ -16573,7 +16573,7 @@ MonoBehaviour:
   textSection4Read: 0
   ttsIntro1: {fileID: 2087514104}
   ttsIntro2: {fileID: 153664625}
-  ttsIntro3: {fileID: 153664625}
+  ttsIntro3: {fileID: 857574702}
   ttsIntro4: {fileID: 690315235}
   progressText: {fileID: 1452543760}
   progressTextBack: {fileID: 175190169}

@@ -96,10 +96,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro7.onClick.AddListener(IntroTTSSpeak7);
             ttsIntro8.onClick.AddListener(IntroTTSSpeak8);
 
-            ttsIntro9.onClick.AddListener(IntroTTSSpeak2);
-            ttsIntro10.onClick.AddListener(IntroTTSSpeak3);
-            ttsIntro11.onClick.AddListener(IntroTTSSpeak4);
-            ttsIntro12.onClick.AddListener(IntroTTSSpeak5);
+            ttsIntro9.onClick.AddListener(IntroTTSSpeak9Morse);
+            ttsIntro10.onClick.AddListener(IntroTTSSpeak10Binary);
+            ttsIntro11.onClick.AddListener(IntroTTSSpeak11);
+            ttsIntro12.onClick.AddListener(IntroTTSSpeak12);
 
             ttsIntro13.onClick.AddListener(IntroTTSSpeak13);
             if (!digiWaves.aboardTheShip5StartedAlready)
@@ -204,7 +204,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro3.gameObject.SetActive(true);
 
                     introText4.SetActive(false);
-                    ttsIntro3.gameObject.SetActive(false);
+                    ttsIntro4.gameObject.SetActive(false);
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -396,7 +396,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+                    LOLSDK.Instance.SpeakText("stage5IntroText14");
 
 
                     consoleText3.SetActive(false);
@@ -425,7 +425,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+                    LOLSDK.Instance.SpeakText("stage5IntroText15");
 
 
                     consoleText3.SetActive(false);
@@ -454,7 +454,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+                    LOLSDK.Instance.SpeakText("stage5IntroText13");
 
 
                     consoleText3.SetActive(false);
@@ -489,7 +489,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                    // parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(true);
-                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+                    LOLSDK.Instance.SpeakText("stage5IntroText13a");
 
 
                     consoleText6.SetActive(false);
@@ -516,7 +516,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage5IntroText1");
+                    LOLSDK.Instance.SpeakText("stage5IntroText18");
 
                     digiWaves.taskNumberShip = 5;
                     digiWaves.TaskNumberShipSaver();
