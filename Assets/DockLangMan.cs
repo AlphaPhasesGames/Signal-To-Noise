@@ -32,6 +32,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI finalConsoleText2;
         public TextMeshProUGUI finalConsoleText3;
 
+        public TextMeshProUGUI wrongMedia;
+
         public TextMeshProUGUI task1;
         public TextMeshProUGUI task2;
         public TextMeshProUGUI task3;
@@ -70,6 +72,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             task3.text = defs["stage4Task3"];
             task4.text = defs["stage4Task4"];
             task5.text = defs["stage4Task5"];
+
+            wrongMedia.text = defs["stage4IntroText12"];
         }
     }
 }

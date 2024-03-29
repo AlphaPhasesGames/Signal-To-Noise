@@ -48,6 +48,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     binaryPanal.gameObject.SetActive(true); // enable the INV UI
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
+                   
+
                 }
             }
             else

@@ -9,7 +9,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class DockFloppyMan : MonoBehaviour
     {
         public DockTextMan textMan;
-        public TUSOMMain digiWaves;
+     //   public TUSOMMain digiWaves;
         public int floppyNumber;
         public bool flop1Read;
         public bool flop2Read;

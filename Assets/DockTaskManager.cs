@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using LoLSDK;
 
 namespace Digi.Waves.Alpha.Phases.Games
 {
@@ -14,11 +15,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task3;
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
-
+        
         ///      public TextMeshProUGUI reminder1;
         //      public TextMeshProUGUI reminder2;
         //     public TextMeshProUGUI reminder3;
         public GameObject taskPanal;
+        public Animator shipAnimator;
+
         TUSOMMain tusomMain;
         //   public EmployeeBadgeInvProperties badgeProp;
         //    public DigiKeyBaordInvProperties keyBProp;
@@ -33,11 +36,25 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool miniBool4;
         public bool miniBool5;
 
+        public Button task1TTS;
+        public Button task2TTS;
+        public Button task3TTS;
+        public Button task4TTS;
+        public Button task5TTS;
 
-
+        public BoxCollider consoleCollider;
+        public GameObject floppy1;
+        public GameObject floppy2;
+        public GameObject floppy3;
         private void Awake()
         {
             tusomMain = FindObjectOfType<TUSOMMain>();
+            task1TTS.onClick.AddListener(IntroTTSSpeak1);
+            task2TTS.onClick.AddListener(IntroTTSSpeak2);
+            task3TTS.onClick.AddListener(IntroTTSSpeak3);
+            task4TTS.onClick.AddListener(IntroTTSSpeak4);
+
+            task5TTS.onClick.AddListener(IntroTTSSpeak5);
         }
 
         // Update is called once per frame
@@ -87,6 +104,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(true);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+
+                    floppy1.gameObject.SetActive(false);
+                    floppy2.gameObject.SetActive(false);
+                    floppy3.gameObject.SetActive(false);
+
                     miniBool3 = true;
                     // reminder1.gameObject.SetActive(true);
                     //  reminder2.gameObject.SetActive(true);
@@ -107,6 +129,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(true);
                     task5.gameObject.SetActive(false);
+                    consoleCollider.enabled = true;
+
+                    floppy1.gameObject.SetActive(false);
+                    floppy2.gameObject.SetActive(false);
+                    floppy3.gameObject.SetActive(false);
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     //reminder3.gameObject.SetActive(true);
@@ -127,6 +154,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(true);
+                    shipAnimator.SetBool("land", true);
+                    consoleCollider.enabled = false;
+
+                    floppy1.gameObject.SetActive(false);
+                    floppy2.gameObject.SetActive(false);
+                    floppy3.gameObject.SetActive(false);
                     // reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     // reminder3.gameObject.SetActive(true);
@@ -137,5 +170,38 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             }
         }
+
+
+
+        public void IntroTTSSpeak1()
+        {
+            LOLSDK.Instance.SpeakText("stage4Task1");
+            Debug.Log(" stage1Task1 Button is pressed");
+        }
+
+        public void IntroTTSSpeak2()
+        {
+            LOLSDK.Instance.SpeakText("stage4Task2");
+            Debug.Log("stage1Task2 Button is pressed");
+        }
+
+        public void IntroTTSSpeak3()
+        {
+            LOLSDK.Instance.SpeakText("stage4Task3");
+            Debug.Log("stage1Task3 Button is pressed");
+        }
+
+        public void IntroTTSSpeak4()
+        {
+            LOLSDK.Instance.SpeakText("stage4Task4");
+            Debug.Log("stage1Task4 Button is pressed");
+        }
+
+        public void IntroTTSSpeak5()
+        {
+            LOLSDK.Instance.SpeakText("stage4Task5");
+            Debug.Log("stage1Task5 Button is pressed");
+        }
+
     }
 }

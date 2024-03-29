@@ -15,7 +15,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public DockTabletTextMan textman2;
         public Button messageButton;
         public bool stopTaskRepeating;
-
+        public GameObject binaryCoords;
+      //  public GameObject decoder;
         public GameObject parentTextPanalObject;
         public GameObject introText1;
         public GameObject introText2;
@@ -27,12 +28,16 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject floppyText3;
         public GameObject floppyText4;
 
+        public GameObject wrongMediaText;
+
         public GameObject consoleBinaryText1;
         public GameObject consoleBinaryText2;
 
         public GameObject consoleCoordsText1;
         public GameObject consoleCoordsText2;
         public GameObject consoleCoordsText3;
+
+        public BoxCollider consoleCollider;
 
         public bool textSection1Read;
         public bool textSection2Read;
@@ -51,6 +56,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection12Read;
         public bool textSection13Read;
 
+        public bool textAnalogMediaWrongRead;
+
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
@@ -67,6 +74,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro11;
         public Button ttsIntro12;
         public Button ttsIntro13;
+
+        public Button ttsWrongMedia;
 
         public Button progressText;
         public Button progressTextBack;
@@ -95,13 +104,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro4.onClick.AddListener(IntroTTSSpeak4);
 
             ttsIntro5.onClick.AddListener(IntroTTSSpeak5);
-            ttsIntro6.onClick.AddListener(IntroTTSSpeak6);
-            ttsIntro7.onClick.AddListener(IntroTTSSpeak7);
-            ttsIntro8.onClick.AddListener(IntroTTSSpeak8);
+            ttsIntro6.onClick.AddListener(IntroTTSSpeak7);
+            ttsIntro7.onClick.AddListener(IntroTTSSpeak8);
+            ttsIntro8.onClick.AddListener(IntroTTSSpeakDisksCollected);
 
             ttsIntro9.onClick.AddListener(IntroTTSSpeak9);
             ttsIntro10.onClick.AddListener(IntroTTSSpeak10);
 
+            ttsWrongMedia.onClick.AddListener(IntroTTSSpeak11);
             if (!digiWaves.dockingBay4StartedAlready)
             {
                 currentStageOfText = 1;
@@ -129,7 +139,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(false);
                     ttsIntro2.gameObject.SetActive(false);
-
+                    LOLSDK.Instance.SubmitProgress(0, 65, 100);
                     if (!progressTextIsShowing)
                     { // 3 second delay
                         StartCoroutine(DelayProgressButtonVar2());
@@ -195,7 +205,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                                 ttsIntro3.gameObject.SetActive(true);
 
                                 introText4.SetActive(false);
-                                ttsIntro3.gameObject.SetActive(false);
+                                ttsIntro4.gameObject.SetActive(false);
 
                      if (!progressTextIsShowing)
                      { // 3 second delay
@@ -299,7 +309,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage4IntroText14");
 
                     floppyText3.SetActive(true);
-                    ttsIntro3.gameObject.SetActive(true);
+                    ttsIntro7.gameObject.SetActive(true);
 
                    // floppyText3.SetActive(false);
                    // ttsIntro7.gameObject.SetActive(false);
@@ -325,10 +335,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage4IntroText15");
 
                     floppyText4.SetActive(true);
-                    ttsIntro4.gameObject.SetActive(true);
+                    ttsIntro8.gameObject.SetActive(true);
 
                     floppyText3.SetActive(false);
                     ttsIntro7.gameObject.SetActive(false);
+                    LOLSDK.Instance.SubmitProgress(0, 75, 100);
+                    binaryCoords.gameObject.SetActive(false);
+
                     digiWaves.taskNumberDock = 3;
                     digiWaves.TaskNumberDockSaver();
                     digiWaves.Stage4FloppyCollected();
@@ -350,7 +363,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     parentTextPanalObject.gameObject.SetActive(true);
 
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage4IntroText15");
+                    LOLSDK.Instance.SpeakText("stage4IntroText16");
 
                     consoleBinaryText2.SetActive(false);
                     ttsIntro10.gameObject.SetActive(false);
@@ -358,8 +371,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleBinaryText1.SetActive(true);
                     ttsIntro9.gameObject.SetActive(true);
 
+                   
                     //   messageButton.gameObject.SetActive(true);
-                  //  StartCoroutine(MoveCorrectGuessOn());
+                    //  StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is stage4IntroText4 3 running");
                     textSection9Read = true;
                 }
@@ -377,15 +391,16 @@ namespace Digi.Waves.Alpha.Phases.Games
                     parentTextPanalObject.gameObject.SetActive(true);
 
                     //progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage4IntroText15");
+                    LOLSDK.Instance.SpeakText("stage4IntroText17");
 
                     consoleBinaryText1.SetActive(false);
                     ttsIntro9.gameObject.SetActive(false);
-
+                    consoleCollider.enabled = true;
                     consoleBinaryText2.SetActive(true);
                     ttsIntro10.gameObject.SetActive(true);
                     digiWaves.taskNumberDock = 4;
                     digiWaves.TaskNumberDockSaver();
+                    StartCoroutine(MoveCorrectGuessOn());
                     //   messageButton.gameObject.SetActive(true);
                     //  StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is stage4IntroText4 3 running");
@@ -440,11 +455,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleCoordsText3.SetActive(false);
                     ttsIntro13.gameObject.SetActive(false);
 
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2());
-                        progressTextIsShowing = true;
-                    }
+                   
                     Debug.Log("Is stage4IntroText4 3 running");
                     textSection12Read = true;
                 }
@@ -460,7 +471,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                   //  parentTextPanalObject.gameObject.SetActive(true);
 
-                    //progressTextBack.gameObject.SetActive(false);
+                    progressText.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage4IntroText20");
 
                     consoleCoordsText3.SetActive(true);
@@ -478,7 +489,27 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!textAnalogMediaWrongRead)
+            {
+                if (currentStageOfText == 14)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                     parentTextPanalObject.gameObject.SetActive(true);
 
+                    progressText.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage4IntroText20");
+
+                    wrongMediaText.SetActive(true);
+                    ttsWrongMedia.gameObject.SetActive(true);
+
+                    StartCoroutine(MoveCorrectGuessOn());
+                    Debug.Log("Is stage4IntroText4 3 running");
+                    textAnalogMediaWrongRead = true;
+                }
+            }
             if (currentStageOfText == 50)
             {
                 if (!hasTextplayerOnce)
@@ -523,6 +554,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleCoordsText3.SetActive(false);
                     ttsIntro13.gameObject.SetActive(false);
 
+                    wrongMediaText.SetActive(false);
+                    ttsWrongMedia.gameObject.SetActive(false);
+
+                    textAnalogMediaWrongRead = false;
+
+
                     Debug.Log("This hidwe text funtion executed once");
                     textBeenRead = false;
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -549,9 +586,24 @@ namespace Digi.Waves.Alpha.Phases.Games
             textSection1Read = false;
             textSection2Read = false;
             textSection3Read = false;
+            textSection1Read = false;
+            textSection2Read = false;
+            textSection3Read = false;
+            textSection4Read = false;
 
+            textSection5Read = false;
+            textSection6Read = false;
+            textSection7Read = false;
+            textSection8Read = false;
 
-            progressTextIsShowing = false;
+            textSection9Read = false;
+            textSection10Read = false;
+
+           textSection11Read = false;
+           textSection12Read = false;
+           textSection13Read = false;
+
+        progressTextIsShowing = false;
             //     ((ILOLSDK_EXTENSION)LOLSDK.Instance.PostMessage).CancelSpeakText();
         }
 
@@ -599,6 +651,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("introText3 Button is pressed");
         }
 
+        public void IntroTTSSpeakDisksCollected()
+        {
+            LOLSDK.Instance.SpeakText("stage4IntroText15");
+            Debug.Log("stage4IntroText4 Button is pressed");
+        }
+
         public void IntroTTSSpeak8()
         {
             LOLSDK.Instance.SpeakText("stage4IntroText14");
@@ -618,6 +676,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         }
 
 
+        public void IntroTTSSpeak11()
+        {
+            LOLSDK.Instance.SpeakText("stage4IntroText12");
+            Debug.Log("stage4IntroText12 Button is pressed");
+        }
         public void CorrectGuess()
         {
 

@@ -8,8 +8,8 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class DockInventory : MonoBehaviour
     {
         public GameObject invUIPanal; // declare gameobject for UI inventory panal
-        public ShipSmartPhoneInventoryProperties phoneProp;
-        public ShipTabletInventoryProperties tabletProp;
+        public DockSmartPhoneInventoryProperties phoneProp;
+        public DockSmartTabletInventoryProperties tabletProp;
         public DockSmartWatchInventoryProperties watchProp;
         public Button closeInv;
         public Button openInv;
