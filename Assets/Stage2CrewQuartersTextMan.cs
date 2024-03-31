@@ -180,9 +180,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro2.gameObject.SetActive(false);
 
 
-                    phoneBox.enabled = false;
-                    tabletBox.enabled = false;
-                    watchBox.enabled = false;
+                 //   phoneBox.enabled = false;
+                //    tabletBox.enabled = false;
+                //    watchBox.enabled = false;
 
                     compBox.enabled = false;
                     vhsBox.enabled = false;
@@ -240,6 +240,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText3");
                     digiWaves.taskNumberCrewQuarters = 1;
+                    digiWaves.TaskNumberCrewQuartersSaver();
                     introText2.SetActive(false);
                     ttsIntro2.gameObject.SetActive(false);
 

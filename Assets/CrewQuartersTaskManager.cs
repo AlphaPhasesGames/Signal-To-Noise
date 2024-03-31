@@ -10,12 +10,20 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class CrewQuartersTaskManager : MonoBehaviour
     {
+
+        public CrewQuartersPhoneObjectIvProperties phoneInv;
+        public CrewQuartersTabletObjectIvProperties tabletInv;
+        public CrewQuartersWatchObjectIvProperties watchInv;
+
         public TextMeshProUGUI task1;
         public TextMeshProUGUI task2;
         public TextMeshProUGUI task3;
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
         public TextMeshProUGUI task6;
+
+        public GameObject spotLight;
+        public GameObject mainLight;
 
 
         public Button task1TTS;
@@ -25,6 +33,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button task5TTS;
         public Button task6TTS;
 
+        public GameObject watchObj;
+        public GameObject phoneObj;
+        public GameObject tabletObj;
+
+        public BoxCollider digiSwitch;
+        public BoxCollider anaSwitch;
 
         public BoxCollider watchBox;
         public BoxCollider phoneBox;
@@ -87,7 +101,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     phoneBox.enabled = false;
                     tabletBox.enabled = false;
                     watchBox.enabled = false;
-
+                    spotLight.gameObject.SetActive(true);
                     compBox.enabled = false;
                     vhsBox.enabled = false;
 
@@ -108,8 +122,17 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
+
+                    digiSwitch.enabled = false;
+                    phoneBox.enabled = false;
+                    tabletBox.enabled = false;
+                    watchBox.enabled = false;
+                    spotLight.gameObject.SetActive(true);
+                    compBox.enabled = false;
+                    vhsBox.enabled = false;
+
                     //reminder1.gameObject.SetActive(true);
-                   // reminder2.gameObject.SetActive(true);
+                    // reminder2.gameObject.SetActive(true);
                     miniBool2 = true;
                     Debug.Log("Task 2 fired once");
                 }
@@ -128,12 +151,16 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
                     reminderText1.gameObject.SetActive(true);
-                   // phoneBox.enabled = true;
-                  //  tabletBox.enabled = true;
-                  //  watchBox.enabled = true;
+                    digiSwitch.enabled = false;
+                    anaSwitch.enabled = false;
+                    mainLight.gameObject.SetActive(true);
+                    spotLight.gameObject.SetActive(false);
+                    phoneBox.enabled = true;
+                    tabletBox.enabled = true;
+                    watchBox.enabled = true;
 
-                //    compBox.enabled = true;
-               //    vhsBox.enabled = true;
+                    compBox.enabled = true;
+                    vhsBox.enabled = true;
 
                     miniBool3 = true;
                    // reminder1.gameObject.SetActive(true);
@@ -161,6 +188,19 @@ namespace Digi.Waves.Alpha.Phases.Games
                     phoneBox.enabled = false;
                     tabletBox.enabled = false;
                     watchBox.enabled = false;
+                    digiSwitch.enabled = false;
+                    anaSwitch.enabled = false;
+                    mainLight.gameObject.SetActive(true);
+                    spotLight.gameObject.SetActive(false);
+
+                    watchObj.gameObject.SetActive(false);
+                    phoneObj.gameObject.SetActive(false);
+                    tabletObj.gameObject.SetActive(false);
+
+                    watchInv.watchButton.gameObject.SetActive(true);
+                    phoneInv.phoneButton.gameObject.SetActive(true);
+                    tabletInv.tabletButton.gameObject.SetActive(true);
+
 
                     compBox.enabled = false;
                     vhsBox.enabled = false;
@@ -187,6 +227,18 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task6.gameObject.SetActive(false);
                     reminderText1.gameObject.SetActive(true);
                     reminderText2.gameObject.SetActive(true);
+                    digiSwitch.enabled = false;
+                    anaSwitch.enabled = false;
+                    mainLight.gameObject.SetActive(true);
+                    spotLight.gameObject.SetActive(false);
+
+                    watchObj.gameObject.SetActive(false);
+                    phoneObj.gameObject.SetActive(false);
+                    tabletObj.gameObject.SetActive(false);
+
+                    watchInv.watchButton.gameObject.SetActive(true);
+                    phoneInv.phoneButton.gameObject.SetActive(true);
+                    tabletInv.tabletButton.gameObject.SetActive(true);
 
                     // reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
@@ -211,6 +263,18 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(true);
+                    digiSwitch.enabled = false;
+                    anaSwitch.enabled = false;
+                    mainLight.gameObject.SetActive(true);
+                    spotLight.gameObject.SetActive(false);
+
+                    watchObj.gameObject.SetActive(false);
+                    phoneObj.gameObject.SetActive(false);
+                    tabletObj.gameObject.SetActive(false);
+
+                    watchInv.watchButton.gameObject.SetActive(true);
+                    phoneInv.phoneButton.gameObject.SetActive(true);
+                    tabletInv.tabletButton.gameObject.SetActive(true);
 
                     reminderText1.gameObject.SetActive(true);
                     reminderText2.gameObject.SetActive(true);

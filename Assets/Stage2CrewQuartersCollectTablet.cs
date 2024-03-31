@@ -20,7 +20,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // Start is called before the first frame update
         public void OnMouseDown()
         {
-            digiWaveMain.tabletCollected = true;
+           // digiWaveMain.tabletCollected = true;
             setup.collectedTablet = true;
             Debug.Log("This clicked");
             textMan.currentStageOfText = 9;

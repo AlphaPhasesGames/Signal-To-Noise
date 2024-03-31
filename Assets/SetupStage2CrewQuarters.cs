@@ -50,46 +50,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // Update is called once per frame
         void Update()
         {
-            if (!runOnce)
-            {
-                if (digiMain.phoneCollected)
-                {
-                     digiPhone.gameObject.SetActive(false);
-                     watchButton.gameObject.SetActive(true);
-                    //  pickedUpKeyB = true;
-                    Debug.Log("Loaded badge gone");
-                    runOnce = true;
-                }
-
-
-
-            }
-            if (!runTwice)
-            {
-                if (digiMain.tabletCollected)
-                {
-                    digiTablet.gameObject.SetActive(false);
-                    tabletButton.gameObject.SetActive(true);
-                    // pickedUpBadge = true;
-                    Debug.Log("Loaded keyboard gone");
-                    runTwice = true;
-                }
-            }
-
-            if (!runThrice)
-            {
-
-
-                if (digiMain.watchCollected)
-                {
-                    digiWatch.gameObject.SetActive(false);
-                    watchButton.gameObject.SetActive(true);
-                    // pickedUpBadge = true;
-                    Debug.Log("Loaded keyboard gone");
-                    runThrice = true;
-                }
-
-            }
+           
             if (!runForth)
             {
                 if (collectedPhone && collectedTablet && collectedWatch)
@@ -103,15 +64,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
-            if (!runFifth)
-            {
-                if (digiMain.stage2ItemsCollected)
-                {
-                    digiObjects.gameObject.SetActive(false);
-                    runFifth = true;
-                }
-            }
-
+/*
             if (!runSixth)
             {
                 if (digiMain.stage2LightsOn)
@@ -122,11 +75,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     runSixth = true;
                 }
             }
-
+*/
             if (!runSeventh)
             {
                 if (digiMain.stage2ItemsCollected)
                 {
+                    digiObjects.gameObject.SetActive(false);
                     digiMain.taskNumberCrewQuarters = 4;
                     runSeventh = true;
                 }

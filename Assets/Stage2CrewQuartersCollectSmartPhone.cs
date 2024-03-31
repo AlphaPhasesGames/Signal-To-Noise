@@ -21,10 +21,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         // Start is called before the first frame update
         public void OnMouseDown()
         {
-            digiWaveMain.phoneCollected = true;
+            //  digiWaveMain.phoneCollected = true;
+
             setup.collectedPhone = true;
             Debug.Log("This clicked");
             textMan.currentStageOfText = 8;
+            this.gameObject.SetActive(false);
         }
     }
 }

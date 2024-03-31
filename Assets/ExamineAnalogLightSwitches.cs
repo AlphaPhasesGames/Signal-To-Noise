@@ -20,8 +20,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void OnMouseDown()
         {
 
-            digiMain.LightsOnStage2();
+          //  digiMain.LightsOnStage2();
             digiMain.taskNumberCrewQuarters = 3;
+            digiMain.TaskNumberCrewQuartersSaver();
             Debug.Log("This clicked");
             textMan.currentStageOfText = 5;
         }
