@@ -30,13 +30,13 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool docking_bay_4_started_already;
         public bool abour_ship_5_started_already;
 
-        public bool stage_1_started_already;
+     //   public bool stage_1_started_already;
         public bool stage_2_started_already;
         public bool stage_3_started_already;
 
-        public bool employee_badge_collected;
-        public bool keyboad_collected;
-        public bool items_collected;
+     //   public bool employee_badge_collected;
+    //    public bool keyboad_collected;
+    //    public bool items_collected;
 
         public bool stage_2_items_collected;
         public bool stage_2_phone_collected;
@@ -59,33 +59,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public int task_number_comms_room;
         public int task_number_dock;
         public int task_number_ship;
-        /*       public bool lobby_reminder_1;
-               public bool lobby_reminder_2;
 
-               public bool solid_reminder_3;
-               public bool solid_reminder_4;
-               public bool solid_reminder_5;
-
-               public bool liquid_reminder_6;
-               public bool liquid_reminder_7;
-               public bool liquid_reminder_8;
-
-               public bool gas_reminder_9;
-               public bool gas_reminder_10;
-               public bool gas_reminder_11;
-
-               public bool solid_2_reminder_12;
-               public bool solid_2_reminder_13;
-               public bool solid_2_reminder_14;
-
-
-               public int task_number_liquid_1;
-               public int task_number_gas_1;
-               public int task_number_solid_2;
-               public int task_number_liquid_2;
-               public int task_number_liquid_3;
-               public int task_number_gas_3;
-        */
     }
 
          public class TUSOMMain : MonoBehaviour
@@ -231,10 +205,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     taskNumber = digiWavesSaveData.task_number;
                     loadInvItemsOnce = true;
                     Debug.Log("Stage 1 update runs - load save data from save");
-                    employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
-                    keyboadCollected = digiWavesSaveData.keyboad_collected;
-                    stage1Started = digiWavesSaveData.stage_1_started_already;
-                    itemsCollected = digiWavesSaveData.items_collected;
+                  //  employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
+                  //  keyboadCollected = digiWavesSaveData.keyboad_collected;
+                    stage1Started = digiWavesSaveData.bridge_1_started_already;
+                   // itemsCollected = digiWavesSaveData.items_collected;
                 }             
               
                 }
@@ -339,10 +313,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             if (currentStage == 1)
                 {
-                employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
-                keyboadCollected = digiWavesSaveData.keyboad_collected;
+               // employeeBadgeCollected = digiWavesSaveData.employee_badge_collected;
+              //  keyboadCollected = digiWavesSaveData.keyboad_collected;
                 taskNumber = digiWavesSaveData.task_number;
-                itemsCollected = digiWavesSaveData.items_collected;
+             //   itemsCollected = digiWavesSaveData.items_collected;
             }
 
                 if (currentStage == 2)
@@ -472,25 +446,25 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void TaskNumberShipSaver()
         {
-            digiWavesSaveData.task_number_ship = taskNumberShip;
+        //    digiWavesSaveData.task_number_ship = taskNumberShip;
             Save();
         }
 
         public void SaveBadgeCollected()
         {
-            digiWavesSaveData.employee_badge_collected = true;
+         //   digiWavesSaveData.employee_badge_collected = true;
             Save();
         }
 
         public void SaveKeyBCollected()
         {
-            digiWavesSaveData.keyboad_collected = true;
+           // digiWavesSaveData.keyboad_collected = true;
             Save();
         }
 
         public void SaveStage1Started()
         {
-            digiWavesSaveData.stage_1_started_already = stage1Started;
+            digiWavesSaveData.bridge_1_started_already = stage1Started;
 
             Save();
         }
@@ -512,7 +486,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void ItemsCollectedStage1()
         {
-            digiWavesSaveData.items_collected = itemsCollected;
+         //   digiWavesSaveData.items_collected = itemsCollected;
             Save();
         }
 

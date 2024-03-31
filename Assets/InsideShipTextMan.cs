@@ -16,6 +16,12 @@ namespace Digi.Waves.Alpha.Phases.Games
       //  public Button messageButton;
         public bool stopTaskRepeating;
 
+        public GameObject commsFolderButton;
+
+        public Button mCodeButton;
+        public Button binaryButton;
+        public Button phoneCallButton;
+
         public GameObject parentTextPanalObject;
         public GameObject introText1;
         public GameObject introText2;
@@ -267,6 +273,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro5.gameObject.SetActive(true);
 
                     LOLSDK.Instance.SpeakText("stage5IntroText5");
+                    LOLSDK.Instance.SubmitProgress(0, 85, 100);
                       digiWaves.SaveStage5Started();
                     digiWaves.taskNumberShip = 1;
                     digiWaves.TaskNumberShipSaver();
@@ -344,6 +351,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //     StartCoroutine(DelayProgressButtonVar2());
                     //      progressTextIsShowing = true;
                     //  }
+                    LOLSDK.Instance.SubmitProgress(0, 95, 100);
 
                     Debug.Log("Is stage4IntroText2 2 running");
                     textSection7Read = true;
@@ -370,7 +378,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText3.SetActive(true);
                     ttsIntro8.gameObject.SetActive(true);
-
+                    commsFolderButton.gameObject.SetActive(true);
                     //  introText4.SetActive(false);
                     //  ttsIntro3.gameObject.SetActive(false);
 
@@ -408,6 +416,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleText5.SetActive(false);
                     ttsIntro10.gameObject.SetActive(false);
 
+                    consoleText6.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    consoleText7.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+                    mCodeButton.enabled = false;
                     StartCoroutine(IncorrectOption());
                     Debug.Log("Is stage4IntroText1 1 running");
                     textSection9Read = true;
@@ -437,6 +451,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleText5.SetActive(true);
                     ttsIntro10.gameObject.SetActive(true);
 
+                    consoleText6.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    consoleText7.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+                    binaryButton.enabled = false;
+
                     StartCoroutine(IncorrectOption());
                     Debug.Log("Is stage4IntroText1 1 running");
                     textSection10Read = true;
@@ -465,7 +486,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
-                    
+
+
+                    consoleText4.SetActive(false);
+                    ttsIntro9.gameObject.SetActive(false);
+
+                    consoleText5.SetActive(false);
+                    ttsIntro10.gameObject.SetActive(false);
+
                     digiWaves.taskNumberShip = 3;
                     digiWaves.TaskNumberShipSaver();
                     if (!progressTextIsShowing)
@@ -761,9 +789,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             hasTextplayerOnce = false;
             yield return new WaitForSeconds(3f);
 
-            consoleText3.SetActive(true);
-            ttsIntro8.gameObject.SetActive(true);
+            //      consoleText3.SetActive(true);
+            //      ttsIntro8.gameObject.SetActive(true);
 
+
+          //  parentTextPanalObject.gameObject.SetActive(false);
             consoleText4.SetActive(false);
             ttsIntro9.gameObject.SetActive(false);
 

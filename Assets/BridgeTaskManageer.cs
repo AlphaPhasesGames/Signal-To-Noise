@@ -41,7 +41,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsTask4;
         public Button ttsTask5;
 
-
+        public GameObject keyBObject;
+        public GameObject keyCardObject;
            
         public BoxCollider tvItem;
         public BoxCollider speakersItem;
@@ -113,6 +114,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     miniBool3 = true;
+                    consoleCol.enabled = true;
+                    keyboardItem.enabled = false;
+                    speakersItem.enabled = false;
+                    keyboardItem.gameObject.SetActive(false);
+                    keyCardObject.gameObject.SetActive(false);
+                    keyBProp.keyBButton.gameObject.SetActive(true);
+                    badgeProp.badgeButton.gameObject.SetActive(true);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
@@ -136,6 +144,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     keyBProp.keyBButton.gameObject.SetActive(false);
                     badgeProp.badgeButton.gameObject.SetActive(false);
                     consoleCol.enabled = false;
+                    keyboardItem.gameObject.SetActive(false);
+                    keyCardObject.gameObject.SetActive(false);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
@@ -159,6 +169,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     anaClockItem.enabled = false;
                     keyBProp.keyBButton.gameObject.SetActive(false);
                     badgeProp.badgeButton.gameObject.SetActive(false);
+                    keyboardItem.gameObject.SetActive(false);
+                    keyCardObject.gameObject.SetActive(false);
                     consoleCol.enabled = false;
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);

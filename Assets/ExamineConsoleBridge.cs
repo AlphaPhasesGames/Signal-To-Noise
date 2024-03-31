@@ -21,12 +21,18 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool keyBPlaced;
         public bool badgePlaced;
+
+        private void Awake()
+        {
+            digiwaveMain = FindObjectOfType<TUSOMMain>();
+
+        }
         private void OnTriggerEnter(Collider other)
         {
            
             if (other.CompareTag("Player"))
             {
-                if (!playerCollectedItems)
+                if (!playerCollectedItems && digiwaveMain.taskNumber == 1)
                 {
                     textMan.currentStageOfText = 6;
                     digiwaveMain.taskNumber = 2;

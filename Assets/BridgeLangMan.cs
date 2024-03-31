@@ -26,6 +26,16 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI sendAnalogReplyText;
         public TextMeshProUGUI lunchButtonText;
 
+        public TextMeshProUGUI letterTitle;
+        public TextMeshProUGUI letterPT1;
+        public TextMeshProUGUI letterPT2;
+        public TextMeshProUGUI letterPT3;
+        public TextMeshProUGUI letterPT4;
+        public TextMeshProUGUI letterPT5;
+
+
+
+
         public TextMeshProUGUI bridgeText1;
         public TextMeshProUGUI bridgeText2;
         public TextMeshProUGUI bridgeText3;
@@ -89,6 +99,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             keycardText.text = defs["inventoryKeycard"];
             keyboardText.text = defs["inventoryKeyboard"];
             helpText.text = defs["helpText"];
+
+            letterTitle.text = defs["stage1LetterPart1Title"];
+            letterPT1.text = defs["stage1LetterPart2DearM"];
+            letterPT2.text = defs["stage1LetterPart3Accident"];
+            letterPT3.text = defs["stage1LetterPart4Question"];
+            letterPT4.text = defs["stage1LetterPart5ThankYou"];
+            letterPT5.text = defs["stage1LetterPart6Name"];
+
 
             incomingMessageButtontext.text = defs["stage1CnslIncomMess"];
             communicationFolderText.text = defs["stage1CnslCommsFold"];

@@ -30,7 +30,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 Debug.Log("This clicked");
                 textMan.currentStageOfText = 17;
                 setup.pickedUpKeyB = true;
-                tusomMain.SaveKeyBCollected();
+              //  tusomMain.SaveKeyBCollected();
                 memoryTestBool = true;
             }
           

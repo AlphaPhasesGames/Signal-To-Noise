@@ -25,7 +25,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             invScript.isInvOpen = true;
             invScript.employeeBadge.gameObject.SetActive(true);
-            tusomMain.SaveBadgeCollected();
+           // tusomMain.SaveBadgeCollected();
             badgeItem.gameObject.SetActive(false);
             Debug.Log("This clicked");
             textMan.currentStageOfText = 22;

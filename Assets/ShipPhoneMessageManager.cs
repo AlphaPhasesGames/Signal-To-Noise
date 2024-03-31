@@ -99,12 +99,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText2.SetActive(false);
                     ttsIntro2.gameObject.SetActive(false);
+                    parentTextPanalObjectMom.gameObject.SetActive(false);
+                    parentTextPanalObjectPizza.gameObject.SetActive(false);
 
-                  //  introText3.SetActive(false);
-                  //  ttsIntro3.gameObject.SetActive(false);
+                    //  introText3.SetActive(false);
+                    //  ttsIntro3.gameObject.SetActive(false);
 
-                 //   introText4.SetActive(false);
-                 //   ttsIntro4.gameObject.SetActive(false);
+                    //   introText4.SetActive(false);
+                    //   ttsIntro4.gameObject.SetActive(false);
 
 
                     if (!progressTextIsShowing)
@@ -163,7 +165,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
 
                     hasTextplayerOnce = false;
-                    StartCoroutine(MoveFinalTextOn());
+                   // StartCoroutine(MoveFinalTextOn());
 
                     Debug.Log("Is stage4IntroText3 3 running");
                     textSection3Read = true;
@@ -183,7 +185,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage5IntroText25GuysPizza");
 
                     hasTextplayerOnce = false;
-                    StartCoroutine(MoveFinalTextOn());
+                   // StartCoroutine(MoveFinalTextOn());
 
                     Debug.Log("Is stage4IntroText4 3 running");
                     textSection4Read = true;
@@ -319,18 +321,18 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
-        public IEnumerator MoveFinalTextOn()
-        {
-            yield return new WaitForSeconds(5f);
-            currentStageOfText = 51;
+     //   public IEnumerator MoveFinalTextOn()
+   // //    {
+   //         yield return new WaitForSeconds(5f);
+    //        currentStageOfText = 51;
+        //    currentStageOfText = 1;
 
-        }
+   //     }
         public IEnumerator MoveCorrectGuessOn()
         {
             yield return new WaitForSeconds(3.5f);
             hasTextplayerOnce = false;
             currentStageOfText = 50;
-
         }
 
         public IEnumerator MoveCorrectGuessOnD2()

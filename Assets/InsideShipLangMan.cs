@@ -9,6 +9,23 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class InsideShipLangMan : MonoBehaviour
     {
+
+        public TextMeshProUGUI invButton;
+        public TextMeshProUGUI invTitle;
+        public TextMeshProUGUI helpButton;
+        public TextMeshProUGUI invPhoneName;
+        public TextMeshProUGUI invWatchName;
+        public TextMeshProUGUI invTabletName;
+
+        public TextMeshProUGUI commsButton;
+        public TextMeshProUGUI momButton;
+        public TextMeshProUGUI pizzaButton;
+        public TextMeshProUGUI mechanicButton;
+
+        public TextMeshProUGUI binaryButton;
+        public TextMeshProUGUI morseCodeButton;
+        public TextMeshProUGUI phoneCallButton;
+
         public TextMeshProUGUI shipText1;
         public TextMeshProUGUI shipText2;
         public TextMeshProUGUI shipText3;
@@ -46,10 +63,31 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
 
-
+        public TextMeshProUGUI reminder1;
+        public TextMeshProUGUI reminder2;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
+
+
+
+                 invButton.text = defs["inventoryTitle"]; 
+                 invTitle.text = defs["inventoryTitle"]; 
+                 helpButton.text = defs["helpText"]; 
+                 invPhoneName.text = defs["s2InventoryPhone"]; 
+                 invWatchName.text = defs["s2InventoryWatch"]; 
+                 invTabletName.text = defs["s2InventoryTablet"]; 
+
+                 commsButton.text = defs["stage5CommsButton"];
+                 momButton.text = defs["stage5MomText"]; 
+                 pizzaButton.text = defs["stage5GuysPizzaText"]; 
+                 mechanicButton.text = defs["stage5Mechanic"];
+
+            binaryButton.text = defs["stage4BinaryCoordsTitle"];
+            morseCodeButton.text = defs["morseCode"];
+            phoneCallButton.text = defs["stage5PhoneCallText"];
+
+
             shipText1.text = defs["stage5IntroText1"];
             shipText2.text = defs["stage5IntroText2"];
             shipText3.text = defs["stage5IntroText3"];
@@ -87,7 +125,10 @@ namespace Digi.Waves.Alpha.Phases.Games
             task2.text = defs["stage5Task2"];
             task3.text = defs["stage5Task3"];
             task4.text = defs["stage5Task4"];
-            task5.text = defs["stage4Task5"];
+            task5.text = defs["stage5Task5"];
+
+            reminder1.text = defs["stage5Reminder1"];
+            reminder2.text = defs["stage5Reminder2"];
         }
     }
 }

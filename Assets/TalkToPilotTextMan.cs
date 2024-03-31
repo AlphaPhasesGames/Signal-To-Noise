@@ -300,6 +300,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro7.gameObject.SetActive(true);
 
 
+                    LOLSDK.Instance.SubmitProgress(0, 100, 100);
 
                     StartCoroutine(MoveFinalTextOn());
 

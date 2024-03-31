@@ -338,7 +338,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText4.SetActive(false);
                     ttsIntro4.gameObject.SetActive(false);
-                    ronCont.enabled = true;
+                 //   ronCont.enabled = true;
                     introText5.SetActive(true);
                     ttsIntro5.gameObject.SetActive(true);
                     LOLSDK.Instance.SubmitProgress(0, 0, 100);
@@ -346,7 +346,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     digiWaves.SaveStage1Started();
                     digiWaves.taskNumber = 1;
                     digiWaves.TaskNumberSaver();
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD4());
                     textSection5Read = true;
                     Debug.Log("Is currentStageOfText 5 running");
                 }
@@ -1731,6 +1731,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             yield return new WaitForSeconds(5f);
             currentStageOfText = 50;
 
+        }
+
+        public IEnumerator MoveCorrectGuessOnD4()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(5f);
+            currentStageOfText = 50;
+            ronCont.enabled = true;
         }
 
     }

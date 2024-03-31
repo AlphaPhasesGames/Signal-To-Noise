@@ -28,6 +28,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // Update is called once per frame
         void Update()
         {
+            /*
             if (!runOnce)
             {
                 if (digiWaveMain.employeeBadgeCollected)
@@ -53,18 +54,18 @@ namespace Digi.Waves.Alpha.Phases.Games
                     runTwice = true;
                 }
             }
-
+            */
             if (!runThrice)
             {
                
                     if (pickedUpKeyB && pickedUpBadge)
                     {
-                    if (!digiWaveMain.itemsCollected)
-                    {
+                   // if (!digiWaveMain.itemsCollected)
+                   // {
                         StartCoroutine(ShowText());
 
                         runThrice = true;
-                    }
+                   // }
                    
                 }
             }
@@ -81,8 +82,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             consoleBridge.playerCollectedItems = true;
             if (!digiWaveMain.itemsCollected)
             {
-                digiWaveMain.itemsCollected = true;
-                digiWaveMain.ItemsCollectedStage1();
+              //  digiWaveMain.itemsCollected = true;
+             //   digiWaveMain.ItemsCollectedStage1();
                 yield return new WaitForSeconds(6f);
                 textMan.currentStageOfText = 23;
             }
