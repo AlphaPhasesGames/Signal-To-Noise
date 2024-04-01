@@ -17,6 +17,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public TextMeshProUGUI morseCodeButton;
         public TextMeshProUGUI morseCodeSheet;
+        public TextMeshProUGUI morseCodeUIButton;
 
         public TextMeshProUGUI inventoryTitle;
         public TextMeshProUGUI inventoryTitleBUtton;
@@ -143,6 +144,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             morseCodeButton.text = defs["morseCode"];
             morseCodeSheet.text = defs["morseCode"];
+
+            morseCodeUIButton.text = defs["morseCode"];
         }
     }
 }

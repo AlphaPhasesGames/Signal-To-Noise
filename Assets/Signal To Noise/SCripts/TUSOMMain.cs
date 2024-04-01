@@ -27,14 +27,14 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool docking_bay_4_started_already;
         public bool abour_ship_5_started_already;
 
-        public bool stage_3_started_already;
+   //     public bool stage_3_started_already;
 
         public bool stage_2_items_collected;
         public bool stage_2_code_found;
 
         public bool stage_3_console_read;
 
-        public bool stage_3_folders_collected;
+     //   public bool stage_3_folders_collected;
         public bool stage_3_door_key_collected;
 
         public bool stage_4_floppys_collected;
@@ -214,7 +214,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                     stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
-                    stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
+                 //   stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
                     stage3DoorKeyCollected = digiWavesSaveData.stage_3_door_key_collected;
                     //   taskNumberLiquid1 = tusomSaveData.task_number_liquid_1;
                     taskNumberCommsRoom = digiWavesSaveData.task_number_comms_room;
@@ -314,7 +314,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                 commsRoom3StartedAkready = digiWavesSaveData.comms_room_3_started_already;
                 stage3ConsoleRead = digiWavesSaveData.stage_3_console_read;
-                stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
+            //    stage3FolderCollected = digiWavesSaveData.stage_3_folders_collected;
                 stage3DoorKeyCollected = digiWavesSaveData.stage_3_door_key_collected;
                 taskNumberCommsRoom = digiWavesSaveData.task_number_comms_room;
             }
@@ -504,7 +504,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void Stage3FoldersAlreadyCollected()
         {
             stage3FolderCollected = true;
-            digiWavesSaveData.stage_3_folders_collected = stage3FolderCollected;
+         //   digiWavesSaveData.stage_3_folders_collected = stage3FolderCollected;
             Save();
         }
 

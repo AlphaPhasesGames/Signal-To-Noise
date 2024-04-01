@@ -19,6 +19,18 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject reminder1;
         public GameObject reminder2;
 
+        public GameObject folder1;
+        public GameObject folder2;
+        public GameObject folder3;
+
+        public BoxCollider cab1;
+        public BoxCollider cab2;
+        public BoxCollider cab3;
+
+
+        public GameObject mCodeFile1To3;
+        public GameObject mCodeFile4To7;
+        public GameObject mCodeFile8To0;
 
         public Button task1TTS;
         public Button task2TTS;
@@ -80,6 +92,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task5.gameObject.SetActive(false);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    cab1.enabled = true;
+                    cab2.enabled = true;
+                    cab3.enabled = true;
                     miniBool2 = true;
                     Debug.Log("Task 2 fired once");
                 }
@@ -99,6 +114,16 @@ namespace Digi.Waves.Alpha.Phases.Games
                     miniBool3 = true;
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    mCodeFile1To3.gameObject.SetActive(true);
+                    mCodeFile4To7.gameObject.SetActive(true);
+                    mCodeFile8To0.gameObject.SetActive(true);
+
+                    cab1.enabled = false;
+                    cab2.enabled = false;
+                    cab3.enabled = false;
+                    folder1.gameObject.SetActive(false);
+                    folder2.gameObject.SetActive(false);
+                    folder3.gameObject.SetActive(false);
                     Debug.Log("Task fired once");
                 }
 
@@ -117,6 +142,15 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task5.gameObject.SetActive(false);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    mCodeFile1To3.gameObject.SetActive(true);
+                    mCodeFile4To7.gameObject.SetActive(true);
+                    mCodeFile8To0.gameObject.SetActive(true);
+                    cab1.enabled = false;
+                    cab2.enabled = false;
+                    cab3.enabled = false;
+                    folder1.gameObject.SetActive(false);
+                    folder2.gameObject.SetActive(false);
+                    folder3.gameObject.SetActive(false);
                     miniBool4 = true;
                     Debug.Log("Task fired once");
                 }
@@ -134,8 +168,17 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(true);
+                    mCodeFile1To3.gameObject.SetActive(true);
+                    mCodeFile4To7.gameObject.SetActive(true);
+                    mCodeFile8To0.gameObject.SetActive(true);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    cab1.enabled = false;
+                    cab2.enabled = false;
+                    cab3.enabled = false;
+                    folder1.gameObject.SetActive(false);
+                    folder2.gameObject.SetActive(false);
+                    folder3.gameObject.SetActive(false);
                     miniBool5 = true;
                     Debug.Log("Task fired once");
                 }

@@ -8,6 +8,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CommsRoomHelpButton : MonoBehaviour
     {
         public GameObject invUIPanal; // declare gameobject for UI inventory panal
+        public GameObject morseCode;
         public Button openInv;
 
         [SerializeField]
@@ -33,6 +34,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!stopRepeat) // if inventory is open
                 {
                     invUIPanal.gameObject.SetActive(true); // enable the INV UI
+                    morseCode.gameObject.SetActive(false);
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
                 }

@@ -6,14 +6,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class CommsRoomFilingCabinet : MonoBehaviour
     {
-        public Animator cab3;
+     //   public Animator cab3;
         public CommsRoomTextMan textMan;
         public bool runOnce;
         public void OnMouseDown()
         {
             if (!runOnce)
             {
-                cab3.SetBool("openFakeCab", true);
+               // cab3.SetBool("openFakeCab", true);
                 textMan.currentStageOfText = 15;
                 runOnce = true;
             }

@@ -8,6 +8,7 @@ namespace Digi.Waves.Alpha.Phases.Games
     public class CommsRoomOpenMorseCodeFolder : MonoBehaviour
     {
         public GameObject mCodeUIPanal; // declare gameobject for UI inventory panal
+        public GameObject helpPanal;
         public Button closeMCode;
         public Button openMCode;
 
@@ -45,6 +46,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (!stopRepeat) // if inventory is open
                 {
                     mCodeUIPanal.gameObject.SetActive(true); // enable the INV UI
+                    helpPanal.gameObject.SetActive(false);
                     Debug.Log("Inv Consta Loading");
                     stopRepeat = true; // set stop repeat true to stop it firing over and over
                 }

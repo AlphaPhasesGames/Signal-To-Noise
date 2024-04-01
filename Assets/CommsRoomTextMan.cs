@@ -91,6 +91,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsExit;
 
         public Button progressText;
+     //   public Button progressTextForced;
         public Button progressTextBack;
 
         public bool folder1Found;
@@ -152,7 +153,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (folder1Found && folder2Found && folder3Found)
                 {
                     StartCoroutine(FireAllFolderCollectedText());
-                    digiWaves.Stage3FoldersAlreadyCollected();
+                 //   digiWaves.Stage3FoldersAlreadyCollected();
                     LOLSDK.Instance.SubmitProgress(0, 55, 100);
                     allFoldersFound = true;
                 }
@@ -284,8 +285,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 if (currentStageOfText == 5)
                 {
-                   
                     progressText.gameObject.SetActive(false);
+                    progressText.enabled = false;
                     progressTextBack.gameObject.SetActive(true);
                     LOLSDK.Instance.SpeakText("stage3IntroText16");
 
@@ -298,6 +299,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsCarryOnText2.gameObject.SetActive(true);
                     digiWaves.taskNumberCommsRoom = 2;
                     digiWaves.TaskNumberCommsRoomSaver();
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                   
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -319,6 +326,10 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage3IntroTextMorseCodeDoc1");
 
                     // preTextPanal1.gameObject.SetActive(false);
+
+
+                    textFromFakeCabinet.SetActive(false);
+                    ttsFakeCabientFound.gameObject.SetActive(false);
 
                     foundMCode1.SetActive(true);
                     ttsFoundMCode1.gameObject.SetActive(true);
@@ -364,6 +375,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     foundMCode3.SetActive(false);
                     ttsFoundMCode3.gameObject.SetActive(false);
 
+                    textFromFakeCabinet.SetActive(false);
+                    ttsFakeCabientFound.gameObject.SetActive(false);
+
                     //  carryOnText2.SetActive(true);
                     //  ttsCarryOnText2.gameObject.SetActive(true);
 
@@ -385,7 +399,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     progressText.gameObject.SetActive(false);
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage3IntroTextMorseCodeDoc2");
+                    LOLSDK.Instance.SpeakText("stage3IntroTextMorseCodeDoc3");
 
                     // preTextPanal1.gameObject.SetActive(false);
 
@@ -397,6 +411,10 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     foundMCode3.SetActive(true);
                     ttsFoundMCode3.gameObject.SetActive(true);
+
+
+                    textFromFakeCabinet.SetActive(false);
+                    ttsFakeCabientFound.gameObject.SetActive(false);
 
                     //  carryOnText2.SetActive(true);
                     //  ttsCarryOnText2.gameObject.SetActive(true);
@@ -813,7 +831,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar1()
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(8f);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
