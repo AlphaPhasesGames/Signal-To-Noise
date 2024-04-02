@@ -800,8 +800,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.03, y: 0.020472212, z: 0.03082087}
-  m_Center: {x: -0.0026102227, y: -0.00006466497, z: 0.004424093}
+  m_Size: {x: 0.04013502, y: 0.020472214, z: 0.03082087}
+  m_Center: {x: -0.0076777353, y: -0.00006466479, z: 0.0044240933}
 --- !u!114 &102497359 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3827457046930931586, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
@@ -3450,16 +3450,9 @@ MonoBehaviour:
     comms_room_3_started_already: 0
     docking_bay_4_started_already: 0
     abour_ship_5_started_already: 0
-    stage_2_started_already: 0
-    stage_3_started_already: 0
     stage_2_items_collected: 0
-    stage_2_phone_collected: 0
-    stage_2_tablet_collected: 0
-    stage_2_watch_collected: 0
-    stage_2_lights_on: 0
     stage_2_code_found: 0
     stage_3_console_read: 0
-    stage_3_folders_collected: 0
     stage_3_door_key_collected: 0
     stage_4_floppys_collected: 0
     task_number: 0
@@ -3475,16 +3468,10 @@ MonoBehaviour:
   aboardTheShip5StartedAlready: 0
   stage1Started: 0
   itemsCollected: 0
-  employeeBadgeCollected: 0
-  keyboadCollected: 0
   stage2LightsOn: 0
   stage2ItemsCollected: 0
-  phoneCollected: 0
-  tabletCollected: 0
-  watchCollected: 0
   stage2CodeFound: 0
   stage3ConsoleRead: 0
-  stage3FolderCollected: 0
   stage3DoorKeyCollected: 0
   stage4FloppysCollected: 0
   taskNumber: 0

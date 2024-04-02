@@ -533,7 +533,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                      parentTextPanalObject.gameObject.SetActive(true);
 
                     progressTextBack.gameObject.SetActive(false);
-                    LOLSDK.Instance.SpeakText("stage4IntroText20");
+                    LOLSDK.Instance.SpeakText("stage4IntroText12");
 
                     wrongMediaText.SetActive(true);
                     ttsWrongMedia.gameObject.SetActive(true);

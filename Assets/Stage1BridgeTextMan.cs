@@ -891,7 +891,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText20");
                     progressTextBack.gameObject.SetActive(false);
-
+                    consoleCollider.enabled = false;
 
                     introText21CollectedBothItems.SetActive(true);
                     ttsIntro21CollectedBothItems.gameObject.SetActive(true);
@@ -924,6 +924,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText21CollectedBothItems.SetActive(false);
                     ttsIntro21CollectedBothItems.gameObject.SetActive(false);
+
 
                     introText22.SetActive(true);
                     ttsIntro22.gameObject.SetActive(true);
@@ -958,9 +959,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText23.SetActive(true);
                     ttsIntro23.gameObject.SetActive(true);
-                    //consoleCollider.enabled = true;
+                    consoleCollider.enabled = false;
                     consoleColliderNonTrigger.enabled = true;
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD3());
                     textSection23Read = true;
                     Debug.Log("Is stage1IntroText22  running");
                 }
@@ -977,6 +978,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText23");
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
 
                     introText22.SetActive(false);
                     ttsIntro22.gameObject.SetActive(false);
@@ -1009,6 +1016,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                         progressText.gameObject.SetActive(false);
                     }
                     LOLSDK.Instance.SpeakText("stage1IntroText23a");
+
+                    introText22.SetActive(false);
+                    ttsIntro22.gameObject.SetActive(false);
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
 
                     introText22.SetActive(false);
                     ttsIntro22.gameObject.SetActive(false);
@@ -1732,7 +1745,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             currentStageOfText = 50;
 
         }
+        public IEnumerator MoveCorrectGuessOnD3()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(5f);
+            consoleCollider.enabled = true;
+            currentStageOfText = 50;
 
+        }
         public IEnumerator MoveCorrectGuessOnD4()
         {
             hasTextplayerOnce = false;

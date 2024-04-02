@@ -27,7 +27,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public GameObject settingsFolder;
         public GameObject codesFolder;
-        public GameObject spareFolder;
+      //  public GameObject spareFolder;
 
         public int currentStageOfText;
 
@@ -98,7 +98,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SubmitProgress(0, 30, 100);
                     codesFolder.gameObject.SetActive(true);
                     settingsFolder.gameObject.SetActive(true);
-                    spareFolder.gameObject.SetActive(true);
+               //     spareFolder.gameObject.SetActive(true);
                     if (!digiMain.stage2CodeFound)
                     {
                         digiMain.taskNumberCrewQuarters = 5;

@@ -21,7 +21,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button mCodeButton;
         public Button binaryButton;
         public Button phoneCallButton;
+        public Button emailButton;
+        public Button faxButton;
+        public Button textMessageButton;
 
+        public BoxCollider npcRobot;
         public GameObject parentTextPanalObject;
         public GameObject introText1;
         public GameObject introText2;
@@ -40,6 +44,11 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public GameObject thermText1;
 
+        public GameObject emailText;
+        public GameObject faxText;
+        public GameObject textMessageText;
+
+
         public bool textSection1Read;
         public bool textSection2Read;
         public bool textSection3Read;
@@ -56,6 +65,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection12Read;
         public bool textSection13Read;
 
+        public bool textSection14Read;
+        public bool textSection15Read;
+        public bool textSection16Read;
+
         public Button ttsIntro1;
         public Button ttsIntro2;
         public Button ttsIntro3;
@@ -70,7 +83,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro12;
         public Button ttsIntro13;
 
-
+        public Button ttsIntro14;
+        public Button ttsIntro15;
+        public Button ttsIntro16;
 
         public GameObject consoleScreen;
         public Button progressText;
@@ -108,6 +123,12 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro12.onClick.AddListener(IntroTTSSpeak12);
 
             ttsIntro13.onClick.AddListener(IntroTTSSpeak13);
+
+            ttsIntro14.onClick.AddListener(IntroTTSSpeak14);
+
+            ttsIntro15.onClick.AddListener(IntroTTSSpeak15);
+
+            ttsIntro16.onClick.AddListener(IntroTTSSpeak16);
             if (!digiWaves.aboardTheShip5StartedAlready)
             {
                 currentStageOfText = 1;
@@ -274,6 +295,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     LOLSDK.Instance.SpeakText("stage5IntroText5");
                     LOLSDK.Instance.SubmitProgress(0, 85, 100);
+
                       digiWaves.SaveStage5Started();
                     digiWaves.taskNumberShip = 1;
                     digiWaves.TaskNumberShipSaver();
@@ -421,6 +443,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
                     mCodeButton.enabled = false;
                     StartCoroutine(IncorrectOption());
                     Debug.Log("Is stage4IntroText1 1 running");
@@ -456,6 +487,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText7.SetActive(false);
                     ttsIntro12.gameObject.SetActive(false);
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
                     binaryButton.enabled = false;
 
                     StartCoroutine(IncorrectOption());
@@ -493,6 +533,24 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     consoleText5.SetActive(false);
                     ttsIntro10.gameObject.SetActive(false);
+
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
+
+
+                    binaryButton.gameObject.SetActive(false);
+                    emailButton.gameObject.SetActive(false);
+                    textMessageButton.gameObject.SetActive(false);
+                    faxButton.gameObject.SetActive(false);
+                    mCodeButton.gameObject.SetActive(false);
+
 
                     digiWaves.taskNumberShip = 3;
                     digiWaves.TaskNumberShipSaver();
@@ -558,6 +616,139 @@ namespace Digi.Waves.Alpha.Phases.Games
             }
 
 
+            if (!textSection14Read)
+            {
+                //  jobotIntroStage1
+                if (currentStageOfText == 14)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage5IntroText23Email");
+
+
+                    emailText.SetActive(true);
+                    ttsIntro14.gameObject.SetActive(true);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
+
+                    consoleText3.SetActive(false);
+                    ttsIntro8.gameObject.SetActive(false);
+
+                    consoleText4.SetActive(false);
+                    ttsIntro9.gameObject.SetActive(false);
+
+                    consoleText5.SetActive(false);
+                    ttsIntro10.gameObject.SetActive(false);
+
+                    consoleText6.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    consoleText7.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+                    emailButton.enabled = false;
+                //    StartCoroutine(IncorrectOption());
+                    Debug.Log("Is stage4IntroText1 1 running");
+                    textSection14Read = true;
+                }
+            }
+
+            if (!textSection15Read)
+            {
+                //  jobotIntroStage1
+                if (currentStageOfText == 15)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage5IntroText24Fax");
+
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(true);
+                    ttsIntro15.gameObject.SetActive(true);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
+
+                    consoleText3.SetActive(false);
+                    ttsIntro8.gameObject.SetActive(false);
+
+                    consoleText4.SetActive(false);
+                    ttsIntro9.gameObject.SetActive(false);
+
+                    consoleText5.SetActive(false);
+                    ttsIntro10.gameObject.SetActive(false);
+
+                    consoleText6.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    consoleText7.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+                    faxButton.enabled = false;
+                  //  StartCoroutine(IncorrectOption());
+                    Debug.Log("Is stage5IntroText24Fax 1 running");
+                    textSection15Read = true;
+                }
+            }
+
+            if (!textSection16Read)
+            {
+                //  jobotIntroStage1
+                if (currentStageOfText == 16)
+                {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    parentTextPanalObject.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage5IntroText25Text");
+
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(true);
+                    ttsIntro16.gameObject.SetActive(true);
+
+                    consoleText3.SetActive(false);
+                    ttsIntro8.gameObject.SetActive(false);
+
+                    consoleText4.SetActive(false);
+                    ttsIntro9.gameObject.SetActive(false);
+
+                    consoleText5.SetActive(false);
+                    ttsIntro10.gameObject.SetActive(false);
+
+                    consoleText6.SetActive(false);
+                    ttsIntro11.gameObject.SetActive(false);
+
+                    consoleText7.SetActive(false);
+                    ttsIntro12.gameObject.SetActive(false);
+                    faxButton.enabled = false;
+                    //StartCoroutine(IncorrectOption());
+                    Debug.Log("Is stage5IntroText24Fax 1 running");
+                    textSection16Read = true;
+                }
+            }
+
+
             if (currentStageOfText == 50)
             {
                 if (!hasTextplayerOnce)
@@ -601,6 +792,15 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     thermText1.SetActive(false);
                     ttsIntro13.gameObject.SetActive(false);
+
+                    emailText.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
+
+                    faxText.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
+
+                    textMessageText.SetActive(false);
+                    ttsIntro16.gameObject.SetActive(false);
 
                     Debug.Log("This hidwe text funtion executed once");
                     textBeenRead = false;
@@ -712,20 +912,25 @@ namespace Digi.Waves.Alpha.Phases.Games
             LOLSDK.Instance.SpeakText("stage5IntroText18");
             Debug.Log(" introText1 Button is pressed");
         }
-        public void CorrectGuess()
-        {
 
-            currentStageOfText = 6;
-            Debug.Log("Correct");
+        public void IntroTTSSpeak14()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText23Email");
+            Debug.Log(" introText1 Button is pressed");
         }
 
-        public void IncorrectGuess()
+        public void IntroTTSSpeak15()
         {
-            // StartCoroutine(RestartCount());
-            currentStageOfText = 5;
-            Debug.Log("Incorrect");
+            LOLSDK.Instance.SpeakText("stage5IntroText24Fax");
+            Debug.Log(" introText1 Button is pressed");
         }
 
+        public void IntroTTSSpeak16()
+        {
+            LOLSDK.Instance.SpeakText("stage5IntroText25Text");
+            Debug.Log(" introText1 Button is pressed");
+        }
+      
 
         public IEnumerator DelayProgressButtonVar3()
         {
@@ -762,6 +967,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             yield return new WaitForSeconds(3.5f);
             hasTextplayerOnce = false;
+            npcRobot.enabled = true;
             currentStageOfText = 50;
 
         }

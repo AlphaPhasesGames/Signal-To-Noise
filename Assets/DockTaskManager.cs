@@ -46,6 +46,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject floppy1;
         public GameObject floppy2;
         public GameObject floppy3;
+
+        public BoxCollider vhs1;
+        public BoxCollider vhs2;
+        public BoxCollider books1;
+        public BoxCollider books2;
+        public BoxCollider books3;
         private void Awake()
         {
             tusomMain = FindObjectOfType<TUSOMMain>();
@@ -55,6 +61,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             task4TTS.onClick.AddListener(IntroTTSSpeak4);
 
             task5TTS.onClick.AddListener(IntroTTSSpeak5);
+
+
+            floppy1.gameObject.SetActive(false);
+            floppy2.gameObject.SetActive(false);
+            floppy3.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -92,6 +103,13 @@ namespace Digi.Waves.Alpha.Phases.Games
                     floppy1.gameObject.SetActive(true);
                     floppy2.gameObject.SetActive(true);
                     floppy3.gameObject.SetActive(true);
+
+                    vhs1.enabled = true;
+                    vhs2.enabled = true;
+                    books1.enabled = true;
+                    books2.enabled = true;
+                    books3.enabled = true;
+
                     reminder1.gameObject.SetActive(true);
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
@@ -117,6 +135,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     floppy3.gameObject.SetActive(false);
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    vhs1.enabled = false;
+                    vhs2.enabled = false;
+                    books1.enabled = false;
+                    books2.enabled = false;
+                    books3.enabled = false;
                     miniBool3 = true;
                     // reminder1.gameObject.SetActive(true);
                     //  reminder2.gameObject.SetActive(true);
@@ -143,6 +166,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
                     floppy3.gameObject.SetActive(false);
+                    vhs1.enabled = false;
+                    vhs2.enabled = false;
+                    books1.enabled = false;
+                    books2.enabled = false;
+                    books3.enabled = false;
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     //reminder3.gameObject.SetActive(true);
@@ -170,6 +198,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
                     floppy3.gameObject.SetActive(false);
+                    vhs1.enabled = false;
+                    vhs2.enabled = false;
+                    books1.enabled = false;
+                    books2.enabled = false;
+                    books3.enabled = false;
                     // reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     // reminder3.gameObject.SetActive(true);

@@ -65,19 +65,19 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             public bool stage1Started;
             public bool itemsCollected;
-            public bool employeeBadgeCollected;
-            public bool keyboadCollected;
+         //   public bool employeeBadgeCollected;
+          //  public bool keyboadCollected;
 
             public bool stage2LightsOn;
 
             public bool stage2ItemsCollected;
-            public bool phoneCollected;
-            public bool tabletCollected;
-            public bool watchCollected;
+        //    public bool phoneCollected;
+        //    public bool tabletCollected;
+       //     public bool watchCollected;
             public bool stage2CodeFound;
 
             public bool stage3ConsoleRead;
-            public bool stage3FolderCollected;
+        //    public bool stage3FolderCollected;
             public bool stage3DoorKeyCollected;
 
             public bool stage4FloppysCollected;
@@ -423,7 +423,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void TaskNumberShipSaver()
         {
-        //    digiWavesSaveData.task_number_ship = taskNumberShip;
+          digiWavesSaveData.task_number_ship = taskNumberShip;
             Save();
         }
 
@@ -503,7 +503,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public void Stage3FoldersAlreadyCollected()
         {
-            stage3FolderCollected = true;
+            //stage3FolderCollected = true;
          //   digiWavesSaveData.stage_3_folders_collected = stage3FolderCollected;
             Save();
         }

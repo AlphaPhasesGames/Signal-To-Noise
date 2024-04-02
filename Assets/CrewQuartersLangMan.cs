@@ -20,7 +20,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI reminder1;
         public TextMeshProUGUI reminder2;
 
-        public TextMeshProUGUI spareFolder;
+      //  public TextMeshProUGUI spareFolder;
         public TextMeshProUGUI codesFolder;
         public TextMeshProUGUI toiletCodeFile;
         public TextMeshProUGUI trashRoomCodeFile;
@@ -90,7 +90,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             task5.text = defs["stage2Task5"];
             task6.text = defs["stage2Task6"];
 
-            spareFolder.text = defs["stage2CnslSpareFold"];
+       //     spareFolder.text = defs["stage2CnslSpareFold"];
             codesFolder.text = defs["stage2CnslCodesFold"];
             toiletCodeFile.text = defs["stage2CnslToiletFile"];
             trashRoomCodeFile.text = defs["stage2CnslTrashFile"];

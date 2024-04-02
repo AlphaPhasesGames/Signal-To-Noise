@@ -38,6 +38,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         // Update is called once per frame
         void Update()
         {
+            /*
             if (!runOnce)
             {
                 if (digiMain.stage3FolderCollected)
@@ -53,7 +54,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
                   
             }
-
+            */
             if (!runTwice)
             {
                 if (digiMain.stage3DoorKeyCollected)

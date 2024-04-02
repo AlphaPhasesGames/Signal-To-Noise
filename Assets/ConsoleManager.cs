@@ -11,6 +11,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button clickBinary;
         public Button clickMorseCode;
         public Button clickPhoneCall;
+        public Button clickEmail;
+        public Button clickFax;
+        public Button clickTextMEssage;
         public Button closeFolder;
         public bool folderOpen;
         public bool stopRepeat;
@@ -24,6 +27,9 @@ namespace Digi.Waves.Alpha.Phases.Games
             clickBinary.onClick.AddListener(ClickBinaryButton);
             clickMorseCode.onClick.AddListener(ClickMorseCodeButton);
             clickPhoneCall.onClick.AddListener(ClickPhoneCall);
+            clickEmail.onClick.AddListener(ClickEmailButton);
+            clickFax.onClick.AddListener(ClickFaxButton);
+            clickTextMEssage.onClick.AddListener(ClickText);
         }
 
         void Update()
@@ -81,6 +87,20 @@ namespace Digi.Waves.Alpha.Phases.Games
             textMan.currentStageOfText = 11;
         }
 
+        public void ClickEmailButton()
+        {
+            textMan.currentStageOfText = 14;
+        }
+
+        public void ClickFaxButton()
+        {
+            textMan.currentStageOfText = 15;
+        }
+
+        public void ClickText()
+        {
+            textMan.currentStageOfText = 16;
+        }
 
     }
 }

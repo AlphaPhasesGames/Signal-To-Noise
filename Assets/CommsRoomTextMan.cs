@@ -299,11 +299,6 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsCarryOnText2.gameObject.SetActive(true);
                     digiWaves.taskNumberCommsRoom = 2;
                     digiWaves.TaskNumberCommsRoomSaver();
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
                    
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");

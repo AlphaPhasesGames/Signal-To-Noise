@@ -25,6 +25,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI binaryButton;
         public TextMeshProUGUI morseCodeButton;
         public TextMeshProUGUI phoneCallButton;
+        public TextMeshProUGUI emailButton;
+        public TextMeshProUGUI textButton;
+        public TextMeshProUGUI faxButton;
 
         public TextMeshProUGUI shipText1;
         public TextMeshProUGUI shipText2;
@@ -63,6 +66,10 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI task4;
         public TextMeshProUGUI task5;
 
+        public TextMeshProUGUI emailMessage;
+        public TextMeshProUGUI faxMessage;
+        public TextMeshProUGUI textMessageMessage;
+
         public TextMeshProUGUI reminder1;
         public TextMeshProUGUI reminder2;
         private void Awake()
@@ -86,6 +93,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             binaryButton.text = defs["stage4BinaryCoordsTitle"];
             morseCodeButton.text = defs["morseCode"];
             phoneCallButton.text = defs["stage5PhoneCallText"];
+
+            emailButton.text = defs["stage5Email"];
+            faxButton.text = defs["stage5Fax"];
+            textButton.text = defs["stage5TextMessage"];
+
+            emailMessage.text = defs["stage5IntroText23Email"];
+            faxMessage.text = defs["stage5IntroText24Fax"];
+            textMessageMessage.text = defs["stage5IntroText25Text"];
 
 
             shipText1.text = defs["stage5IntroText1"];

@@ -3539,7 +3539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110.8, y: 48.4}
+  m_AnchoredPosition: {x: 114.1, y: 52.6}
   m_SizeDelta: {x: 16.256, y: 16.4779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382333572
@@ -8248,7 +8248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110.79997, y: 48.399986}
+  m_AnchoredPosition: {x: 113, y: 56}
   m_SizeDelta: {x: 16.256, y: 16.4779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405804667
@@ -10026,7 +10026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110.79997, y: 48.399986}
+  m_AnchoredPosition: {x: 113.9, y: 56}
   m_SizeDelta: {x: 16.256, y: 16.4779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770756277
@@ -11625,7 +11625,6 @@ MonoBehaviour:
   helpTitle: {fileID: 2367095048536873589}
   reminder1: {fileID: 7674082543148022966}
   reminder2: {fileID: 2547555580603390325}
-  spareFolder: {fileID: 0}
   codesFolder: {fileID: 8317547053132104705}
   toiletCodeFile: {fileID: 7864612665390424053}
   trashRoomCodeFile: {fileID: 1837133323}
@@ -11780,7 +11779,6 @@ MonoBehaviour:
   progressTextBack: {fileID: 1147850190}
   settingsFolder: {fileID: 4207325839349695794}
   codesFolder: {fileID: 9084672199228713524}
-  spareFolder: {fileID: 0}
   currentStageOfText: 0
 --- !u!114 &1984380655
 MonoBehaviour:
