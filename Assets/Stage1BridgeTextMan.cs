@@ -68,6 +68,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject introText29;
         public GameObject introText30;
 
+        public GameObject introText32;
+
         public GameObject anaFolderReplyMessage;
         public bool textBeenRead;
         public bool progressTextIsShowing;
@@ -109,7 +111,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection29Read;
         public bool textSection30Read;
         public bool textSection31Read;
-
+        public bool textSection32Read;
         public bool consoleImageRead;
 
         public Button ttsIntro1;
@@ -148,6 +150,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Button ttsIntro29;
         public Button ttsIntro30;
         public Button ttsIntro31;
+        public Button ttsIntro32;
         public Button progressText;
         public Button progressTextBack;
 
@@ -197,6 +200,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             ttsIntro29.onClick.AddListener(IntroTTSSpeak32);
             ttsIntro30.onClick.AddListener(IntroTTSSpeak33);
             ttsIntro31.onClick.AddListener(IntroTTSSpeak34);
+            ttsIntro32.onClick.AddListener(IntroTTSSpeak35);
             if (!digiWaves.stage1Started)
             {
                 currentStageOfText = 1;
@@ -947,11 +951,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 if (currentStageOfText == 25)
                 {
-                  
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
+
+                    progressText.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage1IntroText22");
 
                     introText22.SetActive(false);
@@ -959,9 +960,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText23.SetActive(true);
                     ttsIntro23.gameObject.SetActive(true);
-                    consoleCollider.enabled = false;
-                    consoleColliderNonTrigger.enabled = true;
-                    StartCoroutine(MoveCorrectGuessOnD3());
+
+                    StartCoroutine(MoveText());
                     textSection23Read = true;
                     Debug.Log("Is stage1IntroText22  running");
                 }
@@ -1294,6 +1294,32 @@ namespace Digi.Waves.Alpha.Phases.Games
                 }
             }
 
+            if (!textSection32Read)
+            {
+                if (currentStageOfText == 36)
+                {
+
+                    progressText.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1IntroText34");
+
+                    introText23.SetActive(false);
+                    ttsIntro23.gameObject.SetActive(false);
+
+                    introText32.SetActive(true);
+                    ttsIntro32.gameObject.SetActive(true);
+
+                    consoleCollider.enabled = false;
+                    consoleColliderNonTrigger.enabled = true;
+
+                    StartCoroutine(MoveCorrectGuessOnD3());
+                    textSection32Read = true;
+                    Debug.Log("Is stage1IntroText22  running");
+                }
+
+             
+            }
+
+
             if (currentStageOfText == 50)
             {
 
@@ -1401,6 +1427,14 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText28.SetActive(false);
                     ttsIntro28.gameObject.SetActive(false);
 
+                    introText29.SetActive(false);
+                    ttsIntro29.gameObject.SetActive(false);
+
+                    introText30.SetActive(false);
+                    ttsIntro30.gameObject.SetActive(false);
+
+                    introText32.SetActive(false);
+                    ttsIntro32.gameObject.SetActive(false);
                     ronCont.enabled = true;
                     Debug.Log("This hidwe text funtion executed once");
 
@@ -1426,6 +1460,12 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
+
+        public IEnumerator MoveText()
+        {
+            yield return new WaitForSeconds(4);
+            currentStageOfText = 36;
+        }
 
         void OnClick()
         {
@@ -1712,6 +1752,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             LOLSDK.Instance.SpeakText("stage1IntroText33AnaMessage");
             Debug.Log("introText 18 Button is pressed");
+        }
+
+        public void IntroTTSSpeak35()
+        {
+            LOLSDK.Instance.SpeakText("stage1IntroText34");
+            Debug.Log("stage1IntroText34  Button is pressed");
         }
 
         public IEnumerator DelayProgressButtonVar3()

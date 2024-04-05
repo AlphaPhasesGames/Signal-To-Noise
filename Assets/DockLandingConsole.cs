@@ -73,8 +73,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         private void OnMouseDown()
         {
-            doorCode.gameObject.SetActive(true);
-            doorCodeImage.gameObject.SetActive(true);
+            StartCoroutine(DelayPadWorking());
+
         }
 
         public void PlaceNo1()
@@ -166,6 +166,14 @@ namespace Digi.Waves.Alpha.Phases.Games
                 doorCode.text += 0;
                 charLimitl++;
             }
+        }
+
+        public IEnumerator DelayPadWorking()
+        {
+            yield return new WaitForSeconds(0.2f);
+
+            doorCode.gameObject.SetActive(true);
+            doorCodeImage.gameObject.SetActive(true);
         }
     }
 }

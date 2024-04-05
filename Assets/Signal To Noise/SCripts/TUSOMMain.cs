@@ -138,6 +138,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             private void Update()
             {
+            
             if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 SceneManager.LoadScene("CrewQuaters");

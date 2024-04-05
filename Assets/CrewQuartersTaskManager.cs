@@ -104,7 +104,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     spotLight.gameObject.SetActive(true);
                     compBox.enabled = false;
                     vhsBox.enabled = false;
-
+                    anaSwitch.enabled = false;
                     miniBool1 = true;
                     Debug.Log("Task fired once");
                 }
@@ -130,7 +130,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     spotLight.gameObject.SetActive(true);
                     compBox.enabled = false;
                     vhsBox.enabled = false;
-
+                    anaSwitch.enabled = true;
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
                     miniBool2 = true;

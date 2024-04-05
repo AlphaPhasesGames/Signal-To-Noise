@@ -270,6 +270,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     LOLSDK.Instance.SpeakText("stage2IntroText4");
                     digiWaves.taskNumberCrewQuarters = 2;
 
+                    introText3.SetActive(false);
+                    ttsIntro3.gameObject.SetActive(false);
+
                     introText4.SetActive(true);
                     ttsIntro4.gameObject.SetActive(true);
 

@@ -71,6 +71,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI bridgeText27;
         public TextMeshProUGUI bridgeTextClockRight28;
         public TextMeshProUGUI bridgeTextClockWrong29;
+        public TextMeshProUGUI bridgeDropItem;
 
         public TextMeshProUGUI bridgeConsoleAnaWrong;
 
@@ -155,6 +156,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             bridgeTextClockWrong29.text = defs["stage1IntroText31"];
 
             bridgeConsoleAnaWrong.text = defs["stage1IntroText33AnaMessage"];
+
+            bridgeDropItem.text = defs["stage1IntroText34"];
 
             task1.text = defs["stage1Task1"];
             task2.text = defs["stage1Task2"];

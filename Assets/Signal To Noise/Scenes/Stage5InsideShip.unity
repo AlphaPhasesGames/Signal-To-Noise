@@ -12111,6 +12111,7 @@ GameObject:
   - component: {fileID: 1984380669}
   - component: {fileID: 1984380670}
   - component: {fileID: 1984380671}
+  - component: {fileID: 1984380672}
   m_Layer: 0
   m_Name: NonMovingScripts
   m_TagString: Untagged
@@ -12539,6 +12540,33 @@ MonoBehaviour:
   resetBools: 0
   stopRepeat: 0
   stopRepeat2: 0
+--- !u!114 &1984380672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984380643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8976806e4cd78c4abe0646625ee6cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invUIPanal: {fileID: 5542169034279189338}
+  phoneProp: {fileID: 1984380667}
+  tabletProp: {fileID: 1984380668}
+  watchProp: {fileID: 1984380658}
+  closeInv: {fileID: 3406751860974015672}
+  openInv: {fileID: 8746634364681183428}
+  isInvOpen: 0
+  resetBools: 0
+  stopRepeat: 0
+  stopRepeat2: 0
+  stopRepeat3: 0
+  stopRepeat4: 0
+  stopRepeat5: 0
+  stopRepeat6: 0
+  allItemsCollected: 0
 --- !u!1001 &1988721625
 PrefabInstance:
   m_ObjectHideFlags: 0
