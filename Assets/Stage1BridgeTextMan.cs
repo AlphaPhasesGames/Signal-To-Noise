@@ -1463,7 +1463,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator MoveText()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(8);
             currentStageOfText = 36;
         }
 

@@ -14840,6 +14840,7 @@ MonoBehaviour:
   miniBool3: 0
   miniBool4: 0
   miniBool5: 0
+  helpButtonUI: {fileID: 2783781724416440579}
   task1TTS: {fileID: 5564438447829816763}
   task2TTS: {fileID: 1288920352525850286}
   task3TTS: {fileID: 7708374199700650699}
@@ -18605,7 +18606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2787152881020887239
 RectTransform:
   m_ObjectHideFlags: 0

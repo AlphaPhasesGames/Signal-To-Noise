@@ -369,13 +369,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText7.SetActive(true);
                     ttsIntro7.gameObject.SetActive(true);
-                    phoneBox.enabled = true;
-                    tabletBox.enabled = true;
-                    watchBox.enabled = true;
 
-                    compBox.enabled = true;
-                    vhsBox.enabled = true;
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD5());
 
                     Debug.Log("Is stage2IntroText7 running");
                     textSection7Read = true;
@@ -542,10 +537,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
+                    progressText.gameObject.SetActive(false);
+
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText18");
 
@@ -567,6 +560,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 {
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
+                    progressText.gameObject.SetActive(false);
                     if (!textBeenRead)
                     {
                         progressText.gameObject.SetActive(false);
@@ -953,6 +947,23 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         }
 
+        public IEnumerator MoveCorrectGuessOnD5()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(5f);
+            digiWaves.taskNumberCrewQuarters = 3;
+            digiWaves.TaskNumberCrewQuartersSaver();
+
+            phoneBox.enabled = true;
+            tabletBox.enabled = true;
+            watchBox.enabled = true;
+            
+            compBox.enabled = true;
+            vhsBox.enabled = true;
+            currentStageOfText = 50;
+
+        }
+       
         public IEnumerator MoveCorrectGuessOn2()
         {
             yield return new WaitForSeconds(3);

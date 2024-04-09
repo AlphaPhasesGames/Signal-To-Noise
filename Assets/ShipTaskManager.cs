@@ -41,7 +41,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool miniBool4;
         public bool miniBool5;
 
-
+        public Button phoneButton;
 
         private void Awake()
         {
@@ -68,6 +68,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     consoleCollider.enabled = false;
+                    pilotCollider.enabled = true;
                     thermCollider.enabled = false;
                     reminder1.gameObject.SetActive(true);
                     miniBool1 = true;
@@ -112,7 +113,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     pilotCollider.enabled = false;
                     consoleCollider.enabled = false;
                     thermCollider.enabled = false;
-
+                    phoneButton.enabled = true;
                      reminder1.gameObject.SetActive(true);
                      reminder2.gameObject.SetActive(true);
                     //  reminder3.gameObject.SetActive(true);

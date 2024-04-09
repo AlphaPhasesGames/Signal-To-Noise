@@ -27,6 +27,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider cab2;
         public BoxCollider cab3;
 
+        public BoxCollider consoleCol;
+     //   public GameObject helpButtonUI;
 
         public GameObject mCodeFile1To3;
         public GameObject mCodeFile4To7;
@@ -95,6 +97,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     cab1.enabled = true;
                     cab2.enabled = true;
                     cab3.enabled = true;
+                    consoleCol.enabled = false;
                     miniBool2 = true;
                     Debug.Log("Task 2 fired once");
                 }
@@ -117,6 +120,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     mCodeFile1To3.gameObject.SetActive(true);
                     mCodeFile4To7.gameObject.SetActive(true);
                     mCodeFile8To0.gameObject.SetActive(true);
+                    consoleCol.enabled = true;
 
                     cab1.enabled = false;
                     cab2.enabled = false;
@@ -148,6 +152,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     cab1.enabled = false;
                     cab2.enabled = false;
                     cab3.enabled = false;
+                    consoleCol.enabled = false;
+
                     folder1.gameObject.SetActive(false);
                     folder2.gameObject.SetActive(false);
                     folder3.gameObject.SetActive(false);
@@ -180,6 +186,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     folder2.gameObject.SetActive(false);
                     folder3.gameObject.SetActive(false);
                     miniBool5 = true;
+                    consoleCol.enabled = false;
+
                     Debug.Log("Task fired once");
                 }
 

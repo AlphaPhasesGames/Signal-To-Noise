@@ -135,7 +135,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 #endif
                 Helper.StateButtonInitialize<DigiWaveSaveData>(newGameButton, continueButton, OnLoad); // initialise LOLSDK helper function and attached both new game and continue buttons to it
             }
-
+        /*
             private void Update()
             {
             
@@ -158,7 +158,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 SceneManager.LoadScene("Stage5InsideShip");
             }
           
-        }
+        }*/
         //save function - not actually used much
         public void Save()
             {

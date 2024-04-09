@@ -28,6 +28,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public bool loadTaskOnce;
 
+        public GameObject helpButtonUI;
+
         public bool miniBool1;
         public bool miniBool2;
         public bool miniBool3;
@@ -75,6 +77,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(false);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(false);
                     miniBool1 = true;
                     Debug.Log("Task fired once");
                 }
@@ -97,6 +100,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     speakersItem.enabled = true;
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
+                    helpButtonUI.gameObject.SetActive(true);
                     miniBool2 = true;
                     Debug.Log("Task 2 fired once");
                 }
@@ -121,6 +125,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     keyCardObject.gameObject.SetActive(false);
                     keyBProp.keyBButton.gameObject.SetActive(true);
                     badgeProp.badgeButton.gameObject.SetActive(true);
+                    helpButtonUI.gameObject.SetActive(true);
+
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
@@ -149,6 +155,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
+                    helpButtonUI.gameObject.SetActive(true);
+
                     miniBool4 = true;
                     Debug.Log("Task fired once");
                 }
@@ -175,6 +183,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     reminder3.gameObject.SetActive(true);
+                    helpButtonUI.gameObject.SetActive(true);
+
                     miniBool5 = true;
                     Debug.Log("Task fired once");
                 }

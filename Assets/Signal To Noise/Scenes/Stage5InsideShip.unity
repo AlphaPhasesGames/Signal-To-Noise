@@ -9202,7 +9202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109.7, y: 67.399994}
+  m_AnchoredPosition: {x: 19.9, y: 48.6}
   m_SizeDelta: {x: 38.9593, y: 39.054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373553854
@@ -12099,7 +12099,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984380646}
-  - component: {fileID: 1984380661}
   - component: {fileID: 1984380658}
   - component: {fileID: 1984380662}
   - component: {fileID: 1984380664}
@@ -12156,33 +12155,6 @@ MonoBehaviour:
   checkBool1: 0
   checkBool2: 0
   watchHeld: 0
---- !u!114 &1984380661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984380643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca625322972fc6248922412242887469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invUIPanal: {fileID: 5542169034279189338}
-  phoneProp: {fileID: 0}
-  tabletProp: {fileID: 0}
-  watchProp: {fileID: 1984380658}
-  closeInv: {fileID: 8746634364681183428}
-  openInv: {fileID: 3406751860974015672}
-  isInvOpen: 0
-  resetBools: 0
-  stopRepeat: 0
-  stopRepeat2: 0
-  stopRepeat3: 0
-  stopRepeat4: 0
-  stopRepeat5: 0
-  stopRepeat6: 0
-  allItemsCollected: 0
 --- !u!114 &1984380662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12522,6 +12494,7 @@ MonoBehaviour:
   miniBool3: 0
   miniBool4: 0
   miniBool5: 0
+  phoneButton: {fileID: 5417844651283891130}
 --- !u!114 &1984380671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18174,7 +18147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5898270376413140223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 

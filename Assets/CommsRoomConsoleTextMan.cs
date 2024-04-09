@@ -349,10 +349,11 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText8.SetActive(true);
                     ttsIntro8.gameObject.SetActive(true);
-
+                    digiMain.taskNumberCommsRoom = 2;
+                    digiMain.TaskNumberCommsRoomSaver();
                     morseCodeButton.gameObject.SetActive(true);
                     digiMain.Stage3ConsoleReadAlready();
-                    StartCoroutine(ShowNextText());
+                  //  StartCoroutine(ShowNextText());
                     Debug.Log("This hidwe text funtion executed once");
 
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -497,7 +498,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         {
             consoleWindow.gameObject.SetActive(false);
             parentTextPanalObject.gameObject.SetActive(false);
-            textMan.currentStageOfText = 50;
+           // textMan.currentStageOfText = 50;
         }
 
         public void RemoveReplies()
@@ -505,14 +506,17 @@ namespace Digi.Waves.Alpha.Phases.Games
             reply1Button.gameObject.SetActive(false);
             reply2Button.gameObject.SetActive(false);
             reply3Button.gameObject.SetActive(false);
+            parentTextPanalObject.gameObject.SetActive(false);
+            textMan.currentStageOfText = 4;
+            textBeenRead = true;
         }
 
         public IEnumerator ShowNextText()
         {
             yield return new WaitForSeconds(5);
             //messageWindow.gameObject.SetActive(false);
-            textMan.currentStageOfText = 4;
-            textBeenRead = true;
+           // parentTextPanalObject.gameObject.SetActive(false);
+         
 
         }
     }

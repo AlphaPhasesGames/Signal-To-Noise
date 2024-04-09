@@ -25,6 +25,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public GameObject spotLight;
         public GameObject mainLight;
 
+        public GameObject helpButtonUI;
 
         public Button task1TTS;
         public Button task2TTS;
@@ -97,7 +98,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
-
+                    helpButtonUI.gameObject.SetActive(false);
                     phoneBox.enabled = false;
                     tabletBox.enabled = false;
                     watchBox.enabled = false;
@@ -122,6 +123,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(false);
 
                     digiSwitch.enabled = false;
                     phoneBox.enabled = false;
@@ -150,6 +152,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
                     task6.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(true);
+
                     reminderText1.gameObject.SetActive(true);
                     digiSwitch.enabled = false;
                     anaSwitch.enabled = false;
@@ -192,6 +196,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     anaSwitch.enabled = false;
                     mainLight.gameObject.SetActive(true);
                     spotLight.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(true);
 
                     watchObj.gameObject.SetActive(false);
                     phoneObj.gameObject.SetActive(false);
@@ -235,6 +240,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     watchObj.gameObject.SetActive(false);
                     phoneObj.gameObject.SetActive(false);
                     tabletObj.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(true);
 
                     watchInv.watchButton.gameObject.SetActive(true);
                     phoneInv.phoneButton.gameObject.SetActive(true);
@@ -271,6 +277,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     watchObj.gameObject.SetActive(false);
                     phoneObj.gameObject.SetActive(false);
                     tabletObj.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(true);
 
                     watchInv.watchButton.gameObject.SetActive(true);
                     phoneInv.phoneButton.gameObject.SetActive(true);

@@ -10,7 +10,8 @@ namespace Digi.Waves.Alpha.Phases.Games
     {
         public Stage2CrewQuartersTextMan textMan;
          TUSOMMain digiMain;
-
+        public GameObject roomLight;
+        public GameObject torch;
 
         private void Awake()
         {
@@ -20,9 +21,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public void OnMouseDown()
         {
 
-          //  digiMain.LightsOnStage2();
-            digiMain.taskNumberCrewQuarters = 3;
-            digiMain.TaskNumberCrewQuartersSaver();
+            //  digiMain.LightsOnStage2();
+            torch.gameObject.SetActive(false);
+            roomLight.gameObject.SetActive(true);
             Debug.Log("This clicked");
             textMan.currentStageOfText = 5;
         }

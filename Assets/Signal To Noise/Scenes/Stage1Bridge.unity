@@ -7345,6 +7345,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887812591}
   m_CullTransparentMesh: 1
+--- !u!1 &919395618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2783781724073011497, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &925731640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8871700665335280199, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
@@ -13677,6 +13682,7 @@ MonoBehaviour:
   keyBProp: {fileID: 1984380651}
   consoleCol: {fileID: 94101810}
   loadTaskOnce: 0
+  helpButtonUI: {fileID: 919395618}
   miniBool1: 0
   miniBool2: 0
   miniBool3: 0
@@ -14839,7 +14845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 866587774110243209, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 957287440565069023, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
@@ -15056,6 +15062,10 @@ PrefabInstance:
       value: 216.9
       objectReference: {fileID: 0}
     - target: {fileID: 2705479082514978860, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783781724073011497, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -16500,7 +16510,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3210691637860140175, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
   m_PrefabInstance: {fileID: 442430762353486584}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 919395618}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}

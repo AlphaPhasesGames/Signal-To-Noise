@@ -101,7 +101,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro2.gameObject.SetActive(false);
                     parentTextPanalObjectMom.gameObject.SetActive(false);
                     parentTextPanalObjectPizza.gameObject.SetActive(false);
-
+                    pizzaCall.gameObject.SetActive(false);
+                    momCall.gameObject.SetActive(false);
                     //  introText3.SetActive(false);
                     //  ttsIntro3.gameObject.SetActive(false);
 

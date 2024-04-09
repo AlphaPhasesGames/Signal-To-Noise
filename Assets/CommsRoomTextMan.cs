@@ -259,7 +259,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     parentTextPanalObject.gameObject.SetActive(true);
                     progressTextBack.gameObject.SetActive(false);
-
+                    digiWaves.taskNumberCommsRoom = 2;
+                    digiWaves.TaskNumberCommsRoomSaver();
                     carryOnText1.SetActive(true);
                     ttsCarryOnText1.gameObject.SetActive(true);
 
@@ -297,8 +298,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     carryOnText2.SetActive(true);
                     ttsCarryOnText2.gameObject.SetActive(true);
-                    digiWaves.taskNumberCommsRoom = 2;
-                    digiWaves.TaskNumberCommsRoomSaver();
+
                    
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");

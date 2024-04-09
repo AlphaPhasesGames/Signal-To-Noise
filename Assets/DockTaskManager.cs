@@ -36,6 +36,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool miniBool4;
         public bool miniBool5;
 
+        public GameObject helpButtonUI;
+
         public Button task1TTS;
         public Button task2TTS;
         public Button task3TTS;
@@ -109,7 +111,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     books1.enabled = true;
                     books2.enabled = true;
                     books3.enabled = true;
-
+                    helpButtonUI.gameObject.SetActive(true);
                     reminder1.gameObject.SetActive(true);
                     //reminder1.gameObject.SetActive(true);
                     // reminder2.gameObject.SetActive(true);
@@ -129,6 +131,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task3.gameObject.SetActive(true);
                     task4.gameObject.SetActive(false);
                     task5.gameObject.SetActive(false);
+                    helpButtonUI.gameObject.SetActive(true);
 
                     floppy1.gameObject.SetActive(false);
                     floppy2.gameObject.SetActive(false);
@@ -161,6 +164,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task4.gameObject.SetActive(true);
                     task5.gameObject.SetActive(false);
                     consoleCollider.enabled = true;
+                    helpButtonUI.gameObject.SetActive(true);
+
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     floppy1.gameObject.SetActive(false);
@@ -193,6 +198,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     task5.gameObject.SetActive(true);
                     shipAnimator.SetBool("land", true);
                     consoleCollider.enabled = false;
+                    helpButtonUI.gameObject.SetActive(true);
+
                     reminder1.gameObject.SetActive(true);
                     reminder2.gameObject.SetActive(true);
                     floppy1.gameObject.SetActive(false);

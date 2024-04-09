@@ -1061,15 +1061,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.57
+      value: 22.44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2038574
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.22
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1097,6 +1097,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: e23b33c172e21224a90bf6ffdc46cd48, type: 3}
@@ -6045,6 +6053,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 745b5bdb379213e45aa00b09fc8034f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 745b5bdb379213e45aa00b09fc8034f7, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 745b5bdb379213e45aa00b09fc8034f7, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 745b5bdb379213e45aa00b09fc8034f7, type: 3}
@@ -11828,6 +11844,7 @@ MonoBehaviour:
   task6: {fileID: 923304727}
   spotLight: {fileID: 603550341}
   mainLight: {fileID: 628534794}
+  helpButtonUI: {fileID: 2783781724416440579}
   task1TTS: {fileID: 5564438447829816763}
   task2TTS: {fileID: 1288920352525850286}
   task3TTS: {fileID: 7708374199700650699}
@@ -12090,6 +12107,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc5d2d25c5dac7f478b18929a9809d70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: cc5d2d25c5dac7f478b18929a9809d70, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: cc5d2d25c5dac7f478b18929a9809d70, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: cc5d2d25c5dac7f478b18929a9809d70, type: 3}
@@ -15252,7 +15277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find 3 devices that can receive and transmit digital signals. Test
+  m_text: Find 3 devices that can receive and transmit digital signals.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16439,7 +16464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2787152881020887239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17206,7 +17231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278.5806, y: -3.7999573}
+  m_AnchoredPosition: {x: 299.1, y: -3.7999573}
   m_SizeDelta: {x: 28.7257, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3321718852323691188
@@ -18391,7 +18416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.3, y: 3.8}
+  m_AnchoredPosition: {x: 13.6, y: 3.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4434310648479518215
@@ -20543,6 +20568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMan: {fileID: 1984380648}
+  roomLight: {fileID: 628534794}
+  torch: {fileID: 603550341}
 --- !u!65 &6224492521205818714
 BoxCollider:
   m_ObjectHideFlags: 0
