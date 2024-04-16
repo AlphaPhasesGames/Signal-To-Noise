@@ -504,6 +504,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage3IntroText21");
 
+                    carryOnText3.SetActive(false);
+                    ttsCarryOnText3.gameObject.SetActive(false);
+
                     safeFoundText1.SetActive(true);
                     ttsSafeFound1.gameObject.SetActive(true);
 

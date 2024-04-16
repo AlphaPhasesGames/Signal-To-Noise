@@ -22,6 +22,8 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider compBox;
         public BoxCollider vhsBox;
 
+        public BoxCollider anaCol;
+
         public Light roomLight;
         public Light spotLight;
 
@@ -268,7 +270,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
                     //progressTextBack.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage2IntroText4");
-                    digiWaves.taskNumberCrewQuarters = 2;
+
 
                     introText3.SetActive(false);
                     ttsIntro3.gameObject.SetActive(false);
@@ -277,7 +279,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     ttsIntro4.gameObject.SetActive(true);
 
               
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD6());
 
                     Debug.Log("Is stage2IntroText4 running");
                     textSection4Read = true;
@@ -944,6 +946,17 @@ namespace Digi.Waves.Alpha.Phases.Games
             hasTextplayerOnce = false;
             yield return new WaitForSeconds(5f);
             currentStageOfText = 50;
+
+        }
+
+        public IEnumerator MoveCorrectGuessOnD6()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(5f);
+            digiWaves.taskNumberCrewQuarters = 2;
+            anaCol.enabled = true;
+            currentStageOfText = 50;
+            
 
         }
 

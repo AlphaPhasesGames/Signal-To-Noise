@@ -11559,6 +11559,7 @@ MonoBehaviour:
   tabletBox: {fileID: 9152552057069626232}
   compBox: {fileID: 154979221}
   vhsBox: {fileID: 871656344}
+  anaCol: {fileID: 6224492521205818714}
   roomLight: {fileID: 628534795}
   spotLight: {fileID: 603550343}
   parentTextPanalObject: {fileID: 6970692333635345087}

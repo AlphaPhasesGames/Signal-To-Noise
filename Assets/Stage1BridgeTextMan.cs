@@ -499,6 +499,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText10.SetActive(true);
                     ttsIntro10.gameObject.SetActive(true);
 
+                    introText10a.SetActive(false);
+                    ttsIntro10a.gameObject.SetActive(false);
+
                     introText11.SetActive(false);
                     ttsIntro11.gameObject.SetActive(false);
 
@@ -1126,7 +1129,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 if (currentStageOfText == 30)
                 {
 
-                    progressTextBack.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
                     if (!textBeenRead)
                     {
                         progressText.gameObject.SetActive(false);
@@ -1490,6 +1493,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             textSection8Read = false;
             textSection9Read = false;
             textSection10Read = false;
+            textSection10aRead = false;
             textSection11Read = false;
             textSection12Read = false;
             textSection13Read = false;
@@ -1802,7 +1806,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator MoveCorrectGuessOnD4()
         {
             hasTextplayerOnce = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(8f);
             currentStageOfText = 50;
             ronCont.enabled = true;
         }
