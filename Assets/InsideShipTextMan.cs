@@ -942,7 +942,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar2()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 

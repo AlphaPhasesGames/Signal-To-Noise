@@ -23,7 +23,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public BoxCollider vhsBox;
 
         public BoxCollider anaCol;
-
+        public BoxCollider digiCol;
         public Light roomLight;
         public Light spotLight;
 
@@ -251,7 +251,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     spotLight.gameObject.SetActive(true);
                     digiWaves.crewQuarters2StartedAlready = true;
                     digiWaves.SaveStage2Started();
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD8());
            
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection3Read = true;
@@ -403,7 +403,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introTextVHS.SetActive(false);
                     ttsIntroVHS16.gameObject.SetActive(false);
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD7());
 
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection8Read = true;
@@ -434,7 +434,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introTextVHS.SetActive(false);
                     ttsIntroVHS16.gameObject.SetActive(false);
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD7());
 
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection9Read = true;
@@ -466,8 +466,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introTextVHS.SetActive(false);
                     ttsIntroVHS16.gameObject.SetActive(false);
 
-
-                    StartCoroutine(MoveCorrectGuessOnD2());
+                  //  if (!progressTextIsShowing)
+                  //  { // 3 second delay
+                  //      StartCoroutine(DelayProgressButtonVar2());
+                  ///      progressTextIsShowing = true;
+                   // }
+                     StartCoroutine(MoveCorrectGuessOnD7());
 
                     Debug.Log("Is currentStageOfText 3 running");
                     textSection10Read = true;
@@ -912,7 +916,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar2()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
@@ -944,7 +948,24 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator MoveCorrectGuessOnD2()
         {
             hasTextplayerOnce = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(4f);
+            currentStageOfText = 50;
+
+        }
+
+        public IEnumerator MoveCorrectGuessOnD8()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(4f);
+            digiCol.enabled = true;
+            currentStageOfText = 50;
+
+        }
+
+        public IEnumerator MoveCorrectGuessOnD7()
+        {
+            hasTextplayerOnce = false;
+            yield return new WaitForSeconds(3f);
             currentStageOfText = 50;
 
         }

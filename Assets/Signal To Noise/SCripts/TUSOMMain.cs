@@ -139,26 +139,27 @@ namespace Digi.Waves.Alpha.Phases.Games
             private void Update()
             {
             
-            if (Input.GetKeyDown(KeyCode.Keypad2))
-            {
-                SceneManager.LoadScene("CrewQuaters");
-            }
-           
-            if (Input.GetKeyDown(KeyCode.Keypad3))
-            {
-                SceneManager.LoadScene("CommsRoom");
-            }
-
-            if (Input.GetKeyDown(KeyCode.Keypad4))
-            {
-                SceneManager.LoadScene("Stage4DockingBay");
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 SceneManager.LoadScene("Stage5InsideShip");
             }
-          
-        }*/
+            
+             if (Input.GetKeyDown(KeyCode.Keypad3))
+             {
+                 SceneManager.LoadScene("CommsRoom");
+             }
+
+             if (Input.GetKeyDown(KeyCode.Keypad4))
+             {
+                 SceneManager.LoadScene("Stage4DockingBay");
+             }
+             if (Input.GetKeyDown(KeyCode.Alpha4))
+             {
+                 SceneManager.LoadScene("Stage5InsideShip");
+             }
+           
+    }
+         */
         //save function - not actually used much
         public void Save()
             {

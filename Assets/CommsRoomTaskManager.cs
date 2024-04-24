@@ -152,7 +152,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     cab1.enabled = false;
                     cab2.enabled = false;
                     cab3.enabled = false;
-                    consoleCol.enabled = false;
+                   // consoleCol.enabled = false;
 
                     folder1.gameObject.SetActive(false);
                     folder2.gameObject.SetActive(false);

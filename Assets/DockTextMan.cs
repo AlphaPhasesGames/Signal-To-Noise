@@ -784,7 +784,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar2()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
@@ -800,14 +800,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator MoveFinalTextOn()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(6f);
             currentStageOfText = 8;
 
         }
 
         public IEnumerator MoveCorrectGuessOn()
         {
-            yield return new WaitForSeconds(3.5f);
+            yield return new WaitForSeconds(5f);
             hasTextplayerOnce = false;
             currentStageOfText = 50;
 
@@ -817,7 +817,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator MoveCorrectGuessOnD2()
         {
             hasTextplayerOnce = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(6f);
             currentStageOfText = 50;
 
         }

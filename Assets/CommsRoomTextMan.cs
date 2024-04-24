@@ -483,7 +483,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //  carryOnText2.SetActive(true);
                     //  ttsCarryOnText2.gameObject.SetActive(true);
 
-              //      StartCoroutine(MoveCorrectGuessOnD2());
+                    StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("This hidwe text funtion executed once");
                     digiWaves.taskNumberCommsRoom = 4;
                     digiWaves.TaskNumberCommsRoomSaver();
@@ -821,7 +821,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar2()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
@@ -844,7 +844,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator MoveCorrectGuessOn()
         {
-            yield return new WaitForSeconds(3.5f);
+            yield return new WaitForSeconds(5f);
             currentStageOfText = 50;
 
         }
@@ -853,7 +853,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public IEnumerator MoveCorrectGuessOnD2()
         {
             hasTextplayerOnce = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(6f);
             currentStageOfText = 50;
 
         }
@@ -868,7 +868,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator MoveCorrectGuessOn2()
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(4.5f);
             currentStageOfText = 50;
             Debug.Log("This coroutine fired");
 
@@ -876,7 +876,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator FireAllFolderCollectedText()
         {
-            yield return new WaitForSeconds(7);
+            yield return new WaitForSeconds(5);
             currentStageOfText = 9;
             Debug.Log("This new coroutine fired");
 

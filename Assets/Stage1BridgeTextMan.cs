@@ -1301,7 +1301,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             {
                 if (currentStageOfText == 36)
                 {
-
+                   // progressTextBack.gameObject.SetActive(false);
                     progressText.gameObject.SetActive(false);
                     LOLSDK.Instance.SpeakText("stage1IntroText34");
 
@@ -1766,7 +1766,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar3()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(6);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
@@ -1774,7 +1774,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar2()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
@@ -1782,7 +1782,7 @@ namespace Digi.Waves.Alpha.Phases.Games
 
         public IEnumerator DelayProgressButtonVar1()
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(4f);
             progressText.gameObject.SetActive(true);
             textBeenRead = true;
 
