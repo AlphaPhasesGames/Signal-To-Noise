@@ -9,6 +9,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 {
     public class DockLangMan : MonoBehaviour
     {
+
+        public TextMeshProUGUI landCoordsButtonText;
+
         public TextMeshProUGUI bridgeText1;
         public TextMeshProUGUI bridgeText2;
         public TextMeshProUGUI bridgeText3;
@@ -103,6 +106,8 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             wrongMedia.text = defs["stage4IntroText12"];
             wrongCode.text = defs["stage4IntroText21WrongCode"];
+
+            landCoordsButtonText.text = defs["stage4LandinCoordsButton"];
         }
     }
 }

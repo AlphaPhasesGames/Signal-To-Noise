@@ -3725,7 +3725,7 @@ GameObject:
   - component: {fileID: 349637125}
   - component: {fileID: 349637124}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MCText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14612,6 +14612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fa88ce08b0bc14faf6f82f43bb1007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landCoordsButtonText: {fileID: 349637124}
   bridgeText1: {fileID: 251415045971087997}
   bridgeText2: {fileID: 2248047210168711141}
   bridgeText3: {fileID: 4085236303847689470}

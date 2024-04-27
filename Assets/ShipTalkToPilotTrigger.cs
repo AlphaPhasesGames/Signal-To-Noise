@@ -14,6 +14,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public Camera playerRobotCam;
         public TalkToPilotTextMan textMan;
         public bool runOnce;
+        public RobotController robCont;
 
         // Start is called before the first frame update
         void Start()
@@ -36,6 +37,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                 playerRobotCam.enabled = false;
                 npcRobotCam.gameObject.SetActive(true);
                 npcRobotCam.enabled = true;
+                robCont.enabled = false;
                 runOnce = true;
             }
            

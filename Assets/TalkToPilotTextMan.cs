@@ -335,7 +335,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     introText7.SetActive(false);
                     ttsIntro7.gameObject.SetActive(false);
 
-
+                    ronCont.enabled = true;
                     npcCam.gameObject.SetActive(false);
                     npcCam.enabled = false;
                     playerCam.gameObject.SetActive(true);

@@ -12952,6 +12952,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1856472043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2018459749941917748, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1856472044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8606854101143288229, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1856472045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1126903804290783173, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1856472046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 916662207963069903, guid: c7b349c7d110dce499393c00bc036bf3, type: 3}
+  m_PrefabInstance: {fileID: 442430762353486584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1868343016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13507,6 +13551,7 @@ MonoBehaviour:
   startGame: {fileID: 442876712837758072}
   continueGame: {fileID: 3079924647504726398}
   inventoryText: {fileID: 6027275242969777313}
+  inventoryButtonText: {fileID: 1856472046}
   keycardText: {fileID: 4835358825540938320}
   keyboardText: {fileID: 175378869}
   helpText: {fileID: 1078144955}
@@ -13519,6 +13564,9 @@ MonoBehaviour:
   sendDigiReplyText: {fileID: 1840790756}
   sendAnalogReplyText: {fileID: 1091390362}
   lunchButtonText: {fileID: 1053528528}
+  reply1: {fileID: 1856472045}
+  reply2: {fileID: 1856472044}
+  reply3: {fileID: 1856472043}
   letterTitle: {fileID: 2066494937}
   letterPT1: {fileID: 566033297}
   letterPT2: {fileID: 1180643853}

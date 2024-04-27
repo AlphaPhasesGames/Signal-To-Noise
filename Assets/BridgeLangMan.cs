@@ -12,6 +12,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI startGame;
         public TextMeshProUGUI continueGame;
         public TextMeshProUGUI inventoryText;
+        public TextMeshProUGUI inventoryButtonText;
         public TextMeshProUGUI keycardText;
         public TextMeshProUGUI keyboardText;
         public TextMeshProUGUI helpText;
@@ -25,6 +26,11 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI sendDigiReplyText;
         public TextMeshProUGUI sendAnalogReplyText;
         public TextMeshProUGUI lunchButtonText;
+
+        public TextMeshProUGUI reply1;
+        public TextMeshProUGUI reply2;
+        public TextMeshProUGUI reply3;
+
 
         public TextMeshProUGUI letterTitle;
         public TextMeshProUGUI letterPT1;
@@ -101,6 +107,8 @@ namespace Digi.Waves.Alpha.Phases.Games
             keyboardText.text = defs["inventoryKeyboard"];
             helpText.text = defs["helpText"];
 
+            inventoryButtonText.text = defs["inventoryTitle"];
+
             letterTitle.text = defs["stage1LetterPart1Title"];
             letterPT1.text = defs["stage1LetterPart2DearM"];
             letterPT2.text = defs["stage1LetterPart3Accident"];
@@ -118,6 +126,11 @@ namespace Digi.Waves.Alpha.Phases.Games
             sendDigiReplyText.text = defs["stage1CnslSendDigReply"];
             sendAnalogReplyText.text = defs["stage1CnslSendAnalReply"];
             lunchButtonText.text = defs["stage1CnslLunchButtontext"];
+
+            reply1.text = defs["stage1IntroText26"];
+            reply2.text = defs["stage1IntroText27"];
+            reply3.text = defs["stage1IntroText28"];
+
 
             bridgeText1.text = defs["stage1IntroText1"];
             bridgeText2.text = defs["stage1IntroText2"];
