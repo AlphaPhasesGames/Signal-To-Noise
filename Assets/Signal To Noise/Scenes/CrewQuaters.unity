@@ -14156,7 +14156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8, y: 59.2}
+  m_AnchoredPosition: {x: 1, y: 80}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &983425254583887767
@@ -16190,7 +16190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Information can be stored on various types of devices. '
+  m_text: "La informaci\xF3n se puede almacenar en varios tipos de dispositivos."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21447,7 +21447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7999697, y: -59.5}
+  m_AnchoredPosition: {x: -0, y: -59.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6835293302346830461
@@ -22064,8 +22064,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Modern technologies use digitized signals as a reliable way to encode and
-    transmit information.
+  m_text: "Las tecnolog\xEDas modernas utilizan se\xF1ales digitalizadas como una
+    forma fiable de codificar y transmitir informaci\xF3n."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24008,8 +24008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -390.99683, y: 6.6104}
-  m_SizeDelta: {x: 242.0064, y: 292.5333}
+  m_AnchoredPosition: {x: -385.07675, y: -39.432236}
+  m_SizeDelta: {x: 253.8465, y: 384.6186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9219893273734157075
 MonoBehaviour:
