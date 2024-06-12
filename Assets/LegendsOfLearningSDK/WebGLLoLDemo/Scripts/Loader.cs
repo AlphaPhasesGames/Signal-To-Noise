@@ -50,9 +50,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
             // Mock the platform-to-game messages when in the Unity editor.
 
-       //    #if UNITY_EDITOR
-      //            LoadMockData();
-      //     #endif
+           #if UNITY_EDITOR
+                 LoadMockData();
+          #endif
 
 
             // Then, tell the platform the game is ready.
@@ -97,7 +97,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             Debug.Log("HandleGameStateChange");
         }
      
-           /*     private void LoadMockData()
+                private void LoadMockData()
                 {
         #if UNITY_EDITOR
                     // Load Dev Language File from StreamingAssets
@@ -130,7 +130,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     }
         #endif
                 }
-        */
+        
     }
 }
 

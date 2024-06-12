@@ -557,6 +557,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     StartCoroutine(MoveCorrectGuessOnD2());
                     Debug.Log("Is stage2IntroText13 running");
                     textSection13Read = true;
+                    textSection14Read = false;
                 }
             }
 
@@ -579,10 +580,14 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText14.SetActive(true);
                     ttsIntro14.gameObject.SetActive(true);
+
+                    introText15.SetActive(false);
+                    ttsIntro15.gameObject.SetActive(false);
                     LOLSDK.Instance.SubmitProgress(0, 40, 100);
                     StartCoroutine(MoveFinalTextOn());
                     Debug.Log("Is stage2IntroText19DoorCorrect running");
                     textSection14Read = true;
+                    textSection13Read = false;
                 }
             }
 
@@ -601,6 +606,9 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText13.SetActive(false);
                     ttsIntro13.gameObject.SetActive(false);
+
+                    introText14.SetActive(false);
+                    ttsIntro14.gameObject.SetActive(false);
 
                     introText15.SetActive(true);
                     ttsIntro15.gameObject.SetActive(true);
