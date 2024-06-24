@@ -58,6 +58,7 @@ namespace Digi.Waves.Alpha.Phases.Games
         public TextMeshProUGUI reminder2;
 
         public TextMeshProUGUI wrongCode;
+        public TextMeshProUGUI landCoordsButtonText2;
         private void Awake()
         {
             JSONNode defs = SharedState.LanguageDefs;
@@ -108,6 +109,7 @@ namespace Digi.Waves.Alpha.Phases.Games
             wrongCode.text = defs["stage4IntroText21WrongCode"];
 
             landCoordsButtonText.text = defs["stage4LandinCoordsButton"];
+            landCoordsButtonText2.text = defs["stage4LandinCoordsButton"];
         }
     }
 }

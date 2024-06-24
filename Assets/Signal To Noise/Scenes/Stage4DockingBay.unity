@@ -3770,7 +3770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Landing Coordinates
+  m_text: Landing Coordinates test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14650,6 +14650,7 @@ MonoBehaviour:
   reminder1: {fileID: 2547555580603390325}
   reminder2: {fileID: 7674082543148022966}
   wrongCode: {fileID: 993087441}
+  landCoordsButtonText2: {fileID: 349637124}
 --- !u!114 &1984380658
 MonoBehaviour:
   m_ObjectHideFlags: 0

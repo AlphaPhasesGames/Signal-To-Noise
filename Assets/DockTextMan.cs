@@ -488,9 +488,11 @@ namespace Digi.Waves.Alpha.Phases.Games
                     consoleCoordsText3.SetActive(false);
                     ttsIntro13.gameObject.SetActive(false);
 
-                   
+                    wrongCodeText.SetActive(false);
+                    ttsWrongCode.gameObject.SetActive(false);
                     Debug.Log("Is stage4IntroText4 3 running");
                     textSection12Read = true;
+                    textWrongCodeRead = false;
                 }
             }
 
@@ -576,6 +578,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                     StartCoroutine(MoveCorrectGuessOn());
                     Debug.Log("Is stage4IntroText4 3 running");
                     textWrongCodeRead = true;
+                    textSection12Read = false;
                 }
             }
 

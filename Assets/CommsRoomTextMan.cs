@@ -510,6 +510,12 @@ namespace Digi.Waves.Alpha.Phases.Games
                     safeFoundText1.SetActive(true);
                     ttsSafeFound1.gameObject.SetActive(true);
 
+                    safeFoundText2.SetActive(false);
+                    ttsSafeFound2.gameObject.SetActive(false);
+
+                    safeFoundText3.SetActive(false);
+                    ttsSafeFound3.gameObject.SetActive(false);
+
                     Debug.Log("This hidwe text funtion executed once");
 
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -535,6 +541,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     safeFoundText2.SetActive(true);
                     ttsSafeFound2.gameObject.SetActive(true);
 
+                    safeFoundText3.SetActive(false);
+                    ttsSafeFound3.gameObject.SetActive(false);
+
                     Debug.Log("This hidwe text funtion executed once");
                     StartCoroutine(MoveCorrectGuessOn2());
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
@@ -557,6 +566,9 @@ namespace Digi.Waves.Alpha.Phases.Games
                     safeFoundText1.SetActive(false);
                     ttsSafeFound1.gameObject.SetActive(false);
 
+                    safeFoundText2.SetActive(false);
+                    ttsSafeFound2.gameObject.SetActive(false);
+
                     safeFoundText3.SetActive(true);
                     ttsSafeFound3.gameObject.SetActive(true);
 
@@ -567,6 +579,8 @@ namespace Digi.Waves.Alpha.Phases.Games
                     //LOLSDK.Instance.SubmitProgress(0, 10, 100);
                     //  Debug.Log("This apple bot correct funtion called");
                     safeFound3Read = true;
+                    safeFound2Read = false;
+                    safeFound1Read = false;
                     hasTextplayerOnce = false;
 
                 }

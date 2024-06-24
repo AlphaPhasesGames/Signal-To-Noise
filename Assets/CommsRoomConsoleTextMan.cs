@@ -36,6 +36,9 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool textSection7Read;
         public bool textSection8Read;
 
+        public GameObject folder1;
+        public GameObject folder2;
+        public GameObject folder3;
 
         public Button ttsIntro1;
         public Button ttsIntro2;
@@ -317,6 +320,11 @@ namespace Digi.Waves.Alpha.Phases.Games
 
                     introText7.SetActive(true);
                     ttsIntro7.gameObject.SetActive(true);
+
+                    folder1.gameObject.SetActive(true);
+                    folder2.gameObject.SetActive(true);
+                    folder3.gameObject.SetActive(true);
+
 
                     introText8.SetActive(false);
                     ttsIntro8.gameObject.SetActive(false);
