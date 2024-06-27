@@ -13373,6 +13373,11 @@ MonoBehaviour:
   collectedBadge: 0
   pickedUpKeyB: 0
   pickedUpBadge: 0
+  locker1: {fileID: 1165218027}
+  locker2: {fileID: 1234895935}
+  clock: {fileID: 9065971947474273737}
+  speakers: {fileID: 327390284}
+  tvObject: {fileID: 576328910}
 --- !u!114 &1984380648
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,12 @@ namespace Digi.Waves.Alpha.Phases.Games
         public bool pickedUpKeyB;
         public bool pickedUpBadge;
 
+        public BoxCollider locker1;
+        public BoxCollider locker2;
+        public BoxCollider clock;
+        public BoxCollider speakers;
+        public BoxCollider tvObject;
+
         // Update is called once per frame
         void Update()
         {
@@ -67,7 +73,7 @@ namespace Digi.Waves.Alpha.Phases.Games
                         runThrice = true;
                    // }
                    
-                }
+                    }
             }
           
         }
@@ -82,8 +88,14 @@ namespace Digi.Waves.Alpha.Phases.Games
             consoleBridge.playerCollectedItems = true;
             if (!digiWaveMain.itemsCollected)
             {
-              //  digiWaveMain.itemsCollected = true;
-             //   digiWaveMain.ItemsCollectedStage1();
+                //  digiWaveMain.itemsCollected = true;
+                //   digiWaveMain.ItemsCollectedStage1();
+                tvObject.enabled = false;
+                clock.enabled = false;
+                locker1.enabled = false;
+                locker2.enabled = false;
+                speakers.enabled = false;
+
                 yield return new WaitForSeconds(6f);
                 textMan.currentStageOfText = 23;
             }
